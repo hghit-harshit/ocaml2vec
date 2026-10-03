@@ -1,0 +1,258 @@
+{
+  "unit": "Evenodd",
+  "source": "evenodd.ml",
+  "digest": "395d95a1a119fc090b0363a5d22c890c",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "name": "camlEvenodd.even_274",
+      "loc": {"file":"evenodd.ml","l1":1,"c1":13,"l2":1,"c2":52},
+      "params": [{"var":"n/276","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Ccmpi",
+              "type": "INT",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_INT","var":"n/276"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "BR",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [1,2],
+          "exn_succ": []
+        },
+        {
+          "id": 1,
+          "instrs": [
+            {
+              "id": 2,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        },
+        {
+          "id": 2,
+          "instrs": [
+            {
+              "id": 3,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_INT","var":"n/276"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"SYM_FUNC","sym":"camlEvenodd.odd_275"},
+                {"kind":"VAR_INT","var":"t2"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t3"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"PRED_EQ":1},
+      "n_cops": 3,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEvenodd.odd_275",
+      "loc": {"file":"evenodd.ml","l1":2,"c1":8,"l2":2,"c2":49},
+      "params": [{"var":"n/277","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Ccmpi",
+              "type": "INT",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_INT","var":"n/277"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "BR",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [1,2],
+          "exn_succ": []
+        },
+        {
+          "id": 1,
+          "instrs": [
+            {
+              "id": 2,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        },
+        {
+          "id": 2,
+          "instrs": [
+            {
+              "id": 3,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_INT","var":"n/277"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"SYM_FUNC","sym":"camlEvenodd.even_274"},
+                {"kind":"VAR_INT","var":"t2"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t3"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"PRED_EQ":1},
+      "n_cops": 3,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEvenodd.entry",
+      "loc": null,
+      "params": [],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"SYM_DATA","sym":"camlEvenodd"},
+                {"kind":"SYM_DATA","sym":"camlEvenodd.1"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Caddv",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEvenodd.1"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t2",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEvenodd"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t2"},{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"EXT:caml_initialize":2,"NOALLOC":2},
+      "n_cops": 4,
+      "dead_cops": 0
+    }
+  ]
+}

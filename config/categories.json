@@ -1,0 +1,38 @@
+{
+  "comment": "Display categories for Phase 8 figures (BUILD_SPEC 8.0, D8.0). Every inventory entity and every merged family name is in exactly one category per level; categories are listed in display order. Presentation only: nothing here affects training or encoding.",
+  "lambda": {
+    "int arithmetic": ["Pnegint", "Paddint", "Psubint", "Pmulint", "Pdivint", "Pmodint", "Pandint", "Porint", "Pxorint", "Plslint", "Plsrint", "Pasrint", "Poffsetint", "Pbswap16", "P_BSWAP"],
+    "float arithmetic": ["Pnegfloat", "Pabsfloat", "Paddfloat", "Psubfloat", "Pmulfloat", "Pdivfloat"],
+    "boxed-int": ["Pnegbint", "Paddbint", "Psubbint", "Pmulbint", "Pdivbint", "Pmodbint", "Pandbint", "Porbint", "Pxorbint", "Plslbint", "Plsrbint", "Pasrbint", "Pbbswap"],
+    "conversions": ["Pintoffloat", "Pfloatofint", "Pbintofint", "Pintofbint", "Pcvtbint"],
+    "comparisons and tests": ["Pintcomp", "Pfloatcomp", "Pbintcomp", "Pcompare_ints", "Pcompare_floats", "Pcompare_bints", "Pisint", "Pisout", "Psequand", "Psequor", "Pnot"],
+    "blocks and records": ["Pmakeblock", "Pmakelazyblock", "Pfield", "Pfield_computed", "Psetfield", "Psetfield_computed", "Pfloatfield", "Psetfloatfield", "Pduprecord", "Poffsetref"],
+    "arrays": ["Pmakearray", "Pduparray", "Parraylength", "Parrayrefu", "Parraysetu", "Parrayrefs", "Parraysets", "Pbigarrayref", "Pbigarrayset", "Pbigarraydim", "P_BIGARRAY"],
+    "strings and bytes": ["Pstringlength", "Pstringrefu", "Pstringrefs", "Pbyteslength", "Pbytesrefu", "Pbytessetu", "Pbytesrefs", "Pbytessets", "Pbytes_to_string", "Pbytes_of_string", "Pstring_load_16", "Pstring_load_32", "Pstring_load_64", "Pbytes_load_16", "Pbytes_load_32", "Pbytes_load_64", "Pbigstring_load_16", "Pbigstring_load_32", "Pbigstring_load_64", "Pbytes_set_16", "Pbytes_set_32", "Pbytes_set_64", "Pbigstring_set_16", "Pbigstring_set_32", "Pbigstring_set_64", "P_RAW_LOAD", "P_RAW_STORE"],
+    "control forms": ["Lapply_a1", "Lapply_a2", "Lapply_a3", "Lapply_a4p", "Lfunction_a1", "Lfunction_a2", "Lfunction_a3", "Lfunction_a4p", "Llet", "Lmutlet", "Lletrec", "Lifthenelse", "Lswitch", "Lstringswitch", "Lstaticraise", "Lstaticcatch", "Ltrywith", "Lsequence", "Lwhile", "Lfor", "Lassign", "Lsend", "Praise"],
+    "effects": ["Pperform", "Presume", "Prunstack", "Preperform"],
+    "runtime intrinsics": ["Ppoll", "Patomic_load", "Pdls_get"],
+    "globals and externs": ["Pgetglobal_self", "Pgetglobal_stdlib", "Pgetglobal_other", "Psetglobal", "Pccall"],
+    "misc": ["Pignore", "Popaque", "Pint_as_pointer", "Pctconst"],
+    "types": ["INT", "FLOAT", "BINT", "ADDR", "GEN"],
+    "operand kinds": ["VAR_INT", "VAR_FLOAT", "VAR_BINT", "VAR_GEN", "MUTVAR", "CONST_INT", "CONST_FLOAT", "CONST_BINT", "CONST_STRING", "CONST_BLOCK"]
+  },
+  "cmm": {
+    "int arithmetic": ["Caddi", "Csubi", "Cmuli", "Cmulhi", "Cdivi", "Cmodi", "Cand", "Cor", "Cxor", "Clsl", "Clsr", "Casr"],
+    "float arithmetic": ["Cnegf", "Cabsf", "Caddf", "Csubf", "Cmulf", "Cdivf"],
+    "conversions": ["Cfloatofint", "Cintoffloat"],
+    "pointer arithmetic": ["Caddv", "Cadda"],
+    "comparisons and tests": ["Ccmpi", "Ccmpa", "Ccmpf"],
+    "loads": ["Cload_byte_u", "Cload_byte_s", "Cload_16u", "Cload_16s", "Cload_32u", "Cload_32s", "Cload_64", "Cload_word_int", "Cload_word_val", "Cload_single", "Cload_double", "Cload_narrow"],
+    "stores": ["Cstore_byte_u", "Cstore_byte_s", "Cstore_16u", "Cstore_16s", "Cstore_32u", "Cstore_32s", "Cstore_64", "Cstore_word_int", "Cstore_word_val", "Cstore_single", "Cstore_double", "Cstore_narrow"],
+    "calls and allocation": ["Capply", "Cextcall", "Calloc"],
+    "runtime": ["Craise", "Ccheckbound", "Copaque", "Cdls_get", "Cpoll", "C_RUNTIME"],
+    "structural": ["COPY", "ASSIGN", "BR", "SWITCH", "JUMP", "RET", "TUPLE", "RETURN_ADDR"],
+    "types": ["INT", "VAL", "ADDR", "FLOAT"],
+    "operand kinds": ["VAR_INT", "VAR_VAL", "VAR_ADDR", "VAR_FLOAT", "CONST_INT", "CONST_NATINT", "CONST_FLOAT", "SYM_FUNC", "SYM_DATA", "SYM_EXTERN"]
+  },
+  "status": {
+    "lambda": {},
+    "cmm": {"Cload_narrow": "unused: the Cload_narrow family did not merge (Cload_32s has >= 1000 triples), so no vector exists"}
+  }
+}

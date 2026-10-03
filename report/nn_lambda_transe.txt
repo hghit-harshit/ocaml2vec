@@ -1,0 +1,25 @@
+nearest neighbours (cosine), lambda
+  Paddint          Psubint 0.61, Pmulint 0.51, Pdivint 0.43, Parrayrefs 0.43, Pmakeblock 0.39
+  Psubint          Paddint 0.61, Pmulint 0.48, Parrayrefs 0.43, Pdivint 0.40, Pmakeblock 0.39
+  Pmulint          Paddint 0.51, Psubint 0.48, Pdivint 0.46, Parrayrefs 0.41, Plslint 0.30
+  Paddfloat        Pmulfloat 0.65, Psubfloat 0.52, Pdivfloat 0.49, Pfloatfield 0.44, Pmakeblock 0.32
+  Pmulfloat        Paddfloat 0.65, Psubfloat 0.64, Pdivfloat 0.53, Pfloatfield 0.47, Pnegfloat 0.36
+  Pintcomp         Psequand 0.43, Psequor 0.40, Lifthenelse 0.33, Paddint 0.29, Pstringrefs 0.28
+  Pfloatcomp       Psequand 0.36, Psequor 0.31, Pmulfloat 0.30, Psubfloat 0.29, Pabsfloat 0.28
+  Pmakeblock       Lapply_a2 0.63, Lapply_a4p 0.61, Lapply_a3 0.59, Pmakearray 0.59, Pfield 0.47
+  Pfield           Pmakeblock 0.47, Parrayrefs 0.39, Pmakearray 0.35, Lapply_a3 0.33, Lapply_a4p 0.31
+  Lapply_a1        Pmakeblock 0.46, Lapply_a2 0.39, Lapply_a3 0.36, Lapply_a4p 0.36, Paddint 0.35
+  Lfunction_a1     Pmakeblock 0.45, Llet 0.42, Pmakearray 0.39, Lfunction_a2 0.37, Lapply_a3 0.37
+  Lifthenelse      Lsequence 0.52, Llet 0.50, Lstaticcatch 0.50, Lapply_a4p 0.45, Pmakeblock 0.43
+  Pperform         CONST_BINT 0.20, GEN 0.16, CONST_STRING 0.16, INT 0.15, P_BSWAP 0.14
+  INT              ADDR 0.32, GEN 0.22, Preperform 0.21, Pisint 0.21, Pcompare_floats 0.20
+  FLOAT            CONST_FLOAT 0.32, GEN 0.31, Pabsfloat 0.25, BINT 0.25, Pnegfloat 0.23
+  VAR_INT          VAR_GEN 0.47, CONST_INT 0.44, MUTVAR 0.40, CONST_STRING 0.23, CONST_BLOCK 0.19
+  CONST_INT        VAR_INT 0.44, VAR_GEN 0.40, CONST_BLOCK 0.36, MUTVAR 0.33, CONST_STRING 0.31
+expected clusters: cosine, and rank of the partner among the probe's neighbours
+  Paddint ~ Psubint: cos 0.61, rank 1 / 126
+  Pmulint ~ Pdivint: cos 0.46, rank 3 / 126
+  Paddfloat ~ Pmulfloat: cos 0.65, rank 1 / 126
+  Paddfloat ~ Psubfloat: cos 0.52, rank 2 / 126
+  Pfield ~ Psetfield: cos 0.15, rank 36 / 126
+  Lapply_a1 ~ Lapply_a2: cos 0.39, rank 2 / 126

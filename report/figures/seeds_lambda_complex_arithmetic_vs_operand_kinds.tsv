@@ -1,0 +1,59 @@
+# lambda · complex · α = 0.75 · vocabulary sha256 071b3f660cb9 · not plotted: 4 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Praise is a control form here, Cmm's Craise is runtime; P_RAW_LOAD/P_RAW_STORE (merged) span strings, bytes and bigstrings
+# PCA explained variance: PC1 0.331911, PC2 0.154611
+entity	category	group	pc1	pc2	low_confidence	triples
+P_BSWAP	int arithmetic	int + float arithmetic	0.149107	-0.528674	True	375
+Paddint	int arithmetic	int + float arithmetic	-3.705820	-1.762634	False	23896
+Pandint	int arithmetic	int + float arithmetic	-2.243995	-1.443706	False	2888
+Pasrint	int arithmetic	int + float arithmetic	-1.387150	-1.224457	True	332
+Pdivint	int arithmetic	int + float arithmetic	-2.257319	-1.432192	False	1216
+Plslint	int arithmetic	int + float arithmetic	-2.241827	-1.325265	False	1984
+Plsrint	int arithmetic	int + float arithmetic	-2.386298	-1.452949	False	1524
+Pmodint	int arithmetic	int + float arithmetic	-1.686477	-1.522541	True	676
+Pmulint	int arithmetic	int + float arithmetic	-2.414093	-1.546209	False	2620
+Pnegint	int arithmetic	int + float arithmetic	-1.100959	-1.063291	True	339
+Poffsetint	int arithmetic	int + float arithmetic	-2.023296	-0.848238	False	3456
+Porint	int arithmetic	int + float arithmetic	-2.451559	-1.204861	False	1512
+Psubint	int arithmetic	int + float arithmetic	-3.426841	-1.657562	False	19920
+Pxorint	int arithmetic	int + float arithmetic	-0.831213	-0.787076	True	128
+Pabsfloat	float arithmetic	int + float arithmetic	-0.598305	2.676768	True	234
+Paddfloat	float arithmetic	int + float arithmetic	-2.124563	3.487552	False	3156
+Pdivfloat	float arithmetic	int + float arithmetic	-1.373450	3.606034	False	1620
+Pmulfloat	float arithmetic	int + float arithmetic	-1.801686	4.062856	False	4856
+Pnegfloat	float arithmetic	int + float arithmetic	-0.872824	3.204399	True	432
+Psubfloat	float arithmetic	int + float arithmetic	-1.723494	3.612683	False	2196
+CONST_BINT	operand kinds	operand kinds	3.446330	0.806320	True	504
+CONST_BLOCK	operand kinds	operand kinds	4.120749	0.441838	False	12743
+CONST_FLOAT	operand kinds	operand kinds	3.484841	-0.215202	False	2160
+CONST_INT	operand kinds	operand kinds	3.878993	-1.257200	False	103629
+CONST_STRING	operand kinds	operand kinds	4.458723	-0.305001	False	17254
+MUTVAR	operand kinds	operand kinds	3.124781	-0.580343	False	2939
+VAR_BINT	operand kinds	operand kinds	4.219360	0.604477	False	2556
+VAR_FLOAT	operand kinds	operand kinds	3.287223	-0.577377	False	4498
+VAR_GEN	operand kinds	operand kinds	2.987907	-0.976557	False	425741
+VAR_INT	operand kinds	operand kinds	3.493155	-0.791593	False	51217
+Pbbswap		merged into P_BSWAP				
+Pbigarraydim		merged into P_BIGARRAY				
+Pbigarrayref		merged into P_BIGARRAY				
+Pbigarrayset		merged into P_BIGARRAY				
+Pbigstring_load_16		merged into P_RAW_LOAD				
+Pbigstring_load_32		merged into P_RAW_LOAD				
+Pbigstring_load_64		merged into P_RAW_LOAD				
+Pbigstring_set_16		merged into P_RAW_STORE				
+Pbigstring_set_32		merged into P_RAW_STORE				
+Pbigstring_set_64		merged into P_RAW_STORE				
+Pbswap16		merged into P_BSWAP				
+Pbytes_load_16		merged into P_RAW_LOAD				
+Pbytes_load_32		merged into P_RAW_LOAD				
+Pbytes_load_64		merged into P_RAW_LOAD				
+Pbytes_set_16		merged into P_RAW_STORE				
+Pbytes_set_32		merged into P_RAW_STORE				
+Pbytes_set_64		merged into P_RAW_STORE				
+Pduprecord		fallback -> Pduparray				
+Pint_as_pointer		fallback -> Popaque				
+Ppoll		fallback -> Pccall				
+Psetfloatfield		fallback -> Psetfield				
+Psetglobal		impossible				
+Pstring_load_16		merged into P_RAW_LOAD				
+Pstring_load_32		merged into P_RAW_LOAD				
+Pstring_load_64		merged into P_RAW_LOAD				

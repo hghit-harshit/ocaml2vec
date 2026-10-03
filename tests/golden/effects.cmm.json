@@ -1,0 +1,718 @@
+{
+  "unit": "Effects",
+  "source": "effects.ml",
+  "digest": "0ce7774afc88782d58f55adef5de0f8c",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "name": "camlEffects.ask_281",
+      "loc": {"file":"effects.ml","l1":3,"c1":8,"l2":3,"c2":31},
+      "params": [{"var":"param/283","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [{"kind":"CONST_NATINT"},{"kind":"CONST_INT"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "t2",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"caml_perform"},
+                {"kind":"VAR_VAL","var":"t2"},
+                {"kind":"VAR_VAL","var":"t1"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t3"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"LOAD_IMMUT":1,"LOAD_NONATOMIC":1},
+      "n_cops": 3,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.run_raw_367",
+      "loc": {"file":"effects.ml","l1":12,"c1":12,"l2":12,"c2":42},
+      "params": [
+        {"var":"stack/369","type":"VAL"},
+        {"var":"f/370","type":"VAL"},
+        {"var":"x/371","type":"VAL"}
+      ],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"caml_runstack"},
+                {"kind":"VAR_VAL","var":"stack/369"},
+                {"kind":"VAR_VAL","var":"f/370"},
+                {"kind":"VAR_VAL","var":"x/371"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.resume_raw_372",
+      "loc": {"file":"effects.ml","l1":13,"c1":15,"l2":13,"c2":53},
+      "params": [
+        {"var":"stack/374","type":"VAL"},
+        {"var":"f/375","type":"VAL"},
+        {"var":"x/376","type":"VAL"},
+        {"var":"last/377","type":"VAL"}
+      ],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"caml_resume"},
+                {"kind":"VAR_VAL","var":"stack/374"},
+                {"kind":"VAR_VAL","var":"f/375"},
+                {"kind":"VAR_VAL","var":"x/376"},
+                {"kind":"VAR_VAL","var":"last/377"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.reperform_raw_378",
+      "loc": {"file":"effects.ml","l1":14,"c1":18,"l2":14,"c2":51},
+      "params": [
+        {"var":"eff/380","type":"VAL"},
+        {"var":"k/381","type":"VAL"},
+        {"var":"last/382","type":"VAL"}
+      ],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"caml_reperform"},
+                {"kind":"VAR_VAL","var":"eff/380"},
+                {"kind":"VAR_VAL","var":"k/381"},
+                {"kind":"VAR_VAL","var":"last/382"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.handled_383",
+      "loc": {"file":"effects.ml","l1":16,"c1":12,"l2":24,"c2":22},
+      "params": [{"var":"param/414","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"CONST_NATINT"},
+                {"kind":"SYM_DATA","sym":"camlEffects.8"},
+                {"kind":"SYM_DATA","sym":"camlEffects.9"},
+                {"kind":"SYM_DATA","sym":"camlEffects.10"}
+              ],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t2",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"camlStdlib__Effect.match_with_508"},
+                {"kind":"SYM_DATA","sym":"camlEffects.7"},
+                {"kind":"CONST_INT"},
+                {"kind":"VAR_VAL","var":"t1"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t2"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 2,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.fun_431",
+      "loc": {"file":"effects.ml","l1":17,"c1":25,"l2":17,"c2":52},
+      "params": [{"var":"param/400","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [{"kind":"CONST_NATINT"},{"kind":"CONST_INT"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "t2",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"caml_perform"},
+                {"kind":"VAR_VAL","var":"t2"},
+                {"kind":"VAR_VAL","var":"t1"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t4",
+              "operands": [{"kind":"CONST_NATINT"},{"kind":"CONST_INT"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "t5",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t6",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"caml_perform"},
+                {"kind":"VAR_VAL","var":"t5"},
+                {"kind":"VAR_VAL","var":"t4"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t7",
+              "operands": [{"kind":"VAR_VAL","var":"t6"},{"kind":"VAR_VAL","var":"t3"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t8",
+              "operands": [{"kind":"VAR_INT","var":"t7"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 8,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t8"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"LOAD_IMMUT":2,"LOAD_NONATOMIC":2},
+      "n_cops": 8,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.fun_433",
+      "loc": {"file":"effects.ml","l1":18,"c1":13,"l2":18,"c2":25},
+      "params": [{"var":"x/410","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"x/410"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 0,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.fun_435",
+      "loc": {"file":"effects.ml","l1":19,"c1":13,"l2":19,"c2":18},
+      "params": [{"var":"prim/425","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Craise",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"prim/425"}],
+              "side_effect": true,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.fun_437",
+      "loc": {"file":"effects.ml","l1":20,"c1":13,"l2":24,"c2":20},
+      "params": [{"var":"e/412","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Ccmpi",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_VAL","var":"e/412"},{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "BR",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t2"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [1,2],
+          "exn_succ": []
+        },
+        {
+          "id": 1,
+          "instrs": [
+            {
+              "id": 3,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [{"kind":"CONST_NATINT"},{"kind":"SYM_DATA","sym":"camlEffects.11"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t3"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        },
+        {
+          "id": 2,
+          "instrs": [
+            {
+              "id": 5,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"LOAD_IMMUT":1,"LOAD_NONATOMIC":1,"PRED_EQ":1},
+      "n_cops": 3,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.fun_439",
+      "loc": {"file":"effects.ml","l1":22,"c1":22,"l2":23,"c2":38},
+      "params": [{"var":"k/413","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"camlStdlib__Effect.continue_453"},
+                {"kind":"VAR_VAL","var":"k/413"},
+                {"kind":"CONST_INT"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlEffects.entry",
+      "loc": null,
+      "params": [],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cextcall",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "Ask/280",
+              "operands": [
+                {"kind":"CONST_NATINT"},
+                {"kind":"SYM_DATA","sym":"camlEffects.1"},
+                {"kind":"VAR_VAL","var":"t1"}
+              ],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"SYM_DATA","sym":"camlEffects"},
+                {"kind":"VAR_VAL","var":"Ask/280"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t2",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t2"},{"kind":"SYM_DATA","sym":"camlEffects.6"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t3",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t3"},{"kind":"SYM_DATA","sym":"camlEffects.5"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t4",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 8,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t4"},{"kind":"SYM_DATA","sym":"camlEffects.4"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 9,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t5",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 10,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t5"},{"kind":"SYM_DATA","sym":"camlEffects.3"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 11,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t6",
+              "operands": [{"kind":"SYM_DATA","sym":"camlEffects"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 12,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t6"},{"kind":"SYM_DATA","sym":"camlEffects.2"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 13,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"EXT:caml_fresh_oo_id":1,"EXT:caml_initialize":6,"NOALLOC":7},
+      "n_cops": 13,
+      "dead_cops": 0
+    }
+  ]
+}

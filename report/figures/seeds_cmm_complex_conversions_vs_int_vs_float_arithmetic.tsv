@@ -1,0 +1,38 @@
+# cmm · complex · α = 0.75 · vocabulary sha256 5903b481b78a · not plotted: 5 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Craise is runtime here, Lambda's Praise is a control form; Cload_narrow is unused (the family did not merge)
+# PCA explained variance: PC1 0.395374, PC2 0.126611
+entity	category	group	pc1	pc2	low_confidence	triples
+Caddi	int arithmetic	int arithmetic	-2.855192	1.562646	False	146622
+Cand	int arithmetic	int arithmetic	-3.150391	0.496111	False	116902
+Casr	int arithmetic	int arithmetic	-2.455095	1.083887	False	40928
+Cdivi	int arithmetic	int arithmetic	0.514654	-2.247181	True	735
+Clsl	int arithmetic	int arithmetic	-2.617602	0.469535	False	124835
+Clsr	int arithmetic	int arithmetic	-2.559516	-0.205841	False	57399
+Cmodi	int arithmetic	int arithmetic	0.611980	-2.365212	True	505
+Cmulhi	int arithmetic	int arithmetic	-0.016092	-2.580259	True	835
+Cmuli	int arithmetic	int arithmetic	-1.196310	-0.054660	False	4011
+Cor	int arithmetic	int arithmetic	-2.042190	-0.307298	False	22968
+Csubi	int arithmetic	int arithmetic	-2.470609	0.976424	False	63728
+Cxor	int arithmetic	int arithmetic	-1.444994	-0.879961	False	3796
+Cabsf	float arithmetic	float arithmetic	2.903618	-0.056594	True	366
+Caddf	float arithmetic	float arithmetic	2.729540	1.554258	False	4454
+Cdivf	float arithmetic	float arithmetic	2.749021	0.892855	False	2016
+Cmulf	float arithmetic	float arithmetic	2.453491	1.888131	False	6797
+Cnegf	float arithmetic	float arithmetic	2.750120	0.312790	True	576
+Csubf	float arithmetic	float arithmetic	2.863674	1.061112	False	2958
+Cfloatofint	conversions	conversions	1.726418	-1.158229	True	808
+Cintoffloat	conversions	conversions	1.505474	-0.442515	True	569
+Cdls_get		merged into C_RUNTIME				
+Cload_16s		fallback -> Cload_16u				
+Cload_byte_s		fallback -> Cload_byte_u				
+Cload_narrow		unused: the Cload_narrow family did not merge (Cload_32s has >= 1000 triples), so no vector exists				
+Cload_single		fallback -> Cload_double				
+Cpoll		merged into C_RUNTIME				
+Cstore_16s		merged into Cstore_narrow				
+Cstore_16u		merged into Cstore_narrow				
+Cstore_32s		merged into Cstore_narrow				
+Cstore_32u		merged into Cstore_narrow				
+Cstore_64		merged into Cstore_narrow				
+Cstore_single		fallback -> Cstore_double				
+RETURN_ADDR		impossible				
+TUPLE		fallback -> COPY				

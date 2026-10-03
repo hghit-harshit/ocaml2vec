@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ir2vec
+Version: 0.1.0
+Summary: IR2Vec-style embeddings for OCaml Lambda and Cmm
+Requires-Python: >=3.12
+Requires-Dist: numpy>=2
+Requires-Dist: matplotlib>=3.8
+Provides-Extra: test
+Requires-Dist: pytest>=8; extra == "test"

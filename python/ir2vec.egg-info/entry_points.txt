@@ -1,0 +1,2 @@
+[console_scripts]
+ir2vec = ir2vec.cli:main

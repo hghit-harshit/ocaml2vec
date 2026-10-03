@@ -1,0 +1,654 @@
+{
+  "unit": "Effects",
+  "source": "effects.ml",
+  "digest": "0ce7774afc88782d58f55adef5de0f8c",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "fid": "module_init",
+      "name": "Effects",
+      "kind": "module_init",
+      "stamp": null,
+      "loc": null,
+      "params": [],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":1,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":6,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 1,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":4,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pmakeblock",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","leaf":"CONST_STRING","def":null},
+            {"i":1,"role":"value","child":3,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Pccall",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"CONST_INT","def":null}]
+        },
+        {
+          "id": 4,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":5,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[2]}
+          ]
+        },
+        {"id":5,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 6,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":7,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":11,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 7,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":8,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":9,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 8,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"ask/281","kind":"VAR_GEN"}],
+          "func": "ask/281"
+        },
+        {
+          "id": 9,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":10,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[8]}
+          ]
+        },
+        {"id":10,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 11,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":12,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":16,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 12,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":13,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":14,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 13,
+          "op": "Lfunction_a3",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"run_raw/367","kind":"VAR_GEN"}],
+          "func": "run_raw/367"
+        },
+        {
+          "id": 14,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":15,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[13]}
+          ]
+        },
+        {"id":15,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 16,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":17,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":21,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 17,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":18,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":19,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 18,
+          "op": "Lfunction_a4p",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"resume_raw/372","kind":"VAR_GEN"}],
+          "func": "resume_raw/372"
+        },
+        {
+          "id": 19,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":20,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[18]}
+          ]
+        },
+        {"id":20,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 21,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":22,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":26,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 22,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":23,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":24,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 23,
+          "op": "Lfunction_a3",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"control","child":1,"func":"reperform_raw/378","kind":"VAR_GEN"}
+          ],
+          "func": "reperform_raw/378"
+        },
+        {
+          "id": 24,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":25,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[23]}
+          ]
+        },
+        {"id":25,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 26,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":27,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 27,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":28,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":29,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 28,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"handled/383","kind":"VAR_GEN"}],
+          "func": "handled/383"
+        },
+        {
+          "id": 29,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":30,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[28]}
+          ]
+        },
+        {"id":30,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"EXT:caml_fresh_oo_id":1,"IMMUT":1}
+    },
+    {
+      "fid": "ask/281",
+      "name": "ask",
+      "kind": "named",
+      "stamp": 281,
+      "loc": {"file":"effects.ml","l1":3,"c1":8,"l2":3,"c2":31},
+      "params": [{"name":"param","stamp":283,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Pperform",
+          "type": null,
+          "positions": [{"i":0,"role":"value","child":2,"kind":"VAR_GEN"}]
+        },
+        {
+          "id": 2,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":3,"kind":"VAR_GEN"}]
+        },
+        {"id":3,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"IMMUT":1,"RET_INT":1}
+    },
+    {
+      "fid": "run_raw/367",
+      "name": "run_raw",
+      "kind": "named",
+      "stamp": 367,
+      "loc": {"file":"effects.ml","l1":12,"c1":12,"l2":12,"c2":42},
+      "params": [
+        {"name":"stack","stamp":369,"type":"GEN"},
+        {"name":"f","stamp":370,"type":"GEN"},
+        {"name":"x","stamp":371,"type":"GEN"}
+      ],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a3",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Prunstack",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":2,"role":"value","leaf":"VAR_GEN","def":null}
+          ]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_3":1,"RET_GEN":1}
+    },
+    {
+      "fid": "resume_raw/372",
+      "name": "resume_raw",
+      "kind": "named",
+      "stamp": 372,
+      "loc": {"file":"effects.ml","l1":13,"c1":15,"l2":13,"c2":53},
+      "params": [
+        {"name":"stack","stamp":374,"type":"GEN"},
+        {"name":"f","stamp":375,"type":"GEN"},
+        {"name":"x","stamp":376,"type":"GEN"},
+        {"name":"last","stamp":377,"type":"GEN"}
+      ],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a4p",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Presume",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":2,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":3,"role":"value","leaf":"VAR_GEN","def":null}
+          ]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_4P":1,"RET_GEN":1}
+    },
+    {
+      "fid": "reperform_raw/378",
+      "name": "reperform_raw",
+      "kind": "named",
+      "stamp": 378,
+      "loc": {"file":"effects.ml","l1":14,"c1":18,"l2":14,"c2":51},
+      "params": [
+        {"name":"eff","stamp":380,"type":"GEN"},
+        {"name":"k","stamp":381,"type":"GEN"},
+        {"name":"last","stamp":382,"type":"GEN"}
+      ],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a3",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Preperform",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":2,"role":"value","leaf":"VAR_GEN","def":null}
+          ]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_3":1,"RET_GEN":1}
+    },
+    {
+      "fid": "handled/383",
+      "name": "handled",
+      "kind": "named",
+      "stamp": 383,
+      "loc": {"file":"effects.ml","l1":16,"c1":12,"l2":24,"c2":22},
+      "params": [{"name":"param","stamp":414,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lapply_a3",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":5,"kind":"VAR_INT"},
+            {"i":1,"role":"value","leaf":"CONST_INT","def":null},
+            {"i":2,"role":"value","child":6,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":3,"kind":"VAR_GEN"}],
+          "callee_of": 1
+        },
+        {
+          "id": 3,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":4,"kind":"VAR_GEN"}]
+        },
+        {"id":4,"op":"Pgetglobal_stdlib","type":"GEN","positions":[]},
+        {
+          "id": 5,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/0","kind":"VAR_INT"}],
+          "func": "anon/0"
+        },
+        {
+          "id": 6,
+          "op": "Pmakeblock",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":7,"kind":"VAR_INT"},
+            {"i":1,"role":"value","child":8,"kind":"VAR_GEN"},
+            {"i":2,"role":"value","child":9,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 7,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","leaf":"VAR_INT","def":null}],
+          "func": "anon/1"
+        },
+        {
+          "id": 8,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/2","kind":"VAR_GEN"}],
+          "func": "anon/2"
+        },
+        {
+          "id": 9,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/3","kind":"VAR_GEN"}],
+          "func": "anon/3"
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"CALL_STDLIB":1,"IMMUT":3,"RET_INT":1,"TAIL":1}
+    },
+    {
+      "fid": "anon/0",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"effects.ml","l1":17,"c1":25,"l2":17,"c2":52},
+      "params": [{"name":"param","stamp":400,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_INT"}],
+          "owner": "handled/383"
+        },
+        {
+          "id": 1,
+          "op": "Paddint",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","child":5,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"CONST_INT","def":null}]
+        },
+        {
+          "id": 3,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":4,"kind":"VAR_GEN"}],
+          "callee_of": 2
+        },
+        {"id":4,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 5,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"CONST_INT","def":null}]
+        },
+        {
+          "id": 6,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":7,"kind":"VAR_GEN"}],
+          "callee_of": 5
+        },
+        {"id":7,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"CALL_LOCAL":2,"IMMUT":2,"NONTAIL":2,"RET_INT":1}
+    },
+    {
+      "fid": "anon/1",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"effects.ml","l1":18,"c1":13,"l2":18,"c2":25},
+      "params": [{"name":"x","stamp":410,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","leaf":"VAR_INT","def":null}],
+          "owner": "handled/383"
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"RET_INT":1}
+    },
+    {
+      "fid": "anon/2",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"effects.ml","l1":19,"c1":13,"l2":19,"c2":18},
+      "params": [{"name":"prim","stamp":425,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "handled/383"
+        },
+        {
+          "id": 1,
+          "op": "Praise",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"RET_GEN":1}
+    },
+    {
+      "fid": "anon/3",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"effects.ml","l1":20,"c1":13,"l2":24,"c2":20},
+      "params": [{"name":"e","stamp":412,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "handled/383"
+        },
+        {
+          "id": 1,
+          "op": "Lifthenelse",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":5,"kind":"VAR_GEN"},
+            {"i":2,"role":"control","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pintcomp",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":1,"role":"value","child":3,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":4,"kind":"VAR_GEN"}]
+        },
+        {"id":4,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 5,
+          "op": "Pmakeblock",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":6,"kind":"VAR_INT"}]
+        },
+        {
+          "id": 6,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/4","kind":"VAR_GEN"}],
+          "func": "anon/4"
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"IMMUT":2,"PRED_EQ":1,"RET_GEN":1}
+    },
+    {
+      "fid": "anon/4",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"effects.ml","l1":22,"c1":22,"l2":23,"c2":38},
+      "params": [{"name":"k","stamp":413,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "anon/3"
+        },
+        {
+          "id": 1,
+          "op": "Lapply_a2",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":1,"role":"value","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":3,"kind":"VAR_GEN"}],
+          "callee_of": 1
+        },
+        {
+          "id": 3,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":4,"kind":"VAR_GEN"}]
+        },
+        {"id":4,"op":"Pgetglobal_stdlib","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"CALL_STDLIB":1,"IMMUT":2,"RET_INT":1,"TAIL":1}
+    }
+  ]
+}

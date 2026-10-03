@@ -1,0 +1,54 @@
+# lambda · complex · α = 0.75 · vocabulary sha256 071b3f660cb9 · not plotted: 4 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Praise is a control form here, Cmm's Craise is runtime; P_RAW_LOAD/P_RAW_STORE (merged) span strings, bytes and bigstrings
+# PCA explained variance: PC1 0.277501, PC2 0.176940
+entity	category	group	pc1	pc2	low_confidence	triples
+P_BSWAP	int arithmetic	int arithmetic	0.293476	-3.465410	True	375
+Paddint	int arithmetic	int arithmetic	2.440551	3.142168	False	23896
+Pandint	int arithmetic	int arithmetic	1.827568	0.381575	False	2888
+Pasrint	int arithmetic	int arithmetic	1.392030	-0.800076	True	332
+Pdivint	int arithmetic	int arithmetic	1.717648	1.172485	False	1216
+Plslint	int arithmetic	int arithmetic	1.662152	-0.026591	False	1984
+Plsrint	int arithmetic	int arithmetic	1.872006	0.117488	False	1524
+Pmodint	int arithmetic	int arithmetic	1.710286	0.497369	True	676
+Pmulint	int arithmetic	int arithmetic	1.877547	1.434939	False	2620
+Pnegint	int arithmetic	int arithmetic	1.061908	-1.202053	True	339
+Poffsetint	int arithmetic	int arithmetic	1.110128	0.113164	False	3456
+Porint	int arithmetic	int arithmetic	1.620667	0.500173	False	1512
+Psubint	int arithmetic	int arithmetic	2.238722	2.345121	False	19920
+Pxorint	int arithmetic	int arithmetic	0.856170	-1.238371	True	128
+Pabsfloat	float arithmetic	float arithmetic	-2.673550	-1.036652	True	234
+Paddfloat	float arithmetic	float arithmetic	-3.077764	2.021416	False	3156
+Pdivfloat	float arithmetic	float arithmetic	-3.336632	1.496340	False	1620
+Pmulfloat	float arithmetic	float arithmetic	-3.662487	1.789967	False	4856
+Pnegfloat	float arithmetic	float arithmetic	-3.163131	-0.394895	True	432
+Psubfloat	float arithmetic	float arithmetic	-3.281280	1.612384	False	2196
+Pbintofint	conversions	conversions	0.412811	-2.254364	True	417
+Pcvtbint	conversions	conversions	-0.944825	-2.722880	True	150
+Pfloatofint	conversions	conversions	-1.186724	-0.796502	True	564
+Pintofbint	conversions	conversions	0.076190	-1.775455	True	399
+Pintoffloat	conversions	conversions	-0.843466	-0.911339	True	258
+Pbbswap		merged into P_BSWAP				
+Pbigarraydim		merged into P_BIGARRAY				
+Pbigarrayref		merged into P_BIGARRAY				
+Pbigarrayset		merged into P_BIGARRAY				
+Pbigstring_load_16		merged into P_RAW_LOAD				
+Pbigstring_load_32		merged into P_RAW_LOAD				
+Pbigstring_load_64		merged into P_RAW_LOAD				
+Pbigstring_set_16		merged into P_RAW_STORE				
+Pbigstring_set_32		merged into P_RAW_STORE				
+Pbigstring_set_64		merged into P_RAW_STORE				
+Pbswap16		merged into P_BSWAP				
+Pbytes_load_16		merged into P_RAW_LOAD				
+Pbytes_load_32		merged into P_RAW_LOAD				
+Pbytes_load_64		merged into P_RAW_LOAD				
+Pbytes_set_16		merged into P_RAW_STORE				
+Pbytes_set_32		merged into P_RAW_STORE				
+Pbytes_set_64		merged into P_RAW_STORE				
+Pduprecord		fallback -> Pduparray				
+Pint_as_pointer		fallback -> Popaque				
+Ppoll		fallback -> Pccall				
+Psetfloatfield		fallback -> Psetfield				
+Psetglobal		impossible				
+Pstring_load_16		merged into P_RAW_LOAD				
+Pstring_load_32		merged into P_RAW_LOAD				
+Pstring_load_64		merged into P_RAW_LOAD				

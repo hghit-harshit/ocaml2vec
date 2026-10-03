@@ -1,0 +1,17 @@
+; Entity inventory generated from the pinned compiler's installed .mli files
+; (DECISIONS.md D0.18). `dune test` fails if the checked-in copy drifts;
+; `dune promote` refreshes it.
+
+(rule
+ (enabled_if (= %{ocaml_version} 5.5.1))
+ (deps
+  %{ocaml_where}/compiler-libs/lambda.mli
+  %{ocaml_where}/compiler-libs/cmm.mli)
+ (action
+  (with-stdout-to entities.5.5.1.json.gen
+   (run %{exe:../extractor/bin/ir2vec_extract.exe} entities))))
+
+(rule
+ (alias runtest)
+ (enabled_if (= %{ocaml_version} 5.5.1))
+ (action (diff entities.5.5.1.json entities.5.5.1.json.gen)))

@@ -1,0 +1,49 @@
+# lambda · transe · α = 0.75 · vocabulary sha256 da2af4277d3a · not plotted: 4 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Praise is a control form here, Cmm's Craise is runtime; P_RAW_LOAD/P_RAW_STORE (merged) span strings, bytes and bigstrings
+# PCA explained variance: PC1 0.183045, PC2 0.102257
+entity	category	group	pc1	pc2	low_confidence	triples
+P_BSWAP	int arithmetic	int arithmetic	-0.035734	0.149079	True	375
+Paddint	int arithmetic	int arithmetic	-0.365724	-0.356186	False	23896
+Pandint	int arithmetic	int arithmetic	-0.344341	0.325568	False	2888
+Pasrint	int arithmetic	int arithmetic	-0.250628	0.132364	True	332
+Pdivint	int arithmetic	int arithmetic	-0.226618	-0.554069	False	1216
+Plslint	int arithmetic	int arithmetic	-0.413405	0.262400	False	1984
+Plsrint	int arithmetic	int arithmetic	-0.306651	0.261834	False	1524
+Pmodint	int arithmetic	int arithmetic	-0.235579	-0.370636	True	676
+Pmulint	int arithmetic	int arithmetic	-0.318481	-0.453458	False	2620
+Pnegint	int arithmetic	int arithmetic	-0.221725	0.074447	True	339
+Poffsetint	int arithmetic	int arithmetic	0.010249	-0.065021	False	3456
+Porint	int arithmetic	int arithmetic	-0.276847	0.537142	False	1512
+Psubint	int arithmetic	int arithmetic	-0.281573	-0.370955	False	19920
+Pxorint	int arithmetic	int arithmetic	-0.167402	0.439635	True	128
+Pabsfloat	float arithmetic	float arithmetic	0.408091	0.078386	True	234
+Paddfloat	float arithmetic	float arithmetic	0.600733	-0.051927	False	3156
+Pdivfloat	float arithmetic	float arithmetic	0.620498	-0.064093	False	1620
+Pmulfloat	float arithmetic	float arithmetic	0.713302	0.006679	False	4856
+Pnegfloat	float arithmetic	float arithmetic	0.449919	-0.046760	True	432
+Psubfloat	float arithmetic	float arithmetic	0.641915	0.065572	False	2196
+Pbbswap		merged into P_BSWAP				
+Pbigarraydim		merged into P_BIGARRAY				
+Pbigarrayref		merged into P_BIGARRAY				
+Pbigarrayset		merged into P_BIGARRAY				
+Pbigstring_load_16		merged into P_RAW_LOAD				
+Pbigstring_load_32		merged into P_RAW_LOAD				
+Pbigstring_load_64		merged into P_RAW_LOAD				
+Pbigstring_set_16		merged into P_RAW_STORE				
+Pbigstring_set_32		merged into P_RAW_STORE				
+Pbigstring_set_64		merged into P_RAW_STORE				
+Pbswap16		merged into P_BSWAP				
+Pbytes_load_16		merged into P_RAW_LOAD				
+Pbytes_load_32		merged into P_RAW_LOAD				
+Pbytes_load_64		merged into P_RAW_LOAD				
+Pbytes_set_16		merged into P_RAW_STORE				
+Pbytes_set_32		merged into P_RAW_STORE				
+Pbytes_set_64		merged into P_RAW_STORE				
+Pduprecord		fallback -> Pduparray				
+Pint_as_pointer		fallback -> Popaque				
+Ppoll		fallback -> Pccall				
+Psetfloatfield		fallback -> Psetfield				
+Psetglobal		impossible				
+Pstring_load_16		merged into P_RAW_LOAD				
+Pstring_load_32		merged into P_RAW_LOAD				
+Pstring_load_64		merged into P_RAW_LOAD				

@@ -1,0 +1,25 @@
+nearest neighbours (cosine), lambda
+  Paddint          Psubint 0.86, Pmulint 0.75, Pdivint 0.72, Plsrint 0.68, Pandint 0.66
+  Psubint          Paddint 0.86, Pdivint 0.78, Pmulint 0.76, Plslint 0.70, Plsrint 0.69
+  Pmulint          Pdivint 0.89, Plslint 0.84, Pmodint 0.80, Plsrint 0.79, Pandint 0.78
+  Paddfloat        Psubfloat 0.92, Pmulfloat 0.92, Pdivfloat 0.87, Pnegfloat 0.81, Pabsfloat 0.74
+  Pmulfloat        Paddfloat 0.92, Psubfloat 0.91, Pdivfloat 0.90, Pnegfloat 0.82, Pabsfloat 0.73
+  Pintcomp         Pisint 0.64, Psubint 0.61, Pstringrefs 0.59, Paddint 0.57, Psequand 0.56
+  Pfloatcomp       Pbintcomp 0.76, Pcompare_floats 0.73, Pintoffloat 0.68, Paddfloat 0.68, Psubfloat 0.68
+  Pmakeblock       Lapply_a4p 0.62, Pmakearray 0.58, Lapply_a3 0.55, Lapply_a2 0.54, Llet 0.51
+  Pfield           Pmakeblock 0.47, Lapply_a1 0.47, Parrayrefs 0.39, Lfunction_a1 0.39, Llet 0.37
+  Lapply_a1        Lapply_a2 0.71, Lapply_a3 0.57, Lapply_a4p 0.53, Lfunction_a1 0.50, Pfield 0.47
+  Lfunction_a1     Lfunction_a2 0.78, Lfunction_a3 0.71, Lfunction_a4p 0.68, Lapply_a1 0.50, Llet 0.49
+  Lifthenelse      Lapply_a3 0.50, Lstaticcatch 0.48, Lapply_a2 0.46, Psetfield 0.44, Lsequence 0.43
+  Pperform         Pbytes_of_string 0.85, Patomic_load 0.84, Preperform 0.82, Pcompare_floats 0.78, Pcvtbint 0.78
+  INT              BINT 0.49, ADDR 0.47, FLOAT 0.46, GEN 0.43, Patomic_load 0.43
+  FLOAT            ADDR 0.64, BINT 0.62, Patomic_load 0.62, Pbytes_of_string 0.61, Pdls_get 0.58
+  VAR_INT          CONST_INT 0.64, MUTVAR 0.63, VAR_GEN 0.54, CONST_STRING 0.54, VAR_FLOAT 0.53
+  CONST_INT        CONST_STRING 0.64, VAR_INT 0.64, CONST_BLOCK 0.62, MUTVAR 0.50, CONST_FLOAT 0.46
+expected clusters: cosine, and rank of the partner among the probe's neighbours
+  Paddint ~ Psubint: cos 0.86, rank 1 / 126
+  Pmulint ~ Pdivint: cos 0.89, rank 1 / 126
+  Paddfloat ~ Pmulfloat: cos 0.92, rank 2 / 126
+  Paddfloat ~ Psubfloat: cos 0.92, rank 1 / 126
+  Pfield ~ Psetfield: cos 0.27, rank 20 / 126
+  Lapply_a1 ~ Lapply_a2: cos 0.71, rank 1 / 126

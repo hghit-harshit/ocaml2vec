@@ -1,0 +1,26 @@
+nearest neighbours (cosine), cmm
+  Caddi            Csubi 0.72, Casr 0.71, Cor 0.66, Clsr 0.64, Cand 0.63
+  Csubi            Caddi 0.72, Ccmpi 0.66, Clsr 0.66, Cmuli 0.64, Clsl 0.61
+  Cmuli            Cxor 0.77, Cmulhi 0.75, Cmodi 0.74, Cdivi 0.74, Cor 0.70
+  Caddf            Cdivf 0.93, Csubf 0.93, Cmulf 0.93, Cnegf 0.88, Cabsf 0.87
+  Cmulf            Csubf 0.93, Caddf 0.93, Cdivf 0.92, Cnegf 0.85, Cabsf 0.85
+  Ccmpi            Cand 0.75, Csubi 0.66, Clsl 0.62, Caddi 0.60, Clsr 0.59
+  Ccmpf            Cintoffloat 0.85, Cdivf 0.75, Cabsf 0.75, Caddf 0.75, Csubf 0.74
+  Capply           Calloc 0.66, Cextcall 0.49, Cload_word_val 0.48, Caddi 0.44, Caddv 0.42
+  Cextcall         Cload_word_val 0.57, Cload_double 0.53, Cstore_word_val 0.52, Capply 0.49, Cload_word_int 0.49
+  Cload_word_val   Cload_word_int 0.61, Cextcall 0.57, Caddv 0.55, Cstore_word_val 0.51, Cload_double 0.51
+  Cstore_word_val  Cstore_word_int 0.82, Cstore_byte_u 0.74, Cstore_narrow 0.73, Cstore_double 0.65, Cload_32s 0.60
+  BR               SWITCH 0.74, Cfloatofint 0.50, Cmodi 0.48, Cdivi 0.45, Craise 0.43
+  JUMP             Craise 0.58, RET 0.57, SWITCH 0.55, BR 0.40, Ccmpi 0.39
+  RET              Craise 0.67, JUMP 0.57, Ccmpi 0.53, Cand 0.53, COPY 0.52
+  INT              C_RUNTIME 0.59, Cstore_byte_s 0.57, CONST_FLOAT 0.52, Cabsf 0.51, Cmulhi 0.49
+  VAL              Cstore_byte_s 0.52, C_RUNTIME 0.51, FLOAT 0.51, Cmodi 0.47, Cabsf 0.43
+  VAR_INT          CONST_INT 0.57, VAR_VAL 0.50, SYM_EXTERN 0.46, SYM_FUNC 0.45, SYM_DATA 0.42
+  SYM_FUNC         SYM_EXTERN 0.76, Cstore_byte_s 0.57, CONST_FLOAT 0.56, C_RUNTIME 0.55, VAR_FLOAT 0.53
+expected clusters: cosine, and rank of the partner among the probe's neighbours
+  Caddf ~ Cmulf: cos 0.93, rank 3 / 65
+  Caddi ~ Csubi: cos 0.72, rank 1 / 65
+  Caddf ~ Csubf: cos 0.93, rank 2 / 65
+  Cload_word_val ~ Cload_word_int: cos 0.61, rank 1 / 65
+  Ccmpi ~ Ccmpa: cos 0.56, rank 7 / 65
+  BR ~ SWITCH: cos 0.74, rank 1 / 65

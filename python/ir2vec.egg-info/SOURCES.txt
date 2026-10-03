@@ -1,0 +1,15 @@
+pyproject.toml
+ir2vec/__init__.py
+ir2vec/cli.py
+ir2vec/config.py
+ir2vec/corpus.py
+ir2vec/inventory.py
+ir2vec/metrics.py
+ir2vec/stats.py
+ir2vec/triples.py
+ir2vec.egg-info/PKG-INFO
+ir2vec.egg-info/SOURCES.txt
+ir2vec.egg-info/dependency_links.txt
+ir2vec.egg-info/entry_points.txt
+ir2vec.egg-info/requires.txt
+ir2vec.egg-info/top_level.txt

@@ -1,0 +1,49 @@
+(executable
+ (name dump_counts)
+ (modules dump_counts)
+ (libraries ir2vec compiler-libs.optcomp)
+ (flags (:standard -w +8 -warn-error +8)))
+
+(rule
+ (alias runtest)
+ (deps
+  phase0_dumps.sh
+  %{exe:dump_counts.exe}
+  %{exe:../bin/ir2vec_extract.exe}
+  (glob_files %{workspace_root}/tests/fixtures/*.ml))
+ (action
+  (run bash %{dep:phase0_dumps.sh} %{exe:dump_counts.exe}
+   %{workspace_root}/tests/fixtures %{exe:../bin/ir2vec_extract.exe})))
+
+(test
+ (name inventory_test)
+ (modules inventory_test)
+ (libraries ir2vec compiler-libs.optcomp)
+ (flags (:standard -w +8 -warn-error +8)))
+
+(rule
+ (alias runtest)
+ (deps
+  phase1_lambda.sh
+  extract_fixture.sh
+  %{exe:../bin/ir2vec_extract.exe}
+  (glob_files %{workspace_root}/tests/fixtures/*.ml))
+ (action
+  (run bash %{dep:phase1_lambda.sh} %{exe:../bin/ir2vec_extract.exe}
+   %{workspace_root}/tests/fixtures)))
+
+(rule
+ (alias runtest)
+ (deps phase1_exhaustive.sh ../src/entities.ml ../src/lambda_ent.ml ../src/cmm_ent.ml)
+ (action (run bash %{dep:phase1_exhaustive.sh} ../src)))
+
+(rule
+ (alias runtest)
+ (deps
+  phase2_cmm.sh
+  %{exe:../bin/ir2vec_extract.exe}
+  %{exe:dump_counts.exe}
+  (glob_files %{workspace_root}/tests/fixtures/*.ml))
+ (action
+  (run bash %{dep:phase2_cmm.sh} %{exe:../bin/ir2vec_extract.exe}
+   %{exe:dump_counts.exe} %{workspace_root}/tests/fixtures)))

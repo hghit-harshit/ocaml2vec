@@ -1,0 +1,413 @@
+{
+  "unit": "Exn",
+  "source": "exn.ml",
+  "digest": "5d3470ba6b2d964802ff205e261a0fb6",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "fid": "module_init",
+      "name": "Exn",
+      "kind": "module_init",
+      "stamp": null,
+      "loc": null,
+      "params": [],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":1,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":6,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 1,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":4,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pmakeblock",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","leaf":"CONST_STRING","def":null},
+            {"i":1,"role":"value","child":3,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Pccall",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"CONST_INT","def":null}]
+        },
+        {
+          "id": 4,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":5,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[2]}
+          ]
+        },
+        {"id":5,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 6,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":7,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":11,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 7,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":8,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":9,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 8,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"check/275","kind":"VAR_GEN"}],
+          "func": "check/275"
+        },
+        {
+          "id": 9,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":10,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[8]}
+          ]
+        },
+        {"id":10,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 11,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":12,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":16,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 12,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":13,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":14,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 13,
+          "op": "Lfunction_a2",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"safe_div/278","kind":"VAR_GEN"}],
+          "func": "safe_div/278"
+        },
+        {
+          "id": 14,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":15,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[13]}
+          ]
+        },
+        {"id":15,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 16,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":17,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 17,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":18,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":19,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 18,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"classify/282","kind":"VAR_GEN"}],
+          "func": "classify/282"
+        },
+        {
+          "id": 19,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":20,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[18]}
+          ]
+        },
+        {"id":20,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"EXT:caml_fresh_oo_id":1,"IMMUT":1}
+    },
+    {
+      "fid": "check/275",
+      "name": "check",
+      "kind": "named",
+      "stamp": 275,
+      "loc": {"file":"exn.ml","l1":3,"c1":10,"l2":3,"c2":58},
+      "params": [{"name":"n","stamp":277,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lifthenelse",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":3,"kind":"VAR_GEN"},
+            {"i":2,"role":"control","leaf":"VAR_INT","def":null}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pintcomp",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_INT","def":null},
+            {"i":1,"role":"value","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Praise",
+          "type": null,
+          "positions": [{"i":0,"role":"value","child":4,"kind":"VAR_GEN"}]
+        },
+        {
+          "id": 4,
+          "op": "Pmakeblock",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":5,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_INT","def":null}
+          ]
+        },
+        {
+          "id": 5,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":6,"kind":"VAR_GEN"}]
+        },
+        {"id":6,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"IMMUT":2,"PRED_LE":1,"RET_INT":1}
+    },
+    {
+      "fid": "safe_div/278",
+      "name": "safe_div",
+      "kind": "named",
+      "stamp": 278,
+      "loc": {"file":"exn.ml","l1":5,"c1":13,"l2":5,"c2":55},
+      "params": [{"name":"a","stamp":280,"type":"INT"},{"name":"b","stamp":281,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a2",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Ltrywith",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":2,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":3,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pdivint",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_INT","def":null},
+            {"i":1,"role":"value","leaf":"VAR_INT","def":null}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Lifthenelse",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":4,"kind":"VAR_INT"},
+            {"i":1,"role":"control","leaf":"CONST_INT","def":null},
+            {"i":2,"role":"control","child":7,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 4,
+          "op": "Pintcomp",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_GEN","def":null},
+            {"i":1,"role":"value","child":5,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 5,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":6,"kind":"VAR_GEN"}]
+        },
+        {"id":6,"op":"Pgetglobal_stdlib","type":"GEN","positions":[]},
+        {
+          "id": 7,
+          "op": "Praise",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_2":1,"IMMUT":1,"PRED_EQ":1,"RET_INT":1}
+    },
+    {
+      "fid": "classify/282",
+      "name": "classify",
+      "kind": "named",
+      "stamp": 282,
+      "loc": {"file":"exn.ml","l1":7,"c1":13,"l2":10,"c2":34},
+      "params": [{"name":"n","stamp":284,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lstaticcatch",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":2,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":15,"kind":"VAR_INT"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Ltrywith",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":3,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":7,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Lstaticraise",
+          "type": null,
+          "positions": [{"i":0,"role":"value","child":4,"kind":"VAR_GEN"}]
+        },
+        {
+          "id": 4,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"VAR_INT","def":null}]
+        },
+        {
+          "id": 5,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":6,"kind":"VAR_GEN"}],
+          "callee_of": 4
+        },
+        {"id":6,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 7,
+          "op": "Lifthenelse",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":8,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":12,"kind":"VAR_INT"},
+            {"i":2,"role":"control","child":14,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 8,
+          "op": "Pintcomp",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","child":9,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","child":10,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 9,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        },
+        {
+          "id": 10,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":11,"kind":"VAR_GEN"}]
+        },
+        {"id":11,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 12,
+          "op": "Pnegint",
+          "type": "INT",
+          "positions": [{"i":0,"role":"value","child":13,"kind":"VAR_GEN"}]
+        },
+        {
+          "id": 13,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        },
+        {
+          "id": 14,
+          "op": "Praise",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        },
+        {
+          "id": 15,
+          "op": "Pmulint",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_INT","def":null},
+            {"i":1,"role":"value","leaf":"CONST_INT","def":null}
+          ]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"CALL_LOCAL":1,"IMMUT":4,"NONTAIL":1,"PRED_EQ":1,"RET_INT":1}
+    }
+  ]
+}

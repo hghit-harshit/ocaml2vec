@@ -1,0 +1,301 @@
+{
+  "unit": "Counter",
+  "source": "counter.ml",
+  "digest": "edfeca31f16cf90423203a406845cc1f",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "name": "camlCounter.count_274",
+      "loc": {"file":"counter.ml","l1":1,"c1":10,"l2":6,"c2":4},
+      "params": [{"var":"n/276","type":"INT"}],
+      "mutable_vars": ["r/277","i/278"],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "COPY",
+              "type": "INT",
+              "dst": "r/277",
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "COPY",
+              "type": "INT",
+              "dst": "i/278",
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Ccmpi",
+              "type": "INT",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_INT","var":"i/278"},{"kind":"VAR_INT","var":"n/276"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "BR",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [2,3],
+          "exn_succ": []
+        },
+        {
+          "id": 1,
+          "instrs": [
+            {
+              "id": 17,
+              "op": "JUMP",
+              "type": null,
+              "dst": null,
+              "operands": [],
+              "side_effect": false,
+              "terminator": true,
+              "synthetic": true
+            }
+          ],
+          "succ": [8],
+          "exn_succ": []
+        },
+        {
+          "id": 2,
+          "instrs": [
+            {
+              "id": 4,
+              "op": "JUMP",
+              "type": null,
+              "dst": null,
+              "operands": [],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [1],
+          "exn_succ": []
+        },
+        {
+          "id": 3,
+          "instrs": [
+            {
+              "id": 5,
+              "op": "JUMP",
+              "type": null,
+              "dst": null,
+              "operands": [],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [4],
+          "exn_succ": []
+        },
+        {
+          "id": 4,
+          "instrs": [
+            {
+              "id": 6,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_INT","var":"r/277"},{"kind":"VAR_INT","var":"i/278"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t3",
+              "operands": [{"kind":"VAR_INT","var":"t2"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 8,
+              "op": "ASSIGN",
+              "type": "INT",
+              "dst": "r/277",
+              "operands": [{"kind":"VAR_INT","var":"t3"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 9,
+              "op": "COPY",
+              "type": "INT",
+              "dst": "*id_prev*/281",
+              "operands": [{"kind":"VAR_INT","var":"i/278"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 10,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_INT","var":"i/278"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 11,
+              "op": "ASSIGN",
+              "type": "INT",
+              "dst": "i/278",
+              "operands": [{"kind":"VAR_INT","var":"t4"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 12,
+              "op": "Ccmpi",
+              "type": "INT",
+              "dst": "t5",
+              "operands": [
+                {"kind":"VAR_INT","var":"*id_prev*/281"},
+                {"kind":"VAR_INT","var":"n/276"}
+              ],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 13,
+              "op": "BR",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t5"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [5,6],
+          "exn_succ": []
+        },
+        {
+          "id": 5,
+          "instrs": [
+            {
+              "id": 14,
+              "op": "JUMP",
+              "type": null,
+              "dst": null,
+              "operands": [],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [1],
+          "exn_succ": []
+        },
+        {
+          "id": 6,
+          "instrs": [
+            {
+              "id": 15,
+              "op": "JUMP",
+              "type": null,
+              "dst": null,
+              "operands": [],
+              "side_effect": false,
+              "terminator": true,
+              "synthetic": true
+            }
+          ],
+          "succ": [7],
+          "exn_succ": []
+        },
+        {
+          "id": 7,
+          "instrs": [
+            {
+              "id": 16,
+              "op": "JUMP",
+              "type": null,
+              "dst": null,
+              "operands": [],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [4],
+          "exn_succ": []
+        },
+        {
+          "id": 8,
+          "instrs": [
+            {
+              "id": 18,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"r/277"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"PRED_EQ":1,"PRED_GT":1},
+      "n_cops": 5,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlCounter.entry",
+      "loc": null,
+      "params": [],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"SYM_DATA","sym":"camlCounter"},
+                {"kind":"SYM_DATA","sym":"camlCounter.1"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"EXT:caml_initialize":1,"NOALLOC":1},
+      "n_cops": 1,
+      "dead_cops": 0
+    }
+  ]
+}

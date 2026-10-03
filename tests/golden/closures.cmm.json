@@ -1,0 +1,544 @@
+{
+  "unit": "Closures",
+  "source": "closures.ml",
+  "digest": "8e0b775184eee685c3f73056077bf90b",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "name": "camlClosures.make_adder_274",
+      "loc": {"file":"closures.ml","l1":1,"c1":15,"l2":1,"c2":33},
+      "params": [{"var":"k/276","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"CONST_NATINT"},
+                {"kind":"SYM_FUNC","sym":"camlClosures.fun_368"},
+                {"kind":"CONST_NATINT"},
+                {"kind":"VAR_INT","var":"k/276"}
+              ],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlClosures.fun_368",
+      "loc": {"file":"closures.ml","l1":1,"c1":19,"l2":1,"c2":33},
+      "params": [{"var":"x/277","type":"INT"},{"var":"env/370","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_VAL","var":"env/370"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_ADDR","var":"t1"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t3",
+              "operands": [{"kind":"VAR_INT","var":"x/277"},{"kind":"VAR_VAL","var":"t2"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_INT","var":"t3"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t4"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"LOAD_IMMUT":1,"LOAD_NONATOMIC":1},
+      "n_cops": 4,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlClosures.compose_278",
+      "loc": {"file":"closures.ml","l1":3,"c1":12,"l2":3,"c2":34},
+      "params": [{"var":"f/280","type":"VAL"},{"var":"g/281","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"CONST_NATINT"},
+                {"kind":"SYM_FUNC","sym":"camlClosures.fun_372"},
+                {"kind":"CONST_NATINT"},
+                {"kind":"VAR_VAL","var":"f/280"},
+                {"kind":"VAR_VAL","var":"g/281"}
+              ],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 1,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlClosures.fun_372",
+      "loc": {"file":"closures.ml","l1":3,"c1":18,"l2":3,"c2":34},
+      "params": [{"var":"x/282","type":"VAL"},{"var":"env/375","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_VAL","var":"env/375"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "fun/382",
+              "operands": [{"kind":"VAR_ADDR","var":"t1"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Cload_word_int",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_VAL","var":"fun/382"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "arg/376",
+              "operands": [
+                {"kind":"VAR_INT","var":"t2"},
+                {"kind":"VAR_VAL","var":"x/282"},
+                {"kind":"VAR_VAL","var":"fun/382"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t3",
+              "operands": [{"kind":"VAR_VAL","var":"env/375"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "fun/383",
+              "operands": [{"kind":"VAR_ADDR","var":"t3"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "Cload_word_int",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_VAL","var":"fun/383"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t5",
+              "operands": [
+                {"kind":"VAR_INT","var":"t4"},
+                {"kind":"VAR_VAL","var":"arg/376"},
+                {"kind":"VAR_VAL","var":"fun/383"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 8,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t5"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"LOAD_IMMUT":2,"LOAD_MUT":2,"LOAD_NONATOMIC":4},
+      "n_cops": 8,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlClosures.fun_378",
+      "loc": {"file":"closures.ml","l1":5,"c1":34,"l2":5,"c2":58},
+      "params": [
+        {"var":"acc/360","type":"INT"},
+        {"var":"x/361","type":"VAL"},
+        {"var":"env/380","type":"VAL"}
+      ],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_VAL","var":"env/380"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cload_word_val",
+              "type": "VAL",
+              "dst": "fun/381",
+              "operands": [{"kind":"VAR_ADDR","var":"t1"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Cload_word_int",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_VAL","var":"fun/381"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"VAR_INT","var":"t2"},
+                {"kind":"VAR_VAL","var":"x/361"},
+                {"kind":"VAR_VAL","var":"fun/381"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_INT","var":"acc/360"},{"kind":"VAR_VAL","var":"t3"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t5",
+              "operands": [{"kind":"VAR_INT","var":"t4"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t5"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"LOAD_IMMUT":1,"LOAD_MUT":1,"LOAD_NONATOMIC":2},
+      "n_cops": 6,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlClosures.sum_with_283",
+      "loc": {"file":"closures.ml","l1":5,"c1":13,"l2":5,"c2":62},
+      "params": [{"var":"f/285","type":"VAL"},{"var":"l/286","type":"VAL"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Calloc",
+              "type": "VAL",
+              "dst": "t1",
+              "operands": [
+                {"kind":"CONST_NATINT"},
+                {"kind":"SYM_EXTERN","sym":"caml_curry2"},
+                {"kind":"CONST_NATINT"},
+                {"kind":"SYM_FUNC","sym":"camlClosures.fun_378"},
+                {"kind":"VAR_VAL","var":"f/285"}
+              ],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t2",
+              "operands": [
+                {"kind":"SYM_EXTERN","sym":"camlStdlib__List.fold_left_387"},
+                {"kind":"VAR_VAL","var":"t1"},
+                {"kind":"CONST_INT"},
+                {"kind":"VAR_VAL","var":"l/286"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_VAL","var":"t2"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 2,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlClosures.entry",
+      "loc": null,
+      "params": [],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"SYM_DATA","sym":"camlClosures"},
+                {"kind":"SYM_DATA","sym":"camlClosures.6"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t1",
+              "operands": [{"kind":"SYM_DATA","sym":"camlClosures"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"VAR_ADDR","var":"t1"},
+                {"kind":"SYM_DATA","sym":"camlClosures.5"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t2",
+              "operands": [{"kind":"SYM_DATA","sym":"camlClosures"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"VAR_ADDR","var":"t2"},
+                {"kind":"SYM_DATA","sym":"camlClosures.4"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"SYM_FUNC","sym":"camlClosures.make_adder_274"},
+                {"kind":"CONST_INT"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "total/362",
+              "operands": [
+                {"kind":"SYM_FUNC","sym":"camlClosures.sum_with_283"},
+                {"kind":"VAR_VAL","var":"t3"},
+                {"kind":"SYM_DATA","sym":"camlClosures.3"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t4",
+              "operands": [{"kind":"SYM_DATA","sym":"camlClosures"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 8,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t4"},{"kind":"VAR_VAL","var":"total/362"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 9,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"EXT:caml_initialize":4,"NOALLOC":4},
+      "n_cops": 9,
+      "dead_cops": 0
+    }
+  ]
+}

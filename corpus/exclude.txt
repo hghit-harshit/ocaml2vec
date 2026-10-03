@@ -1,0 +1,2 @@
+# Packages reserved as future evaluation benchmarks: never built into the
+# training corpus, even if listed in packages.txt. One opam package per line.

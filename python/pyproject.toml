@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ir2vec"
+version = "0.1.0"
+description = "IR2Vec-style embeddings for OCaml Lambda and Cmm"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+ir2vec = "ir2vec.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ir2vec*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

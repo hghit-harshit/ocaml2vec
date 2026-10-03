@@ -1,0 +1,373 @@
+{
+  "unit": "Closures",
+  "source": "closures.ml",
+  "digest": "8e0b775184eee685c3f73056077bf90b",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "fid": "module_init",
+      "name": "Closures",
+      "kind": "module_init",
+      "stamp": null,
+      "loc": null,
+      "params": [],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":1,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":5,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 1,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":3,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"make_adder/274","kind":"VAR_INT"}],
+          "func": "make_adder/274"
+        },
+        {
+          "id": 3,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":4,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[2]}
+          ]
+        },
+        {"id":4,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 5,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":6,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":10,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 6,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":7,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":8,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 7,
+          "op": "Lfunction_a2",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"compose/278","kind":"VAR_GEN"}],
+          "func": "compose/278"
+        },
+        {
+          "id": 8,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":9,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[7]}
+          ]
+        },
+        {"id":9,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 10,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":11,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":15,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 11,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":12,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":13,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 12,
+          "op": "Lfunction_a2",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"sum_with/283","kind":"VAR_GEN"}],
+          "func": "sum_with/283"
+        },
+        {
+          "id": 13,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":14,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[12]}
+          ]
+        },
+        {"id":14,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 15,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":16,"kind":"VAR_INT"},
+            {"i":1,"role":"control","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 16,
+          "op": "Llet",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","child":17,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","child":23,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 17,
+          "op": "Lapply_a2",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":20,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"CONST_BLOCK","def":null}
+          ]
+        },
+        {
+          "id": 18,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":19,"kind":"VAR_GEN"}],
+          "callee_of": 17
+        },
+        {"id":19,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 20,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"CONST_INT","def":null}]
+        },
+        {
+          "id": 21,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":22,"kind":"VAR_GEN"}],
+          "callee_of": 20
+        },
+        {"id":22,"op":"Pgetglobal_self","type":"GEN","positions":[]},
+        {
+          "id": 23,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":24,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_INT","def":[17]}
+          ]
+        },
+        {"id":24,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {"CALL_LOCAL":2,"IMMUT":2,"NONTAIL":2}
+    },
+    {
+      "fid": "make_adder/274",
+      "name": "make_adder",
+      "kind": "named",
+      "stamp": 274,
+      "loc": {"file":"closures.ml","l1":1,"c1":15,"l2":1,"c2":33},
+      "params": [{"name":"k","stamp":276,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_INT"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/0","kind":"VAR_INT"}],
+          "func": "anon/0"
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"RET_GEN":1}
+    },
+    {
+      "fid": "anon/0",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"closures.ml","l1":1,"c1":19,"l2":1,"c2":33},
+      "params": [{"name":"x","stamp":277,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_INT"}],
+          "owner": "make_adder/274"
+        },
+        {
+          "id": 1,
+          "op": "Paddint",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_INT","def":null},
+            {"i":1,"role":"value","leaf":"VAR_INT","def":null}
+          ]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"RET_INT":1}
+    },
+    {
+      "fid": "compose/278",
+      "name": "compose",
+      "kind": "named",
+      "stamp": 278,
+      "loc": {"file":"closures.ml","l1":3,"c1":12,"l2":3,"c2":34},
+      "params": [{"name":"f","stamp":280,"type":"GEN"},{"name":"g","stamp":281,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a2",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/1","kind":"VAR_GEN"}],
+          "func": "anon/1"
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_2":1,"RET_GEN":1}
+    },
+    {
+      "fid": "anon/1",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"closures.ml","l1":3,"c1":18,"l2":3,"c2":34},
+      "params": [{"name":"x","stamp":282,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "compose/278"
+        },
+        {
+          "id": 1,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","child":2,"kind":"VAR_GEN"}]
+        },
+        {
+          "id": 2,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"CALL_DYNAMIC":2,"NONTAIL":1,"RET_GEN":1,"TAIL":1}
+    },
+    {
+      "fid": "sum_with/283",
+      "name": "sum_with",
+      "kind": "named",
+      "stamp": 283,
+      "loc": {"file":"closures.ml","l1":5,"c1":13,"l2":5,"c2":62},
+      "params": [{"name":"f","stamp":285,"type":"GEN"},{"name":"l","stamp":286,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a2",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_GEN"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lapply_a3",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":4,"kind":"VAR_INT"},
+            {"i":1,"role":"value","leaf":"CONST_INT","def":null},
+            {"i":2,"role":"value","leaf":"VAR_GEN","def":null}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Pfield",
+          "type": "GEN",
+          "positions": [{"i":0,"role":"value","child":3,"kind":"VAR_GEN"}],
+          "callee_of": 1
+        },
+        {"id":3,"op":"Pgetglobal_stdlib","type":"GEN","positions":[]},
+        {
+          "id": 4,
+          "op": "Lfunction_a2",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"anon/2","kind":"VAR_INT"}],
+          "func": "anon/2"
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_2":1,"CALL_STDLIB":1,"IMMUT":1,"RET_INT":1,"TAIL":1}
+    },
+    {
+      "fid": "anon/2",
+      "name": "",
+      "kind": "anonymous",
+      "stamp": null,
+      "loc": {"file":"closures.ml","l1":5,"c1":34,"l2":5,"c2":58},
+      "params": [{"name":"acc","stamp":360,"type":"INT"},{"name":"x","stamp":361,"type":"GEN"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a2",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_INT"}],
+          "owner": "sum_with/283"
+        },
+        {
+          "id": 1,
+          "op": "Paddint",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"VAR_INT","def":null},
+            {"i":1,"role":"value","child":2,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Lapply_a1",
+          "type": null,
+          "positions": [{"i":0,"role":"value","leaf":"VAR_GEN","def":null}]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_2":1,"CALL_DYNAMIC":1,"NONTAIL":1,"RET_INT":1}
+    }
+  ]
+}

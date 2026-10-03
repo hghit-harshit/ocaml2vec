@@ -1,0 +1,65 @@
+lambda/complex: 2690094 triples, 127 entities, 12 relations, dim 128
+  epoch   1  loss 1.06529  (11.2s)
+  epoch   2  loss 0.60309  (10.1s)
+  epoch   3  loss 0.44134  (10.4s)
+  epoch   4  loss 0.39667  (10.0s)
+  epoch   5  loss 0.38213  (9.7s)
+  epoch   6  loss 0.37661  (10.5s)
+  epoch   7  loss 0.37137  (10.7s)
+  epoch   8  loss 0.36949  (10.0s)
+  epoch   9  loss 0.36846  (13.1s)
+  epoch  10  loss 0.36643  (11.6s)
+  epoch  11  loss 0.36467  (10.8s)
+  epoch  12  loss 0.36504  (12.0s)
+  epoch  13  loss 0.36537  (10.7s)
+  epoch  14  loss 0.36358  (10.1s)
+  epoch  15  loss 0.36269  (13.0s)
+  epoch  16  loss 0.36192  (11.8s)
+  epoch  17  loss 0.36130  (12.5s)
+  epoch  18  loss 0.36143  (12.7s)
+  epoch  19  loss 0.36098  (11.4s)
+  epoch  20  loss 0.36119  (11.6s)
+  epoch  21  loss 0.36109  (11.3s)
+  epoch  22  loss 0.36092  (12.2s)
+  epoch  23  loss 0.36019  (13.2s)
+  epoch  24  loss 0.36078  (14.1s)
+  epoch  25  loss 0.36011  (10.7s)
+  epoch  26  loss 0.35981  (10.7s)
+  epoch  27  loss 0.36041  (9.9s)
+  epoch  28  loss 0.36000  (10.4s)
+  epoch  29  loss 0.35949  (10.6s)
+  epoch  30  loss 0.36008  (11.0s)
+  epoch  31  loss 0.35933  (10.6s)
+  epoch  32  loss 0.35977  (11.1s)
+  epoch  33  loss 0.35991  (10.8s)
+  epoch  34  loss 0.35946  (11.0s)
+  epoch  35  loss 0.35937  (10.7s)
+  epoch  36  loss 0.36012  (10.2s)
+  loss plateau: no relative gain > 0.001 in 5 epochs
+alpha 0.75, 36 epochs: valid MRR 0.9572 hits@1 0.9397 hits@10 0.9899 (n=1983); novel MRR 0.2770 hits@10 0.5417 (n=24)
+nearest neighbours (cosine), lambda
+  Paddint          Psubint 0.84, Pdivint 0.71, Pmulint 0.69, Plsrint 0.62, Pmodint 0.61
+  Psubint          Paddint 0.84, Pdivint 0.78, Pmulint 0.76, Plsrint 0.68, Pandint 0.66
+  Pmulint          Pdivint 0.84, Psubint 0.76, Pmodint 0.72, Plsrint 0.70, Paddint 0.69
+  Paddfloat        Pmulfloat 0.90, Psubfloat 0.88, Pdivfloat 0.86, Pnegfloat 0.74, Pfloatcomp 0.67
+  Pmulfloat        Pdivfloat 0.90, Paddfloat 0.90, Psubfloat 0.88, Pnegfloat 0.77, Pfloatfield 0.68
+  Pintcomp         Pfloatcomp 0.62, Pisint 0.61, Pstringrefs 0.60, Psubint 0.60, Paddint 0.56
+  Pfloatcomp       Pbintcomp 0.70, Paddfloat 0.67, Pmulfloat 0.67, Psubfloat 0.67, Pdivfloat 0.64
+  Pmakeblock       Lapply_a4p 0.69, Pmakearray 0.62, Lapply_a3 0.58, Lapply_a2 0.55, Llet 0.50
+  Pfield           Lapply_a1 0.53, Parrayrefs 0.49, Lfunction_a1 0.43, Pmakeblock 0.42, Paddint 0.42
+  Lapply_a1        Lapply_a2 0.70, Pfield 0.53, Lapply_a4p 0.52, Lapply_a3 0.52, Lfunction_a1 0.52
+  Lfunction_a1     Lfunction_a2 0.75, Lfunction_a3 0.73, Lfunction_a4p 0.70, Lapply_a1 0.52, Llet 0.45
+  Lifthenelse      Lapply_a3 0.54, Lstaticcatch 0.50, Lapply_a2 0.47, Psetfield_computed 0.46, Lapply_a4p 0.46
+  Pperform         Patomic_load 0.78, Pbytes_of_string 0.78, Preperform 0.77, Poffsetref 0.70, Pdls_get 0.68
+  INT              ADDR 0.53, FLOAT 0.52, GEN 0.51, BINT 0.50, Patomic_load 0.45
+  FLOAT            ADDR 0.69, BINT 0.65, Pperform 0.58, Pbytes_of_string 0.58, Preperform 0.54
+  VAR_INT          CONST_INT 0.68, VAR_GEN 0.61, MUTVAR 0.60, CONST_STRING 0.56, VAR_BINT 0.52
+  CONST_INT        VAR_INT 0.68, CONST_STRING 0.66, CONST_BLOCK 0.61, VAR_GEN 0.53, MUTVAR 0.51
+expected clusters: cosine, and rank of the partner among the probe's neighbours
+  Paddint ~ Psubint: cos 0.84, rank 1 / 126
+  Pmulint ~ Pdivint: cos 0.84, rank 1 / 126
+  Paddfloat ~ Pmulfloat: cos 0.90, rank 1 / 126
+  Paddfloat ~ Psubfloat: cos 0.88, rank 2 / 126
+  Pfield ~ Psetfield: cos 0.34, rank 17 / 126
+  Lapply_a1 ~ Lapply_a2: cos 0.70, rank 1 / 126
+wrote vocab/exp/a0.75/lambda.complex.json and vocab/exp/a0.75/lambda.complex.relations.json

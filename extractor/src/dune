@@ -1,0 +1,13 @@
+(library
+ (name ir2vec)
+ (libraries compiler-libs.optcomp compiler-libs.common)
+ (flags (:standard -w +8 -warn-error +8)))
+
+; The expected dump build hash is fixed when the extractor is built: the MD5 of
+; the ocamlopt dune compiles it with (Config.bindir is empty in a relocatable
+; 5.5 install). Depending on %{ocamlopt} regenerates it when the compiler changes.
+(rule
+ (deps gen_build_id.sh %{ocamlopt})
+ (action
+  (with-stdout-to build_id.ml
+   (run bash %{dep:gen_build_id.sh} %{ocamlopt}))))

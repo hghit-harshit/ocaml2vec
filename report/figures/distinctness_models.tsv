@@ -1,0 +1,20 @@
+# values from metrics.distinctness (= ir2vec check distinctness, Report §6)
+level	model	alpha	group	score
+lambda	complex	0.750000	types	0.644533
+lambda	complex	0.750000	operand_kinds	0.632790
+lambda	complex	0.750000	Lapply_a*	0.516265
+lambda	complex	0.750000	Lfunction_a*	0.341260
+lambda	complex	0.750000	Pgetglobal_*	0.261642
+lambda	transe	0.750000	types	0.801744
+lambda	transe	0.750000	operand_kinds	0.754034
+lambda	transe	0.750000	Lapply_a*	0.555430
+lambda	transe	0.750000	Lfunction_a*	0.731204
+lambda	transe	0.750000	Pgetglobal_*	0.726288
+cmm	complex	0.750000	types	0.847415
+cmm	complex	0.750000	operand_kinds	0.810629
+cmm	complex	0.750000	Cload_*	0.632175
+cmm	complex	0.750000	Cstore_*	0.404517
+cmm	transe	0.750000	types	0.896354
+cmm	transe	0.750000	operand_kinds	0.830200
+cmm	transe	0.750000	Cload_*	0.913317
+cmm	transe	0.750000	Cstore_*	0.924462

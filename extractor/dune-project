@@ -1,0 +1,5 @@
+(lang dune 3.0)
+
+(package
+ (name ir2vec)
+ (synopsis "IR2Vec extractor for OCaml Lambda and Cmm dumps"))

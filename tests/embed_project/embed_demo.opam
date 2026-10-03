@@ -1,0 +1,4 @@
+opam-version: "2.0"
+synopsis: "ir2vec embed test project: a dune project with an opam dependency"
+depends: ["dune" "re"]
+build: ["dune" "build" "-p" name]

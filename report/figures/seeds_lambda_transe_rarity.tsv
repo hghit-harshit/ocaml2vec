@@ -1,0 +1,156 @@
+# lambda · transe · α = 0.75 · vocabulary sha256 da2af4277d3a · not plotted: 4 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Praise is a control form here, Cmm's Craise is runtime; P_RAW_LOAD/P_RAW_STORE (merged) span strings, bytes and bigstrings
+# PCA explained variance: PC1 0.074711, PC2 0.049847
+entity	category	pc1	pc2	triples	log10_triples	low_confidence
+ADDR	types	0.427453	-0.219866	1048	3.020361	False
+BINT	types	0.568008	-0.042944	2148	3.332034	False
+CONST_BINT	operand kinds	0.496617	0.074484	504	2.702431	True
+CONST_BLOCK	operand kinds	0.383579	0.253914	12743	4.105272	False
+CONST_FLOAT	operand kinds	0.483273	0.126322	2160	3.334454	False
+CONST_INT	operand kinds	0.313008	0.100824	103629	5.015481	False
+CONST_STRING	operand kinds	0.300899	0.176524	17254	4.236890	False
+FLOAT	types	0.473369	0.005617	8708	3.939918	False
+GEN	types	0.466023	-0.013301	775252	5.889443	False
+INT	types	0.420909	-0.185349	100258	5.001119	False
+Lapply_a1	control forms	-0.483238	0.021901	128950	5.110421	False
+Lapply_a2	control forms	-0.562462	0.015048	167982	5.225263	False
+Lapply_a3	control forms	-0.563273	0.159726	70092	4.845668	False
+Lapply_a4p	control forms	-0.478974	0.200438	77591	4.889811	False
+Lassign	control forms	0.020592	0.123588	2540	3.404834	False
+Lfor	control forms	-0.061008	0.187269	4424	3.645815	False
+Lfunction_a1	control forms	-0.467031	0.145957	92499	4.966137	False
+Lfunction_a2	control forms	-0.366862	0.105319	55731	4.746097	False
+Lfunction_a3	control forms	-0.255077	0.212939	21684	4.336139	False
+Lfunction_a4p	control forms	-0.183773	0.292608	14602	4.164412	False
+Lifthenelse	control forms	-0.432123	0.482839	158315	5.199522	False
+Llet	control forms	-0.420516	0.393550	459877	5.662642	False
+Lletrec	control forms	-0.130535	0.578540	16085	4.206421	False
+Lmutlet	control forms	-0.056824	0.290553	3156	3.499137	False
+Lsend	control forms	-0.244371	0.246058	24003	4.380266	False
+Lsequence	control forms	-0.229373	0.658455	252268	5.401862	False
+Lstaticcatch	control forms	-0.193079	0.574635	18438	4.265714	False
+Lstaticraise	control forms	-0.182685	0.300381	22428	4.350791	False
+Lstringswitch	control forms	0.172165	0.316656	3305	3.519171	False
+Lswitch	control forms	-0.095111	0.267507	44638	4.649705	False
+Ltrywith	control forms	-0.194776	0.557766	6981	3.843918	False
+Lwhile	control forms	0.087018	0.421704	1287	3.109579	False
+MUTVAR	operand kinds	0.411653	-0.108468	2939	3.468200	False
+P_BIGARRAY	arrays	-0.158072	-0.147930	950	2.977724	True
+P_BSWAP	int arithmetic	0.090950	-0.022779	375	2.574031	True
+P_RAW_LOAD	strings and bytes	0.069183	-0.114504	624	2.795185	True
+P_RAW_STORE	strings and bytes	0.178139	0.155905	604	2.781037	True
+Pabsfloat	float arithmetic	0.158949	-0.099738	234	2.369216	True
+Paddbint	boxed-int	-0.041128	-0.004771	424	2.627366	True
+Paddfloat	float arithmetic	-0.222897	-0.028001	3156	3.499137	False
+Paddint	int arithmetic	-0.503493	-0.394102	23896	4.378325	False
+Pandbint	boxed-int	0.047342	-0.034010	344	2.536558	True
+Pandint	int arithmetic	-0.312531	-0.331153	2888	3.460597	False
+Parraylength	arrays	-0.188775	-0.318782	4020	3.604226	False
+Parrayrefs	arrays	-0.444229	-0.389755	15339	4.185797	False
+Parrayrefu	arrays	-0.173839	-0.255983	2048	3.311330	False
+Parraysets	arrays	-0.070479	0.015148	3208	3.506234	False
+Parraysetu	arrays	0.046133	0.074642	556	2.745075	True
+Pasrbint	boxed-int	0.160629	-0.108705	108	2.033424	True
+Pasrint	int arithmetic	-0.074136	-0.210385	332	2.521138	True
+Patomic_load	runtime intrinsics	0.284316	-0.013234	8	0.903090	True
+Pbintcomp	comparisons and tests	0.059285	0.087328	1188	3.074816	False
+Pbintofint	conversions	-0.044101	-0.179155	417	2.620136	True
+Pbytes_of_string	strings and bytes	0.329682	-0.013238	6	0.778151	True
+Pbytes_to_string	strings and bytes	0.217680	0.112897	99	1.995635	True
+Pbyteslength	strings and bytes	-0.022636	-0.333296	660	2.819544	True
+Pbytesrefs	strings and bytes	-0.021729	-0.237292	240	2.380211	True
+Pbytesrefu	strings and bytes	-0.016365	-0.192466	308	2.488551	True
+Pbytessets	strings and bytes	0.044457	0.082999	540	2.732394	True
+Pbytessetu	strings and bytes	0.059099	0.087791	488	2.688420	True
+Pccall	globals and externs	-0.382993	-0.001958	13680	4.136086	False
+Pcompare_bints	comparisons and tests	0.246373	-0.015469	76	1.880814	True
+Pcompare_floats	comparisons and tests	0.236190	-0.053969	64	1.806180	True
+Pcompare_ints	comparisons and tests	-0.069916	-0.082662	432	2.635484	True
+Pctconst	misc	0.295204	-0.053239	27	1.431364	True
+Pcvtbint	conversions	0.104316	-0.001386	150	2.176091	True
+Pdivbint	boxed-int	0.156907	-0.102063	272	2.434569	True
+Pdivfloat	float arithmetic	-0.111613	-0.130217	1620	3.209515	False
+Pdivint	int arithmetic	-0.191287	-0.317847	1216	3.084934	False
+Pdls_get	runtime intrinsics	0.333587	-0.130458	4	0.602060	True
+Pduparray	arrays	0.095722	-0.098929	600	2.778151	True
+Pfield	blocks and records	-0.420279	-0.177389	928944	5.967990	False
+Pfield_computed	blocks and records	0.049688	-0.147146	1952	3.290480	False
+Pfloatcomp	comparisons and tests	0.018109	0.026448	2832	3.452093	False
+Pfloatfield	blocks and records	-0.101841	-0.142920	9204	3.963977	False
+Pfloatofint	conversions	-0.037725	-0.204854	564	2.751279	True
+Pgetglobal_other	globals and externs	0.131551	-0.051873	119040	5.075693	False
+Pgetglobal_self	globals and externs	0.316808	-0.159123	277104	5.442643	False
+Pgetglobal_stdlib	globals and externs	0.252631	-0.116924	53308	4.726792	False
+Pignore	misc	0.010936	0.394492	994	2.997386	True
+Pintcomp	comparisons and tests	-0.375210	-0.069659	78532	4.895047	False
+Pintofbint	conversions	0.007257	-0.158176	399	2.600973	True
+Pintoffloat	conversions	-0.025666	-0.073785	258	2.411620	True
+Pisint	comparisons and tests	0.150126	-0.043670	39105	4.592232	False
+Pisout	comparisons and tests	0.210786	-0.077364	3216	3.507316	False
+Plslbint	boxed-int	0.164410	-0.120913	244	2.387390	True
+Plslint	int arithmetic	-0.227994	-0.402543	1984	3.297542	False
+Plsrbint	boxed-int	0.049387	-0.184031	436	2.639486	True
+Plsrint	int arithmetic	-0.165266	-0.384721	1524	3.182985	False
+Pmakearray	arrays	-0.426099	-0.051298	54694	4.737940	False
+Pmakeblock	blocks and records	-0.642763	0.114583	286458	5.457061	False
+Pmakelazyblock	blocks and records	0.068315	0.139653	750	2.875061	True
+Pmodbint	boxed-int	0.125966	-0.119667	132	2.120574	True
+Pmodint	int arithmetic	-0.117390	-0.285595	676	2.829947	True
+Pmulbint	boxed-int	0.015075	-0.016524	372	2.570543	True
+Pmulfloat	float arithmetic	-0.173459	-0.043826	4856	3.686279	False
+Pmulint	int arithmetic	-0.347657	-0.392906	2620	3.418301	False
+Pnegbint	boxed-int	0.159126	0.011938	111	2.045323	True
+Pnegfloat	float arithmetic	0.006152	-0.174587	432	2.635484	True
+Pnegint	int arithmetic	-0.117961	-0.175336	339	2.530200	True
+Pnot	comparisons and tests	-0.095630	0.217552	4884	3.688776	False
+Poffsetint	int arithmetic	-0.113510	-0.260715	3456	3.538574	False
+Poffsetref	blocks and records	0.220192	0.140413	490	2.690196	True
+Popaque	misc	0.068476	-0.097786	1608	3.206286	False
+Porbint	boxed-int	0.102178	-0.102107	224	2.350248	True
+Porint	int arithmetic	-0.209814	-0.199982	1512	3.179552	False
+Pperform	effects	0.279919	0.130759	16	1.204120	True
+Praise	control forms	-0.037038	0.326127	10678	4.028490	False
+Preperform	effects	0.338304	-0.032524	12	1.079181	True
+Presume	effects	0.238778	0.072042	20	1.301030	True
+Prunstack	effects	0.385234	0.002299	12	1.079181	True
+Psequand	comparisons and tests	-0.208573	0.365507	9604	3.982452	False
+Psequor	comparisons and tests	-0.143697	0.366943	5876	3.769082	False
+Psetfield	blocks and records	-0.158820	0.257772	198759	5.298327	False
+Psetfield_computed	blocks and records	0.096141	0.235499	1576	3.197556	False
+Pstringlength	strings and bytes	-0.186221	-0.328128	4089	3.611617	False
+Pstringrefs	strings and bytes	-0.184778	-0.236364	3868	3.587486	False
+Pstringrefu	strings and bytes	-0.087555	-0.187728	804	2.905256	True
+Psubbint	boxed-int	0.065874	-0.025015	468	2.670246	True
+Psubfloat	float arithmetic	-0.165190	-0.027317	2196	3.341632	False
+Psubint	int arithmetic	-0.469313	-0.425447	19920	4.299289	False
+Pxorbint	boxed-int	0.185374	-0.000060	176	2.245513	True
+Pxorint	int arithmetic	0.033286	-0.184733	128	2.107210	True
+VAR_BINT	operand kinds	0.598844	0.052108	2556	3.407561	False
+VAR_FLOAT	operand kinds	0.530622	0.042624	4498	3.653019	False
+VAR_GEN	operand kinds	0.456030	0.097155	425741	5.629145	False
+VAR_INT	operand kinds	0.316475	-0.031610	51217	4.709414	False
+Pbbswap	merged into P_BSWAP					
+Pbigarraydim	merged into P_BIGARRAY					
+Pbigarrayref	merged into P_BIGARRAY					
+Pbigarrayset	merged into P_BIGARRAY					
+Pbigstring_load_16	merged into P_RAW_LOAD					
+Pbigstring_load_32	merged into P_RAW_LOAD					
+Pbigstring_load_64	merged into P_RAW_LOAD					
+Pbigstring_set_16	merged into P_RAW_STORE					
+Pbigstring_set_32	merged into P_RAW_STORE					
+Pbigstring_set_64	merged into P_RAW_STORE					
+Pbswap16	merged into P_BSWAP					
+Pbytes_load_16	merged into P_RAW_LOAD					
+Pbytes_load_32	merged into P_RAW_LOAD					
+Pbytes_load_64	merged into P_RAW_LOAD					
+Pbytes_set_16	merged into P_RAW_STORE					
+Pbytes_set_32	merged into P_RAW_STORE					
+Pbytes_set_64	merged into P_RAW_STORE					
+Pduprecord	fallback -> Pduparray					
+Pint_as_pointer	fallback -> Popaque					
+Ppoll	fallback -> Pccall					
+Psetfloatfield	fallback -> Psetfield					
+Psetglobal	impossible					
+Pstring_load_16	merged into P_RAW_LOAD					
+Pstring_load_32	merged into P_RAW_LOAD					
+Pstring_load_64	merged into P_RAW_LOAD					

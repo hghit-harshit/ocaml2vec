@@ -1,0 +1,46 @@
+cmm/complex: 5799815 triples, 66 entities, 8 relations, dim 128
+  epoch   1  loss 1.05341  (15.7s)
+  epoch   2  loss 0.52858  (16.9s)
+  epoch   3  loss 0.40447  (19.2s)
+  epoch   4  loss 0.38396  (17.3s)
+  epoch   5  loss 0.37773  (29.7s)
+  epoch   6  loss 0.37558  (14.0s)
+  epoch   7  loss 0.37399  (21.7s)
+  epoch   8  loss 0.37417  (19.3s)
+  epoch   9  loss 0.37227  (36.8s)
+  epoch  10  loss 0.37275  (19.9s)
+  epoch  11  loss 0.37165  (15.8s)
+  epoch  12  loss 0.37187  (14.1s)
+  epoch  13  loss 0.37153  (13.5s)
+  epoch  14  loss 0.37201  (13.3s)
+  epoch  15  loss 0.37162  (12.6s)
+  epoch  16  loss 0.37163  (12.6s)
+  loss plateau: no relative gain > 0.001 in 5 epochs
+alpha 0.75, 16 epochs: valid MRR 0.9697 hits@1 0.9540 hits@10 0.9965 (n=859); novel MRR 0.2648 hits@10 0.6667 (n=6)
+nearest neighbours (cosine), cmm
+  Caddi            Casr 0.71, Csubi 0.71, Cor 0.67, Cmuli 0.65, Clsr 0.62
+  Csubi            Caddi 0.71, Ccmpi 0.65, Cmuli 0.65, Clsr 0.63, Cor 0.62
+  Cmuli            Cxor 0.70, Casr 0.68, Csubi 0.65, Caddi 0.65, Clsl 0.63
+  Caddf            Csubf 0.92, Cmulf 0.91, Cdivf 0.91, Cnegf 0.85, Cabsf 0.82
+  Cmulf            Caddf 0.91, Csubf 0.91, Cdivf 0.90, Cnegf 0.82, Cabsf 0.80
+  Ccmpi            Cand 0.69, Csubi 0.65, Clsl 0.59, Ccmpa 0.57, Clsr 0.57
+  Ccmpf            Cintoffloat 0.79, Caddf 0.70, Csubf 0.70, Cdivf 0.69, Cabsf 0.67
+  Capply           Calloc 0.65, Cextcall 0.55, Cload_word_val 0.53, Caddv 0.45, Caddi 0.45
+  Cextcall         Cload_word_val 0.58, Capply 0.55, Cload_double 0.54, Cstore_word_val 0.54, Calloc 0.54
+  Cload_word_val   Cload_word_int 0.65, Copaque 0.60, Caddv 0.58, Cextcall 0.58, Cstore_word_val 0.57
+  Cstore_word_val  Cstore_word_int 0.78, Cstore_byte_u 0.67, Cstore_narrow 0.65, Cload_word_int 0.59, Cor 0.58
+  BR               SWITCH 0.74, Cfloatofint 0.50, Cmodi 0.50, Cdivi 0.47, Craise 0.46
+  JUMP             Craise 0.59, SWITCH 0.53, RET 0.53, BR 0.40, Calloc 0.35
+  RET              Craise 0.60, COPY 0.53, JUMP 0.53, Cand 0.52, Ccmpi 0.51
+  INT              Cstore_byte_s 0.55, Cload_32u 0.50, C_RUNTIME 0.50, CONST_FLOAT 0.49, FLOAT 0.47
+  VAL              FLOAT 0.55, Cstore_byte_s 0.52, C_RUNTIME 0.47, Cmodi 0.46, CONST_FLOAT 0.45
+  VAR_INT          CONST_INT 0.63, VAR_VAL 0.54, SYM_EXTERN 0.48, SYM_FUNC 0.47, CONST_NATINT 0.45
+  SYM_FUNC         SYM_EXTERN 0.74, CONST_FLOAT 0.57, VAR_FLOAT 0.54, FLOAT 0.51, Cstore_byte_s 0.51
+expected clusters: cosine, and rank of the partner among the probe's neighbours
+  Caddf ~ Cmulf: cos 0.91, rank 2 / 65
+  Caddi ~ Csubi: cos 0.71, rank 2 / 65
+  Caddf ~ Csubf: cos 0.92, rank 1 / 65
+  Cload_word_val ~ Cload_word_int: cos 0.65, rank 1 / 65
+  Ccmpi ~ Ccmpa: cos 0.57, rank 4 / 65
+  BR ~ SWITCH: cos 0.74, rank 1 / 65
+wrote vocab/exp/a0.75/cmm.complex.json and vocab/exp/a0.75/cmm.complex.relations.json

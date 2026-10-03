@@ -1,0 +1,71 @@
+# cmm · complex · α = 0.75 · vocabulary sha256 5903b481b78a · not plotted: 5 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Craise is runtime here, Lambda's Praise is a control form; Cload_narrow is unused (the family did not merge)
+# top-1 same-category rate 0.727273; chance 0.095105
+# excluded (no own vector): Cdls_get (merged into C_RUNTIME); Cload_16s (fallback -> Cload_16u); Cload_byte_s (fallback -> Cload_byte_u); Cload_narrow (unused: the Cload_narrow family did not merge (Cload_32s has >= 1000 triples), so no vector exists); Cload_single (fallback -> Cload_double); Cpoll (merged into C_RUNTIME); Cstore_16s (merged into Cstore_narrow); Cstore_16u (merged into Cstore_narrow); Cstore_32s (merged into Cstore_narrow); Cstore_32u (merged into Cstore_narrow); Cstore_64 (merged into Cstore_narrow); Cstore_single (fallback -> Cstore_double); RETURN_ADDR (impossible); TUPLE (fallback -> COPY)
+category	entity	confidence	triples	nn1	nn1_category	nn1_cosine	nn2	nn2_category	nn2_cosine	nn3	nn3_category	nn3_cosine
+int arithmetic	Caddi		146622	Casr	int arithmetic	0.714989	Csubi	int arithmetic	0.712685	Cor	int arithmetic	0.666448
+int arithmetic	Cand		116902	Casr	int arithmetic	0.699446	Ccmpi	comparisons and tests	0.693899	Clsr	int arithmetic	0.670778
+int arithmetic	Casr		40928	Caddi	int arithmetic	0.714989	Clsr	int arithmetic	0.701143	Cand	int arithmetic	0.699446
+int arithmetic	Cdivi	low	735	Cmodi	int arithmetic	0.948161	Cstore_byte_s	stores	0.715591	Cstore_narrow	stores	0.696590
+int arithmetic	Clsl		124835	Casr	int arithmetic	0.634579	Cmuli	int arithmetic	0.629350	Csubi	int arithmetic	0.613548
+int arithmetic	Clsr		57399	Cxor	int arithmetic	0.725354	Casr	int arithmetic	0.701143	Cand	int arithmetic	0.670778
+int arithmetic	Cmodi	low	505	Cdivi	int arithmetic	0.948161	Cstore_byte_s	stores	0.730739	Cstore_narrow	stores	0.686659
+int arithmetic	Cmulhi	low	835	Cmodi	int arithmetic	0.674781	Cload_32u	loads	0.658567	Cdivi	int arithmetic	0.657265
+int arithmetic	Cmuli		4011	Cxor	int arithmetic	0.699272	Casr	int arithmetic	0.676606	Csubi	int arithmetic	0.649919
+int arithmetic	Cor		22968	Cxor	int arithmetic	0.718034	Caddi	int arithmetic	0.666448	Clsr	int arithmetic	0.642065
+int arithmetic	Csubi		63728	Caddi	int arithmetic	0.712685	Ccmpi	comparisons and tests	0.654874	Cmuli	int arithmetic	0.649919
+int arithmetic	Cxor		3796	Clsr	int arithmetic	0.725354	Cor	int arithmetic	0.718034	Cmuli	int arithmetic	0.699272
+float arithmetic	Cabsf	low	366	Cnegf	float arithmetic	0.884390	Csubf	float arithmetic	0.864533	Cdivf	float arithmetic	0.846309
+float arithmetic	Caddf		4454	Csubf	float arithmetic	0.924453	Cmulf	float arithmetic	0.913032	Cdivf	float arithmetic	0.906159
+float arithmetic	Cdivf		2016	Csubf	float arithmetic	0.924964	Caddf	float arithmetic	0.906159	Cmulf	float arithmetic	0.898752
+float arithmetic	Cmulf		6797	Caddf	float arithmetic	0.913032	Csubf	float arithmetic	0.910051	Cdivf	float arithmetic	0.898752
+float arithmetic	Cnegf	low	576	Cabsf	float arithmetic	0.884390	Csubf	float arithmetic	0.877805	Cdivf	float arithmetic	0.863117
+float arithmetic	Csubf		2958	Cdivf	float arithmetic	0.924964	Caddf	float arithmetic	0.924453	Cmulf	float arithmetic	0.910051
+conversions	Cfloatofint	low	808	Cabsf	float arithmetic	0.745782	Cdivf	float arithmetic	0.713912	Cnegf	float arithmetic	0.710883
+conversions	Cintoffloat	low	569	Ccmpf	comparisons and tests	0.790163	Cnegf	float arithmetic	0.768885	Cabsf	float arithmetic	0.752621
+pointer arithmetic	Cadda		1968535	Cload_word_val	loads	0.502464	Casr	int arithmetic	0.499288	Caddv	pointer arithmetic	0.497280
+pointer arithmetic	Caddv		94109	Cload_word_val	loads	0.584207	Casr	int arithmetic	0.555029	Copaque	runtime	0.548078
+comparisons and tests	Ccmpa		4660	Cdivi	int arithmetic	0.643173	Cintoffloat	conversions	0.639728	Cmodi	int arithmetic	0.622003
+comparisons and tests	Ccmpf		4639	Cintoffloat	conversions	0.790163	Caddf	float arithmetic	0.698207	Csubf	float arithmetic	0.697710
+comparisons and tests	Ccmpi		226321	Cand	int arithmetic	0.693899	Csubi	int arithmetic	0.654874	Clsl	int arithmetic	0.591121
+loads	Cload_16u	low	564	Cload_64	loads	0.917102	Cload_32u	loads	0.889400	Cload_32s	loads	0.810835
+loads	Cload_32s		2396	Cload_32u	loads	0.824543	Cload_64	loads	0.813759	Cload_16u	loads	0.810835
+loads	Cload_32u	low	420	Cload_16u	loads	0.889400	Cload_64	loads	0.880231	Cload_32s	loads	0.824543
+loads	Cload_64	low	352	Cload_16u	loads	0.917102	Cload_32u	loads	0.880231	Cload_32s	loads	0.813759
+loads	Cload_byte_u		53625	Cload_32s	loads	0.723906	Cload_32u	loads	0.692212	Cload_64	loads	0.639242
+loads	Cload_double		31425	Caddf	float arithmetic	0.643502	Cabsf	float arithmetic	0.611943	Csubf	float arithmetic	0.610593
+loads	Cload_word_int		209554	Cload_word_val	loads	0.646781	Cload_byte_u	loads	0.611231	Cstore_word_val	stores	0.594907
+loads	Cload_word_val		1317073	Cload_word_int	loads	0.646781	Copaque	runtime	0.599274	Caddv	pointer arithmetic	0.584207
+stores	Cstore_byte_s	low	4	Cload_32u	loads	0.820210	Cstore_narrow	stores	0.811836	C_RUNTIME	runtime	0.806465
+stores	Cstore_byte_u		1976	Cstore_narrow	stores	0.869363	Cstore_word_int	stores	0.834573	Cstore_double	stores	0.758904
+stores	Cstore_double		1824	Cstore_narrow	stores	0.793965	Cstore_byte_u	stores	0.758904	Cload_32u	loads	0.750325
+stores	Cstore_narrow		1184	Cstore_byte_u	stores	0.869363	Cstore_word_int	stores	0.834582	Cstore_byte_s	stores	0.811836
+stores	Cstore_word_int		3752	Cstore_narrow	stores	0.834582	Cstore_byte_u	stores	0.834573	Cstore_word_val	stores	0.781610
+stores	Cstore_word_val		16360	Cstore_word_int	stores	0.781610	Cstore_byte_u	stores	0.670155	Cstore_narrow	stores	0.646709
+calls and allocation	Calloc		753707	Capply	calls and allocation	0.653008	Cextcall	calls and allocation	0.537133	Caddv	pointer arithmetic	0.474093
+calls and allocation	Capply		947724	Calloc	calls and allocation	0.653008	Cextcall	calls and allocation	0.549815	Cload_word_val	loads	0.525767
+calls and allocation	Cextcall		359617	Cload_word_val	loads	0.575197	Capply	calls and allocation	0.549815	Cload_double	loads	0.540234
+runtime	C_RUNTIME	low	7	Cstore_byte_s	stores	0.806465	Cabsf	float arithmetic	0.728367	Cload_32u	loads	0.713654
+runtime	Ccheckbound		29116	Cor	int arithmetic	0.553433	Cxor	int arithmetic	0.532928	Clsr	int arithmetic	0.528195
+runtime	Copaque		3655	C_RUNTIME	runtime	0.612238	Cload_word_val	loads	0.599274	COPY	structural	0.592750
+runtime	Craise		14552	RET	structural	0.604972	JUMP	structural	0.585337	SWITCH	structural	0.495030
+structural	ASSIGN		11766	COPY	structural	0.739506	Cintoffloat	conversions	0.605457	Copaque	runtime	0.577219
+structural	BR		275688	SWITCH	structural	0.737237	Cfloatofint	conversions	0.498175	Cmodi	int arithmetic	0.495378
+structural	COPY		37954	ASSIGN	structural	0.739506	Copaque	runtime	0.592750	Cload_word_int	loads	0.555287
+structural	JUMP		177426	Craise	runtime	0.585337	SWITCH	structural	0.527915	RET	structural	0.527584
+structural	RET		223170	Craise	runtime	0.604972	COPY	structural	0.533683	JUMP	structural	0.527584
+structural	SWITCH		21483	BR	structural	0.737237	Cfloatofint	conversions	0.543862	JUMP	structural	0.527915
+types	ADDR		399566	Cstore_byte_s	stores	0.554476	Cabsf	float arithmetic	0.516568	Cload_32u	loads	0.515995
+types	FLOAT		12785	Cstore_byte_s	stores	0.712645	Cload_64	loads	0.600239	Cload_32u	loads	0.589206
+types	INT		240298	Cstore_byte_s	stores	0.545789	Cload_32u	loads	0.503931	C_RUNTIME	runtime	0.497682
+types	VAL		597454	FLOAT	types	0.547701	Cstore_byte_s	stores	0.517133	C_RUNTIME	runtime	0.467442
+operand kinds	CONST_FLOAT		1483	VAR_FLOAT	operand kinds	0.897815	Cstore_byte_s	stores	0.623851	C_RUNTIME	runtime	0.611127
+operand kinds	CONST_INT		622217	VAR_INT	operand kinds	0.631885	VAR_VAL	operand kinds	0.549805	SYM_DATA	operand kinds	0.484138
+operand kinds	CONST_NATINT		134926	SYM_DATA	operand kinds	0.480748	VAR_VAL	operand kinds	0.458633	VAR_INT	operand kinds	0.452385
+operand kinds	SYM_DATA		178802	VAR_VAL	operand kinds	0.801377	SYM_EXTERN	operand kinds	0.666100	SYM_FUNC	operand kinds	0.496066
+operand kinds	SYM_EXTERN		136090	SYM_FUNC	operand kinds	0.737263	SYM_DATA	operand kinds	0.666100	VAR_VAL	operand kinds	0.649613
+operand kinds	SYM_FUNC		81938	SYM_EXTERN	operand kinds	0.737263	CONST_FLOAT	operand kinds	0.567961	VAR_FLOAT	operand kinds	0.536269
+operand kinds	VAR_ADDR		399566	SYM_DATA	operand kinds	0.493673	FLOAT	types	0.473727	Cstore_byte_s	stores	0.458096
+operand kinds	VAR_FLOAT		14140	CONST_FLOAT	operand kinds	0.897815	Cstore_byte_s	stores	0.560641	C_RUNTIME	runtime	0.559150
+operand kinds	VAR_INT		306615	CONST_INT	operand kinds	0.631885	VAR_VAL	operand kinds	0.536278	SYM_EXTERN	operand kinds	0.481585
+operand kinds	VAR_VAL		1077304	SYM_DATA	operand kinds	0.801377	SYM_EXTERN	operand kinds	0.649613	CONST_INT	operand kinds	0.549805

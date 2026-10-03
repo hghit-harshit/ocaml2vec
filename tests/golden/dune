@@ -1,0 +1,162 @@
+; Golden snapshots. `dune test` diffs; `dune promote` accepts a change.
+; Every fixture is extracted at both levels; the Python tests read these.
+
+(rule
+ (action
+  (with-stdout-to align.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/align.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff align.lambda.json align.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to align.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/align.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff align.cmm.json align.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to closures.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/closures.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff closures.lambda.json closures.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to closures.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/closures.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff closures.cmm.json closures.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to counter.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/counter.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff counter.lambda.json counter.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to counter.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/counter.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff counter.cmm.json counter.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to effects.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/effects.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff effects.lambda.json effects.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to effects.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/effects.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff effects.cmm.json effects.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to evenodd.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/evenodd.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff evenodd.lambda.json evenodd.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to evenodd.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/evenodd.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff evenodd.cmm.json evenodd.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to exn.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/exn.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff exn.lambda.json exn.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to exn.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/exn.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff exn.cmm.json exn.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to fact.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/fact.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff fact.lambda.json fact.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to fact.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/fact.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff fact.cmm.json fact.cmm.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to pq.lambda.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} lambda
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/pq.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff pq.lambda.json pq.lambda.json.gen)))
+
+(rule
+ (action
+  (with-stdout-to pq.cmm.json.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/pq.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff pq.cmm.json pq.cmm.json.gen)))

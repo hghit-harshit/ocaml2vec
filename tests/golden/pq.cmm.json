@@ -1,0 +1,239 @@
+{
+  "unit": "Pq",
+  "source": "pq.ml",
+  "digest": "bfe49c122ddcc854217b30ffeac42224",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "name": "camlPq.p_274",
+      "loc": {"file":"pq.ml","l1":1,"c1":6,"l2":1,"c2":29},
+      "params": [{"var":"x/276","type":"INT"},{"var":"y/277","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Csubi",
+              "type": "INT",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_INT","var":"x/276"},{"kind":"VAR_INT","var":"y/277"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_INT","var":"t1"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Casr",
+              "type": "INT",
+              "dst": "t3",
+              "operands": [{"kind":"VAR_INT","var":"t2"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_INT","var":"x/276"},{"kind":"VAR_INT","var":"y/277"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t5",
+              "operands": [{"kind":"VAR_INT","var":"t4"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Cmuli",
+              "type": "INT",
+              "dst": "t6",
+              "operands": [{"kind":"VAR_INT","var":"t5"},{"kind":"VAR_INT","var":"t3"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t7",
+              "operands": [{"kind":"VAR_INT","var":"t6"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t7"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 7,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlPq.q_278",
+      "loc": {"file":"pq.ml","l1":2,"c1":6,"l2":2,"c2":40},
+      "params": [{"var":"x/280","type":"INT"},{"var":"y/281","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_INT","var":"x/280"},{"kind":"VAR_INT","var":"y/281"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "a/282",
+              "operands": [{"kind":"VAR_INT","var":"t1"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Casr",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_INT","var":"a/282"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "Csubi",
+              "type": "INT",
+              "dst": "t3",
+              "operands": [{"kind":"VAR_INT","var":"a/282"},{"kind":"VAR_INT","var":"y/281"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Cmuli",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_INT","var":"t3"},{"kind":"VAR_INT","var":"t2"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t5",
+              "operands": [{"kind":"VAR_INT","var":"t4"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t5"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {},
+      "n_cops": 6,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlPq.entry",
+      "loc": null,
+      "params": [],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"SYM_DATA","sym":"camlPq"},{"kind":"SYM_DATA","sym":"camlPq.2"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "Cadda",
+              "type": "ADDR",
+              "dst": "t1",
+              "operands": [{"kind":"SYM_DATA","sym":"camlPq"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 2,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_ADDR","var":"t1"},{"kind":"SYM_DATA","sym":"camlPq.1"}],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 3,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"EXT:caml_initialize":2,"NOALLOC":2},
+      "n_cops": 3,
+      "dead_cops": 0
+    }
+  ]
+}

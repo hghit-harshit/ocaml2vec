@@ -1,0 +1,39 @@
+# cmm · transe · α = 0.75 · vocabulary sha256 ec830229ca12 · not plotted: 5 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Craise is runtime here, Lambda's Praise is a control form; Cload_narrow is unused (the family did not merge)
+# PCA explained variance: PC1 0.183479, PC2 0.110040
+entity	category	group	pc1	pc2	low_confidence	triples
+Calloc	calls and allocation	calls and allocation	0.116389	-0.495558	False	753707
+Capply	calls and allocation	calls and allocation	-0.066660	-0.514051	False	947724
+Cextcall	calls and allocation	calls and allocation	0.270860	-0.401551	False	359617
+Caddi	int arithmetic	int + float arithmetic	-0.473202	-0.241178	False	146622
+Cand	int arithmetic	int + float arithmetic	-0.428061	-0.162869	False	116902
+Casr	int arithmetic	int + float arithmetic	-0.281691	-0.159764	False	40928
+Cdivi	int arithmetic	int + float arithmetic	-0.114652	0.619103	True	735
+Clsl	int arithmetic	int + float arithmetic	-0.390381	-0.108846	False	124835
+Clsr	int arithmetic	int + float arithmetic	-0.423196	0.164151	False	57399
+Cmodi	int arithmetic	int + float arithmetic	-0.004234	0.698481	True	505
+Cmulhi	int arithmetic	int + float arithmetic	-0.207345	0.429076	True	835
+Cmuli	int arithmetic	int + float arithmetic	-0.287130	-0.082982	False	4011
+Cor	int arithmetic	int + float arithmetic	-0.408781	0.175372	False	22968
+Csubi	int arithmetic	int + float arithmetic	-0.391443	-0.169857	False	63728
+Cxor	int arithmetic	int + float arithmetic	-0.257501	0.070727	False	3796
+Cabsf	float arithmetic	int + float arithmetic	0.491320	0.176665	True	366
+Caddf	float arithmetic	int + float arithmetic	0.598750	0.011681	False	4454
+Cdivf	float arithmetic	int + float arithmetic	0.512369	-0.090586	False	2016
+Cmulf	float arithmetic	int + float arithmetic	0.667823	-0.042876	False	6797
+Cnegf	float arithmetic	int + float arithmetic	0.461061	0.018302	True	576
+Csubf	float arithmetic	int + float arithmetic	0.615706	0.106560	False	2958
+Cdls_get		merged into C_RUNTIME				
+Cload_16s		fallback -> Cload_16u				
+Cload_byte_s		fallback -> Cload_byte_u				
+Cload_narrow		unused: the Cload_narrow family did not merge (Cload_32s has >= 1000 triples), so no vector exists				
+Cload_single		fallback -> Cload_double				
+Cpoll		merged into C_RUNTIME				
+Cstore_16s		merged into Cstore_narrow				
+Cstore_16u		merged into Cstore_narrow				
+Cstore_32s		merged into Cstore_narrow				
+Cstore_32u		merged into Cstore_narrow				
+Cstore_64		merged into Cstore_narrow				
+Cstore_single		fallback -> Cstore_double				
+RETURN_ADDR		impossible				
+TUPLE		fallback -> COPY				

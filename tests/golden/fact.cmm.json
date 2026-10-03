@@ -1,0 +1,176 @@
+{
+  "unit": "Fact",
+  "source": "fact.ml",
+  "digest": "d16df01843b3aaffda7b83a8d1f7170a",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "name": "camlFact.fact_274",
+      "loc": {"file":"fact.ml","l1":1,"c1":13,"l2":1,"c2":55},
+      "params": [{"var":"n/275","type":"INT"}],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Ccmpi",
+              "type": "INT",
+              "dst": "t1",
+              "operands": [{"kind":"VAR_INT","var":"n/275"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "BR",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t1"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [1,2],
+          "exn_succ": []
+        },
+        {
+          "id": 1,
+          "instrs": [
+            {
+              "id": 2,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        },
+        {
+          "id": 2,
+          "instrs": [
+            {
+              "id": 3,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t2",
+              "operands": [{"kind":"VAR_INT","var":"n/275"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 4,
+              "op": "Capply",
+              "type": "VAL",
+              "dst": "t3",
+              "operands": [
+                {"kind":"SYM_FUNC","sym":"camlFact.fact_274"},
+                {"kind":"VAR_INT","var":"t2"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 5,
+              "op": "Casr",
+              "type": "INT",
+              "dst": "t4",
+              "operands": [{"kind":"VAR_VAL","var":"t3"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 6,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t5",
+              "operands": [{"kind":"VAR_INT","var":"n/275"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 7,
+              "op": "Cmuli",
+              "type": "INT",
+              "dst": "t6",
+              "operands": [{"kind":"VAR_INT","var":"t5"},{"kind":"VAR_INT","var":"t4"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 8,
+              "op": "Caddi",
+              "type": "INT",
+              "dst": "t7",
+              "operands": [{"kind":"VAR_INT","var":"t6"},{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": false
+            },
+            {
+              "id": 9,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"VAR_INT","var":"t7"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"PRED_LE":1},
+      "n_cops": 7,
+      "dead_cops": 0
+    },
+    {
+      "name": "camlFact.entry",
+      "loc": null,
+      "params": [],
+      "mutable_vars": [],
+      "join_vars": [],
+      "handler_params": [],
+      "blocks": [
+        {
+          "id": 0,
+          "instrs": [
+            {
+              "id": 0,
+              "op": "Cextcall",
+              "type": null,
+              "dst": null,
+              "operands": [
+                {"kind":"SYM_DATA","sym":"camlFact"},
+                {"kind":"SYM_DATA","sym":"camlFact.1"}
+              ],
+              "side_effect": true,
+              "terminator": false
+            },
+            {
+              "id": 1,
+              "op": "RET",
+              "type": null,
+              "dst": null,
+              "operands": [{"kind":"CONST_INT"}],
+              "side_effect": false,
+              "terminator": true
+            }
+          ],
+          "succ": [],
+          "exn_succ": []
+        }
+      ],
+      "counts": {"EXT:caml_initialize":1,"NOALLOC":1},
+      "n_cops": 1,
+      "dead_cops": 0
+    }
+  ]
+}

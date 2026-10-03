@@ -1,0 +1,20 @@
+# null: 10000 random quadruples of distinct entities, numpy default_rng(8005); percentile = % of null strictly below (ties half)
+# decision: holds if cosine > Bonferroni percentile 100(1 - 0.05/k); k = testable quadruples per level
+# matched null: 2000 draws, each position from the tested entity's category (secondary control, not the decision rule)
+level	model	pair1	pair2	cosine	percentile	z	verdict	matched_null_percentile	cos_a_c	cos_b_d	null_mean	null_std	null_p95	null_p_bonferroni
+lambda	complex	(Paddint, Psubint)	(Paddfloat, Psubfloat)	0.045711	60.980000	0.241447	does not hold	58.350000	0.370916	0.374240	-0.000127	0.189849	0.324143	0.456515
+lambda	complex	(Paddint, Paddbint)	(Psubint, Psubbint)	0.856530	100.000000	4.512306	holds	100.000000	0.837095	0.874859	-0.000127	0.189849	0.324143	0.456515
+lambda	complex	(Parrayrefu, Parraysetu)	(Parrayrefs, Parraysets)	0.701682	99.990000	3.696671	holds	99.925000	0.655445	0.762765	-0.000127	0.189849	0.324143	0.456515
+lambda	complex	(Pstringrefu, Pbytesrefu)	(Pstringlength, Pbyteslength)	0.025741	56.310000	0.136258	does not hold	53.150000	0.548213	0.639953	-0.000127	0.189849	0.324143	0.456515
+lambda	complex	(Lapply_a1, Lapply_a2)	(Lfunction_a1, Lfunction_a2)	-0.015609	47.510000	-0.081550	does not hold	46.400000	0.517805	0.284961	-0.000127	0.189849	0.324143	0.456515
+cmm	complex	(Caddi, Csubi)	(Caddf, Csubf)	0.079969	65.610000	0.361966	does not hold	67.275000	0.291871	0.290357	0.002421	0.214243	0.361799	0.431549
+cmm	complex	(Cload_word_val, Cstore_word_val)	(Cload_double, Cstore_double)	0.297173	91.570000	1.375784	does not hold	56.025000	0.546779	0.568457	0.002421	0.214243	0.361799	0.431549
+cmm	complex	(Cload_byte_u, Cload_byte_s)	(Cload_16u, Cload_16s)				untestable: Cload_byte_s fallback -> Cload_byte_u; Cload_16s fallback -> Cload_16u				0.002421	0.214243	0.361799	0.431549
+lambda	transe	(Paddint, Psubint)	(Paddfloat, Psubfloat)	0.001661	50.850000	0.018014	does not hold	50.500000	0.158489	0.073824	-0.000492	0.119500	0.197591	0.280710
+lambda	transe	(Paddint, Paddbint)	(Psubint, Psubbint)	0.438471	99.990000	3.673343	holds	99.350000	0.607008	0.288361	-0.000492	0.119500	0.197591	0.280710
+lambda	transe	(Parrayrefu, Parraysetu)	(Parrayrefs, Parraysets)	0.306591	99.400000	2.569738	holds	99.475000	0.226632	0.283417	-0.000492	0.119500	0.197591	0.280710
+lambda	transe	(Pstringrefu, Pbytesrefu)	(Pstringlength, Pbyteslength)	0.118118	84.290000	0.992549	does not hold	84.900000	0.107746	0.119153	-0.000492	0.119500	0.197591	0.280710
+lambda	transe	(Lapply_a1, Lapply_a2)	(Lfunction_a1, Lfunction_a2)	0.045187	65.550000	0.382247	does not hold	63.500000	0.301675	0.320618	-0.000492	0.119500	0.197591	0.280710
+cmm	transe	(Caddi, Csubi)	(Caddf, Csubf)	-0.112490	18.640000	-0.870419	does not hold	7.875000	-0.060396	-0.140063	0.001912	0.131434	0.219698	0.264567
+cmm	transe	(Cload_word_val, Cstore_word_val)	(Cload_double, Cstore_double)	0.119572	82.340000	0.895202	does not hold	82.825000	0.277065	0.028696	0.001912	0.131434	0.219698	0.264567
+cmm	transe	(Cload_byte_u, Cload_byte_s)	(Cload_16u, Cload_16s)				untestable: Cload_byte_s fallback -> Cload_byte_u; Cload_16s fallback -> Cload_16u				0.001912	0.131434	0.219698	0.264567

@@ -1,0 +1,27 @@
+{
+ "units": 1829,
+ "lambda_functions": 63363,
+ "cmm_functions": 70843,
+ "impossible": 0,
+ "cyclic_sccs": 2078,
+ "largest_scc": 114,
+ "max_residual": 8.881784197001252e-16,
+ "retries": 0,
+ "non_finite": 0,
+ "dead_cops": 287,
+ "n_cops": 1354099,
+ "lookup": {
+  "lambda": {
+   "vocabulary": "/mnt/d/ocaml2vec/vocab/lambda.complex.json",
+   "model": "complex",
+   "fallbacks_used": {},
+   "unknown": {}
+  },
+  "cmm": {
+   "vocabulary": "/mnt/d/ocaml2vec/vocab/cmm.complex.json",
+   "model": "complex",
+   "fallbacks_used": {},
+   "unknown": {}
+  }
+ }
+}

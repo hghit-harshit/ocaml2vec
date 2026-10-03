@@ -1,0 +1,22 @@
+# cmm · transe · α = 0.75 · vocabulary sha256 ec830229ca12 · not plotted: 5 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Craise is runtime here, Lambda's Praise is a control form; Cload_narrow is unused (the family did not merge)
+# PCA explained variance: PC1 0.386033, PC2 0.346817
+entity	category	group	pc1	pc2	low_confidence	triples
+ADDR	types	types	-0.337301	0.643073	False	399566
+FLOAT	types	types	0.358006	-0.542075	False	12785
+INT	types	types	0.617422	0.275996	False	240298
+VAL	types	types	-0.638127	-0.376994	False	597454
+Cdls_get		merged into C_RUNTIME				
+Cload_16s		fallback -> Cload_16u				
+Cload_byte_s		fallback -> Cload_byte_u				
+Cload_narrow		unused: the Cload_narrow family did not merge (Cload_32s has >= 1000 triples), so no vector exists				
+Cload_single		fallback -> Cload_double				
+Cpoll		merged into C_RUNTIME				
+Cstore_16s		merged into Cstore_narrow				
+Cstore_16u		merged into Cstore_narrow				
+Cstore_32s		merged into Cstore_narrow				
+Cstore_32u		merged into Cstore_narrow				
+Cstore_64		merged into Cstore_narrow				
+Cstore_single		fallback -> Cstore_double				
+RETURN_ADDR		impossible				
+TUPLE		fallback -> COPY				

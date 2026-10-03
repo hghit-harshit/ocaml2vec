@@ -1,0 +1,117 @@
+{
+  "unit": "Counter",
+  "source": "counter.ml",
+  "digest": "edfeca31f16cf90423203a406845cc1f",
+  "ocaml": "5.5.1",
+  "functions": [
+    {
+      "fid": "module_init",
+      "name": "Counter",
+      "kind": "module_init",
+      "stamp": null,
+      "loc": null,
+      "params": [],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":1,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","leaf":"CONST_INT","def":null}
+          ]
+        },
+        {
+          "id": 1,
+          "op": "Llet",
+          "type": "GEN",
+          "positions": [
+            {"i":0,"role":"value","child":2,"kind":"VAR_INT"},
+            {"i":1,"role":"control","child":3,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"func":"count/274","kind":"VAR_INT"}],
+          "func": "count/274"
+        },
+        {
+          "id": 3,
+          "op": "Psetfield",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","child":4,"kind":"VAR_GEN"},
+            {"i":1,"role":"value","leaf":"VAR_GEN","def":[2]}
+          ]
+        },
+        {"id":4,"op":"Pgetglobal_self","type":"GEN","positions":[]}
+      ],
+      "cases": {},
+      "counts": {}
+    },
+    {
+      "fid": "count/274",
+      "name": "count",
+      "kind": "named",
+      "stamp": 274,
+      "loc": {"file":"counter.ml","l1":1,"c1":10,"l2":6,"c2":4},
+      "params": [{"name":"n","stamp":276,"type":"INT"}],
+      "nodes": [
+        {
+          "id": 0,
+          "op": "Lfunction_a1",
+          "type": "INT",
+          "positions": [{"i":0,"role":"control","child":1,"kind":"VAR_INT"}],
+          "owner": "module_init"
+        },
+        {
+          "id": 1,
+          "op": "Lmutlet",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"CONST_INT","def":null},
+            {"i":1,"role":"control","child":2,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 2,
+          "op": "Lsequence",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"control","child":3,"kind":"VAR_GEN"},
+            {"i":1,"role":"control","leaf":"MUTVAR","def":[1,4]}
+          ]
+        },
+        {
+          "id": 3,
+          "op": "Lfor",
+          "type": null,
+          "positions": [
+            {"i":0,"role":"value","leaf":"CONST_INT","def":null},
+            {"i":1,"role":"value","leaf":"VAR_INT","def":null},
+            {"i":2,"role":"control","child":4,"kind":"VAR_GEN"}
+          ]
+        },
+        {
+          "id": 4,
+          "op": "Lassign",
+          "type": null,
+          "positions": [{"i":0,"role":"value","child":5,"kind":"VAR_INT"}]
+        },
+        {
+          "id": 5,
+          "op": "Paddint",
+          "type": "INT",
+          "positions": [
+            {"i":0,"role":"value","leaf":"MUTVAR","def":[1,4]},
+            {"i":1,"role":"value","leaf":"VAR_INT","def":null}
+          ]
+        }
+      ],
+      "cases": {},
+      "counts": {"ARITY_1":1,"RET_INT":1}
+    }
+  ]
+}

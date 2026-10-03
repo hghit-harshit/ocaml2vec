@@ -1,0 +1,132 @@
+# lambda · transe · α = 0.75 · vocabulary sha256 da2af4277d3a · not plotted: 4 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Praise is a control form here, Cmm's Craise is runtime; P_RAW_LOAD/P_RAW_STORE (merged) span strings, bytes and bigstrings
+# top-1 same-category rate 0.590551; chance 0.085364
+# excluded (no own vector): Pbbswap (merged into P_BSWAP); Pbigarraydim (merged into P_BIGARRAY); Pbigarrayref (merged into P_BIGARRAY); Pbigarrayset (merged into P_BIGARRAY); Pbigstring_load_16 (merged into P_RAW_LOAD); Pbigstring_load_32 (merged into P_RAW_LOAD); Pbigstring_load_64 (merged into P_RAW_LOAD); Pbigstring_set_16 (merged into P_RAW_STORE); Pbigstring_set_32 (merged into P_RAW_STORE); Pbigstring_set_64 (merged into P_RAW_STORE); Pbswap16 (merged into P_BSWAP); Pbytes_load_16 (merged into P_RAW_LOAD); Pbytes_load_32 (merged into P_RAW_LOAD); Pbytes_load_64 (merged into P_RAW_LOAD); Pbytes_set_16 (merged into P_RAW_STORE); Pbytes_set_32 (merged into P_RAW_STORE); Pbytes_set_64 (merged into P_RAW_STORE); Pduprecord (fallback -> Pduparray); Pint_as_pointer (fallback -> Popaque); Ppoll (fallback -> Pccall); Psetfloatfield (fallback -> Psetfield); Psetglobal (impossible); Pstring_load_16 (merged into P_RAW_LOAD); Pstring_load_32 (merged into P_RAW_LOAD); Pstring_load_64 (merged into P_RAW_LOAD)
+category	entity	confidence	triples	nn1	nn1_category	nn1_cosine	nn2	nn2_category	nn2_cosine	nn3	nn3_category	nn3_cosine
+int arithmetic	P_BSWAP	low	375	P_RAW_LOAD	strings and bytes	0.299640	P_RAW_STORE	strings and bytes	0.217016	BINT	types	0.209269
+int arithmetic	Paddint		23896	Psubint	int arithmetic	0.607008	Pmulint	int arithmetic	0.512953	Pdivint	int arithmetic	0.431617
+int arithmetic	Pandint		2888	Porint	int arithmetic	0.443248	Plsrint	int arithmetic	0.406946	Plslint	int arithmetic	0.391369
+int arithmetic	Pasrint	low	332	Plslint	int arithmetic	0.332899	Psubint	int arithmetic	0.307340	Paddint	int arithmetic	0.271848
+int arithmetic	Pdivint		1216	Pmulint	int arithmetic	0.460913	Paddint	int arithmetic	0.431617	Psubint	int arithmetic	0.403584
+int arithmetic	Plslint		1984	Porint	int arithmetic	0.497998	Pandint	int arithmetic	0.391369	Psubint	int arithmetic	0.357110
+int arithmetic	Plsrint		1524	Pandint	int arithmetic	0.406946	Porint	int arithmetic	0.339415	Plslint	int arithmetic	0.285840
+int arithmetic	Pmodint	low	676	Paddint	int arithmetic	0.307253	Psubint	int arithmetic	0.283159	Pdivint	int arithmetic	0.280301
+int arithmetic	Pmulint		2620	Paddint	int arithmetic	0.512953	Psubint	int arithmetic	0.482915	Pdivint	int arithmetic	0.460913
+int arithmetic	Pnegint	low	339	Paddint	int arithmetic	0.268891	Psubint	int arithmetic	0.259319	Pstringlength	strings and bytes	0.222618
+int arithmetic	Poffsetint		3456	Psubint	int arithmetic	0.289224	Lswitch	control forms	0.228939	Parraylength	arrays	0.224952
+int arithmetic	Porint		1512	Plslint	int arithmetic	0.497998	Pandint	int arithmetic	0.443248	Plsrint	int arithmetic	0.339415
+int arithmetic	Psubint		19920	Paddint	int arithmetic	0.607008	Pmulint	int arithmetic	0.482915	Parrayrefs	arrays	0.434351
+int arithmetic	Pxorint	low	128	Pandint	int arithmetic	0.243158	Parrayrefs	arrays	0.195939	Plsrint	int arithmetic	0.182263
+float arithmetic	Pabsfloat	low	234	Psubfloat	float arithmetic	0.307921	Pdivfloat	float arithmetic	0.290015	Pfloatfield	blocks and records	0.285112
+float arithmetic	Paddfloat		3156	Pmulfloat	float arithmetic	0.654364	Psubfloat	float arithmetic	0.520158	Pdivfloat	float arithmetic	0.494351
+float arithmetic	Pdivfloat		1620	Pmulfloat	float arithmetic	0.531056	Paddfloat	float arithmetic	0.494351	Psubfloat	float arithmetic	0.449511
+float arithmetic	Pmulfloat		4856	Paddfloat	float arithmetic	0.654364	Psubfloat	float arithmetic	0.638383	Pdivfloat	float arithmetic	0.531056
+float arithmetic	Pnegfloat	low	432	Pfloatfield	blocks and records	0.369271	Pmulfloat	float arithmetic	0.363339	Paddfloat	float arithmetic	0.313266
+float arithmetic	Psubfloat		2196	Pmulfloat	float arithmetic	0.638383	Paddfloat	float arithmetic	0.520158	Pdivfloat	float arithmetic	0.449511
+boxed-int	Paddbint	low	424	Pmulbint	boxed-int	0.365717	Pandbint	boxed-int	0.352717	Pdivbint	boxed-int	0.299239
+boxed-int	Pandbint	low	344	Paddbint	boxed-int	0.352717	Plsrbint	boxed-int	0.352503	Psubbint	boxed-int	0.329885
+boxed-int	Pasrbint	low	108	Pandbint	boxed-int	0.278288	Pmulbint	boxed-int	0.233696	Plsrbint	boxed-int	0.194630
+boxed-int	Pdivbint	low	272	Psubbint	boxed-int	0.462886	Paddbint	boxed-int	0.299239	Plslbint	boxed-int	0.282077
+boxed-int	Plslbint	low	244	Porbint	boxed-int	0.297394	Psubbint	boxed-int	0.291821	Pbintofint	conversions	0.289450
+boxed-int	Plsrbint	low	436	Pandbint	boxed-int	0.352503	Paddbint	boxed-int	0.290203	Pintofbint	conversions	0.273692
+boxed-int	Pmodbint	low	132	Psubbint	boxed-int	0.257173	VAR_BINT	operand kinds	0.216705	Pdivbint	boxed-int	0.215115
+boxed-int	Pmulbint	low	372	Paddbint	boxed-int	0.365717	Psubbint	boxed-int	0.315374	Pdivbint	boxed-int	0.250201
+boxed-int	Pnegbint	low	111	CONST_BINT	operand kinds	0.278378	Pxorbint	boxed-int	0.239770	Paddbint	boxed-int	0.229629
+boxed-int	Porbint	low	224	Plslbint	boxed-int	0.297394	Plsrbint	boxed-int	0.216946	Pbintofint	conversions	0.208739
+boxed-int	Psubbint	low	468	Pdivbint	boxed-int	0.462886	Pandbint	boxed-int	0.329885	Pmulbint	boxed-int	0.315374
+boxed-int	Pxorbint	low	176	Pbintcomp	comparisons and tests	0.286268	Psubbint	boxed-int	0.267943	Plslbint	boxed-int	0.263384
+conversions	Pbintofint	low	417	Plslbint	boxed-int	0.289450	Pandbint	boxed-int	0.287446	Pandint	int arithmetic	0.264141
+conversions	Pcvtbint	low	150	VAR_BINT	operand kinds	0.235793	Pandbint	boxed-int	0.219756	Pxorbint	boxed-int	0.187573
+conversions	Pfloatofint	low	564	Pmulfloat	float arithmetic	0.262296	Pdivfloat	float arithmetic	0.257756	Paddfloat	float arithmetic	0.245899
+conversions	Pintofbint	low	399	Plsrbint	boxed-int	0.273692	Pandint	int arithmetic	0.265340	Pandbint	boxed-int	0.224183
+conversions	Pintoffloat	low	258	Pdivfloat	float arithmetic	0.252101	VAR_FLOAT	operand kinds	0.224554	Pmakelazyblock	blocks and records	0.166738
+comparisons and tests	Pbintcomp		1188	Psequor	comparisons and tests	0.312959	Pxorbint	boxed-int	0.286268	Psubbint	boxed-int	0.279015
+comparisons and tests	Pcompare_bints	low	76	Pcompare_floats	comparisons and tests	0.215192	VAR_BINT	operand kinds	0.213251	Porbint	boxed-int	0.184719
+comparisons and tests	Pcompare_floats	low	64	Pcompare_bints	comparisons and tests	0.215192	INT	types	0.200913	Pbytessets	strings and bytes	0.167323
+comparisons and tests	Pcompare_ints	low	432	Pintcomp	comparisons and tests	0.186551	Psubint	int arithmetic	0.179342	Pdivint	int arithmetic	0.149747
+comparisons and tests	Pfloatcomp		2832	Psequand	comparisons and tests	0.355489	Psequor	comparisons and tests	0.312104	Pmulfloat	float arithmetic	0.298292
+comparisons and tests	Pintcomp		78532	Psequand	comparisons and tests	0.430499	Psequor	comparisons and tests	0.398720	Lifthenelse	control forms	0.333664
+comparisons and tests	Pisint		39105	INT	types	0.208669	Pfloatcomp	comparisons and tests	0.201876	Pisout	comparisons and tests	0.178683
+comparisons and tests	Pisout		3216	Poffsetint	int arithmetic	0.208864	Pnot	comparisons and tests	0.186965	Pisint	comparisons and tests	0.178683
+comparisons and tests	Pnot		4884	Psequand	comparisons and tests	0.479823	Psequor	comparisons and tests	0.407965	Lifthenelse	control forms	0.263964
+comparisons and tests	Psequand		9604	Psequor	comparisons and tests	0.579747	Pnot	comparisons and tests	0.479823	Pintcomp	comparisons and tests	0.430499
+comparisons and tests	Psequor		5876	Psequand	comparisons and tests	0.579747	Pnot	comparisons and tests	0.407965	Pintcomp	comparisons and tests	0.398720
+blocks and records	Pfield		928944	Pmakeblock	blocks and records	0.472072	Parrayrefs	arrays	0.391267	Pmakearray	arrays	0.351782
+blocks and records	Pfield_computed		1952	Plslbint	boxed-int	0.193401	Pfloatfield	blocks and records	0.182930	Lapply_a4p	control forms	0.173332
+blocks and records	Pfloatfield		9204	Pmulfloat	float arithmetic	0.473733	Psubfloat	float arithmetic	0.439995	Paddfloat	float arithmetic	0.437936
+blocks and records	Pmakeblock		286458	Lapply_a2	control forms	0.633927	Lapply_a4p	control forms	0.613469	Lapply_a3	control forms	0.591525
+blocks and records	Pmakelazyblock	low	750	Lfunction_a1	control forms	0.264107	Pmakeblock	blocks and records	0.202428	Pduparray	arrays	0.168832
+blocks and records	Poffsetref	low	490	Lsequence	control forms	0.187394	Pbytes_to_string	strings and bytes	0.175402	P_RAW_STORE	strings and bytes	0.141055
+blocks and records	Psetfield		198759	Lsequence	control forms	0.404928	Lletrec	control forms	0.329362	Pgetglobal_self	globals and externs	0.282795
+blocks and records	Psetfield_computed		1576	Lsequence	control forms	0.260431	P_RAW_STORE	strings and bytes	0.226390	Pbytessetu	strings and bytes	0.222869
+arrays	P_BIGARRAY	low	950	Lapply_a3	control forms	0.242392	Paddint	int arithmetic	0.239922	Parrayrefs	arrays	0.232291
+arrays	Parraylength		4020	Pstringlength	strings and bytes	0.306263	Psubint	int arithmetic	0.277968	Pintcomp	comparisons and tests	0.268844
+arrays	Parrayrefs		15339	Psubint	int arithmetic	0.434351	Paddint	int arithmetic	0.430143	Pmulint	int arithmetic	0.413044
+arrays	Parrayrefu		2048	Pandint	int arithmetic	0.328750	Lapply_a2	control forms	0.279261	Pstringrefs	strings and bytes	0.227938
+arrays	Parraysets		3208	Parraysetu	arrays	0.283417	Lifthenelse	control forms	0.238638	Lsequence	control forms	0.237023
+arrays	Parraysetu	low	556	Parraysets	arrays	0.283417	Popaque	misc	0.273507	Pbytessets	strings and bytes	0.231427
+arrays	Pduparray	low	600	Pmakearray	arrays	0.301750	CONST_BLOCK	operand kinds	0.244144	GEN	types	0.203984
+arrays	Pmakearray		54694	Pmakeblock	blocks and records	0.586775	Lapply_a3	control forms	0.407102	Lfunction_a1	control forms	0.391538
+strings and bytes	P_RAW_LOAD	low	624	P_BSWAP	int arithmetic	0.299640	P_RAW_STORE	strings and bytes	0.195802	Pbintcomp	comparisons and tests	0.192777
+strings and bytes	P_RAW_STORE	low	604	Psetfield_computed	blocks and records	0.226390	P_BSWAP	int arithmetic	0.217016	P_RAW_LOAD	strings and bytes	0.195802
+strings and bytes	Pbytes_of_string	low	6	CONST_FLOAT	operand kinds	0.157566	Pfield_computed	blocks and records	0.148227	Pgetglobal_stdlib	globals and externs	0.139062
+strings and bytes	Pbytes_to_string	low	99	GEN	types	0.202191	Lfunction_a3	control forms	0.190440	CONST_FLOAT	operand kinds	0.189747
+strings and bytes	Pbyteslength	low	660	Psubint	int arithmetic	0.250081	Pmulint	int arithmetic	0.230922	Pstringlength	strings and bytes	0.211024
+strings and bytes	Pbytesrefs	low	240	Porint	int arithmetic	0.288697	Plslint	int arithmetic	0.279202	Pstringrefs	strings and bytes	0.195251
+strings and bytes	Pbytesrefu	low	308	Pstringrefs	strings and bytes	0.274844	Paddint	int arithmetic	0.175159	Pstringrefu	strings and bytes	0.165489
+strings and bytes	Pbytessets	low	540	Parraysetu	arrays	0.231427	Parraysets	arrays	0.206374	Psetfield_computed	blocks and records	0.183963
+strings and bytes	Pbytessetu	low	488	Psetfield_computed	blocks and records	0.222869	Lsequence	control forms	0.206419	Pdls_get	runtime intrinsics	0.198238
+strings and bytes	Pstringlength		4089	Psubint	int arithmetic	0.349884	Paddint	int arithmetic	0.336286	Parraylength	arrays	0.306263
+strings and bytes	Pstringrefs		3868	Paddint	int arithmetic	0.326583	Pintcomp	comparisons and tests	0.280062	Pbytesrefu	strings and bytes	0.274844
+strings and bytes	Pstringrefu	low	804	Paddint	int arithmetic	0.261841	Pintcomp	comparisons and tests	0.222570	Plsrint	int arithmetic	0.202942
+control forms	Lapply_a1		128950	Pmakeblock	blocks and records	0.456882	Lapply_a2	control forms	0.388357	Lapply_a3	control forms	0.361357
+control forms	Lapply_a2		167982	Pmakeblock	blocks and records	0.633927	Lapply_a3	control forms	0.531146	Lapply_a4p	control forms	0.506576
+control forms	Lapply_a3		70092	Pmakeblock	blocks and records	0.591525	Lapply_a4p	control forms	0.536100	Lapply_a2	control forms	0.531146
+control forms	Lapply_a4p		77591	Pmakeblock	blocks and records	0.613469	Lapply_a3	control forms	0.536100	Lapply_a2	control forms	0.506576
+control forms	Lassign		2540	Lwhile	control forms	0.232189	Lfor	control forms	0.220931	Lsequence	control forms	0.212766
+control forms	Lfor		4424	Lsequence	control forms	0.369933	Lifthenelse	control forms	0.238838	Ltrywith	control forms	0.227057
+control forms	Lfunction_a1		92499	Pmakeblock	blocks and records	0.452967	Llet	control forms	0.420861	Pmakearray	arrays	0.391538
+control forms	Lfunction_a2		55731	Pmakeblock	blocks and records	0.377128	Lfunction_a1	control forms	0.368111	Lapply_a3	control forms	0.358835
+control forms	Lfunction_a3		21684	Lfunction_a1	control forms	0.367219	Lletrec	control forms	0.360271	Pmakeblock	blocks and records	0.313846
+control forms	Lfunction_a4p		14602	Llet	control forms	0.349652	Lletrec	control forms	0.331300	Pmakeblock	blocks and records	0.275742
+control forms	Lifthenelse		158315	Lsequence	control forms	0.517275	Llet	control forms	0.500827	Lstaticcatch	control forms	0.495035
+control forms	Llet		459877	Lifthenelse	control forms	0.500827	Pmakeblock	blocks and records	0.463895	Lfunction_a1	control forms	0.420861
+control forms	Lletrec		16085	Lsequence	control forms	0.415260	Llet	control forms	0.396372	Lfunction_a3	control forms	0.360271
+control forms	Lmutlet		3156	Lsequence	control forms	0.328585	Lwhile	control forms	0.316510	Ltrywith	control forms	0.272166
+control forms	Lsend		24003	Pmakeblock	blocks and records	0.394987	Lapply_a3	control forms	0.331216	Pfield	blocks and records	0.286334
+control forms	Lsequence		252268	Lifthenelse	control forms	0.517275	Ltrywith	control forms	0.461614	Lstaticcatch	control forms	0.434809
+control forms	Lstaticcatch		18438	Lifthenelse	control forms	0.495035	Lsequence	control forms	0.434809	Ltrywith	control forms	0.422887
+control forms	Lstaticraise		22428	Lifthenelse	control forms	0.379421	Ltrywith	control forms	0.307032	Lsequence	control forms	0.292264
+control forms	Lstringswitch		3305	Lswitch	control forms	0.379397	Lstaticcatch	control forms	0.237463	VAR_GEN	operand kinds	0.198235
+control forms	Lswitch		44638	Lstringswitch	control forms	0.379397	Lstaticcatch	control forms	0.262175	Poffsetint	int arithmetic	0.228939
+control forms	Ltrywith		6981	Lsequence	control forms	0.461614	Lstaticcatch	control forms	0.422887	Lifthenelse	control forms	0.374841
+control forms	Lwhile		1287	Lsequence	control forms	0.424481	Lmutlet	control forms	0.316510	Psequand	comparisons and tests	0.302234
+control forms	Praise		10678	Lifthenelse	control forms	0.245940	Lstaticcatch	control forms	0.245814	Ltrywith	control forms	0.215752
+effects	Pperform	low	16	CONST_BINT	operand kinds	0.203592	GEN	types	0.164705	CONST_STRING	operand kinds	0.156762
+effects	Preperform	low	12	Prunstack	effects	0.228425	INT	types	0.213641	Pisint	comparisons and tests	0.164185
+effects	Presume	low	20	CONST_BLOCK	operand kinds	0.172026	Porbint	boxed-int	0.171252	FLOAT	types	0.154083
+effects	Prunstack	low	12	GEN	types	0.236456	Preperform	effects	0.228425	Pctconst	misc	0.184293
+runtime intrinsics	Patomic_load	low	8	Pabsfloat	float arithmetic	0.135899	Pctconst	misc	0.134677	Pasrint	int arithmetic	0.121210
+runtime intrinsics	Pdls_get	low	4	GEN	types	0.282953	Pbytessetu	strings and bytes	0.198238	CONST_INT	operand kinds	0.195130
+globals and externs	Pccall		13680	Lapply_a2	control forms	0.483169	Parrayrefs	arrays	0.369638	Pmakeblock	blocks and records	0.368988
+globals and externs	Pgetglobal_other		119040	Pgetglobal_self	globals and externs	0.280446	Pfield	blocks and records	0.235282	Pgetglobal_stdlib	globals and externs	0.196120
+globals and externs	Pgetglobal_self		277104	Pgetglobal_stdlib	globals and externs	0.354047	Psetfield	blocks and records	0.282795	Pgetglobal_other	globals and externs	0.280446
+globals and externs	Pgetglobal_stdlib		53308	Pgetglobal_self	globals and externs	0.354047	Pgetglobal_other	globals and externs	0.196120	Pfield	blocks and records	0.178216
+misc	Pctconst	low	27	Pdls_get	runtime intrinsics	0.185511	Prunstack	effects	0.184293	FLOAT	types	0.175418
+misc	Pignore	low	994	Lsequence	control forms	0.303839	Ltrywith	control forms	0.234177	Lletrec	control forms	0.218807
+misc	Popaque		1608	Parraysetu	arrays	0.273507	Parrayrefu	arrays	0.215714	Lapply_a1	control forms	0.214821
+types	ADDR		1048	INT	types	0.317412	GEN	types	0.218648	VAR_BINT	operand kinds	0.192997
+types	BINT		2148	VAR_BINT	operand kinds	0.303783	CONST_BINT	operand kinds	0.271962	Pdivbint	boxed-int	0.251211
+types	FLOAT		8708	CONST_FLOAT	operand kinds	0.319705	GEN	types	0.306706	Pabsfloat	float arithmetic	0.249899
+types	GEN		775252	FLOAT	types	0.306706	Pdls_get	runtime intrinsics	0.282953	Pgetglobal_self	globals and externs	0.248692
+types	INT		100258	ADDR	types	0.317412	GEN	types	0.223889	Preperform	effects	0.213641
+operand kinds	CONST_BINT	low	504	VAR_BINT	operand kinds	0.388782	CONST_BLOCK	operand kinds	0.306152	Pnegbint	boxed-int	0.278378
+operand kinds	CONST_BLOCK		12743	CONST_STRING	operand kinds	0.365389	CONST_INT	operand kinds	0.361978	CONST_FLOAT	operand kinds	0.345481
+operand kinds	CONST_FLOAT		2160	VAR_FLOAT	operand kinds	0.439346	CONST_BLOCK	operand kinds	0.345481	FLOAT	types	0.319705
+operand kinds	CONST_INT		103629	VAR_INT	operand kinds	0.436672	VAR_GEN	operand kinds	0.398935	CONST_BLOCK	operand kinds	0.361978
+operand kinds	CONST_STRING		17254	VAR_GEN	operand kinds	0.387982	CONST_BLOCK	operand kinds	0.365389	CONST_INT	operand kinds	0.305773
+operand kinds	MUTVAR		2939	VAR_INT	operand kinds	0.397372	VAR_FLOAT	operand kinds	0.334107	CONST_INT	operand kinds	0.330002
+operand kinds	VAR_BINT		2556	CONST_BINT	operand kinds	0.388782	VAR_GEN	operand kinds	0.339541	CONST_BLOCK	operand kinds	0.313157
+operand kinds	VAR_FLOAT		4498	CONST_FLOAT	operand kinds	0.439346	MUTVAR	operand kinds	0.334107	VAR_GEN	operand kinds	0.324674
+operand kinds	VAR_GEN		425741	VAR_INT	operand kinds	0.474071	CONST_INT	operand kinds	0.398935	CONST_STRING	operand kinds	0.387982
+operand kinds	VAR_INT		51217	VAR_GEN	operand kinds	0.474071	CONST_INT	operand kinds	0.436672	MUTVAR	operand kinds	0.397372

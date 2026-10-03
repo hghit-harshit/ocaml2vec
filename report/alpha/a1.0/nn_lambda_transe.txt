@@ -1,0 +1,25 @@
+nearest neighbours (cosine), lambda
+  Paddint          Psubint 0.60, Parrayrefs 0.44, Pmulint 0.41, Pdivint 0.40, Lapply_a2 0.37
+  Psubint          Paddint 0.60, Parrayrefs 0.42, Pmulint 0.38, Plslint 0.37, Pstringlength 0.37
+  Pmulint          Parrayrefs 0.41, Paddint 0.41, Pdivint 0.40, Psubint 0.38, Pmodint 0.27
+  Paddfloat        Pmulfloat 0.66, Psubfloat 0.53, Pfloatfield 0.45, Pdivfloat 0.44, Pnegfloat 0.29
+  Pmulfloat        Paddfloat 0.66, Psubfloat 0.57, Pfloatfield 0.49, Pdivfloat 0.44, Pnegfloat 0.36
+  Pintcomp         Psequand 0.48, Psequor 0.44, Lifthenelse 0.40, Pnot 0.32, Lapply_a2 0.32
+  Pfloatcomp       Psequand 0.30, Pmulfloat 0.28, Psequor 0.27, Paddfloat 0.27, Psubfloat 0.25
+  Pmakeblock       Lapply_a2 0.63, Lapply_a4p 0.61, Lapply_a3 0.57, Lapply_a1 0.55, Pmakearray 0.52
+  Pfield           Pmakeblock 0.50, Lapply_a1 0.46, Lapply_a2 0.44, Parrayrefs 0.41, Pmakearray 0.39
+  Lapply_a1        Lapply_a2 0.56, Pmakeblock 0.55, Lapply_a3 0.49, Pfield 0.46, Lapply_a4p 0.44
+  Lfunction_a1     Llet 0.49, Pmakeblock 0.48, Lapply_a2 0.47, Lapply_a1 0.43, Lfunction_a2 0.40
+  Lifthenelse      Lsequence 0.47, Lstaticcatch 0.45, Llet 0.45, Lapply_a2 0.43, Lstaticraise 0.43
+  Pperform         Presume 0.17, VAR_BINT 0.17, GEN 0.16, Poffsetref 0.16, Pbytes_of_string 0.16
+  INT              GEN 0.28, Pbyteslength 0.22, Pstringrefu 0.19, BINT 0.18, Pcompare_floats 0.18
+  FLOAT            Pabsfloat 0.40, Psubfloat 0.28, Pmulfloat 0.27, GEN 0.27, Pfloatfield 0.26
+  VAR_INT          VAR_GEN 0.48, CONST_INT 0.40, MUTVAR 0.36, CONST_STRING 0.25, VAR_BINT 0.24
+  CONST_INT        VAR_GEN 0.45, VAR_INT 0.40, CONST_BLOCK 0.33, VAR_FLOAT 0.33, MUTVAR 0.32
+expected clusters: cosine, and rank of the partner among the probe's neighbours
+  Paddint ~ Psubint: cos 0.60, rank 1 / 126
+  Pmulint ~ Pdivint: cos 0.40, rank 3 / 126
+  Paddfloat ~ Pmulfloat: cos 0.66, rank 1 / 126
+  Paddfloat ~ Psubfloat: cos 0.53, rank 2 / 126
+  Pfield ~ Psetfield: cos 0.23, rank 24 / 126
+  Lapply_a1 ~ Lapply_a2: cos 0.56, rank 1 / 126

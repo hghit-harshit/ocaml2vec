@@ -1,0 +1,55 @@
+# lambda · complex · α = 0.75 · vocabulary sha256 071b3f660cb9 · not plotted: 4 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Praise is a control form here, Cmm's Craise is runtime; P_RAW_LOAD/P_RAW_STORE (merged) span strings, bytes and bigstrings
+# PCA explained variance: PC1 0.366407, PC2 0.089936
+entity	category	group	pc1	pc2	low_confidence	triples
+P_BSWAP	int arithmetic	int arithmetic	1.197770	-2.549298	True	375
+Paddint	int arithmetic	int arithmetic	-4.174625	2.014290	False	23896
+Pandint	int arithmetic	int arithmetic	-2.132835	-0.911464	False	2888
+Pasrint	int arithmetic	int arithmetic	-1.106697	-1.540781	True	332
+Pdivint	int arithmetic	int arithmetic	-2.402118	1.013532	False	1216
+Plslint	int arithmetic	int arithmetic	-1.936594	-1.311112	False	1984
+Plsrint	int arithmetic	int arithmetic	-1.954968	-0.790319	False	1524
+Pmodint	int arithmetic	int arithmetic	-2.072135	0.361756	True	676
+Pmulint	int arithmetic	int arithmetic	-2.669603	1.197880	False	2620
+Pnegint	int arithmetic	int arithmetic	-1.143802	-0.980072	True	339
+Poffsetint	int arithmetic	int arithmetic	-1.855482	-0.032796	False	3456
+Porint	int arithmetic	int arithmetic	-1.929450	-0.802704	False	1512
+Psubint	int arithmetic	int arithmetic	-3.616505	1.334247	False	19920
+Pxorint	int arithmetic	int arithmetic	-0.509286	-1.626924	True	128
+Paddbint	boxed-int	boxed-int	2.353133	1.025175	True	424
+Pandbint	boxed-int	boxed-int	2.672766	0.766528	True	344
+Pasrbint	boxed-int	boxed-int	1.703109	-0.619603	True	108
+Pdivbint	boxed-int	boxed-int	2.030579	1.064819	True	272
+Plslbint	boxed-int	boxed-int	1.950139	-0.200783	True	244
+Plsrbint	boxed-int	boxed-int	1.719252	-0.544763	True	436
+Pmodbint	boxed-int	boxed-int	2.128059	0.996214	True	132
+Pmulbint	boxed-int	boxed-int	2.338326	1.149260	True	372
+Pnegbint	boxed-int	boxed-int	2.404959	-0.440858	True	111
+Porbint	boxed-int	boxed-int	2.103953	0.268507	True	224
+Psubbint	boxed-int	boxed-int	2.433208	1.031351	True	468
+Pxorbint	boxed-int	boxed-int	2.468847	0.127916	True	176
+Pbbswap		merged into P_BSWAP				
+Pbigarraydim		merged into P_BIGARRAY				
+Pbigarrayref		merged into P_BIGARRAY				
+Pbigarrayset		merged into P_BIGARRAY				
+Pbigstring_load_16		merged into P_RAW_LOAD				
+Pbigstring_load_32		merged into P_RAW_LOAD				
+Pbigstring_load_64		merged into P_RAW_LOAD				
+Pbigstring_set_16		merged into P_RAW_STORE				
+Pbigstring_set_32		merged into P_RAW_STORE				
+Pbigstring_set_64		merged into P_RAW_STORE				
+Pbswap16		merged into P_BSWAP				
+Pbytes_load_16		merged into P_RAW_LOAD				
+Pbytes_load_32		merged into P_RAW_LOAD				
+Pbytes_load_64		merged into P_RAW_LOAD				
+Pbytes_set_16		merged into P_RAW_STORE				
+Pbytes_set_32		merged into P_RAW_STORE				
+Pbytes_set_64		merged into P_RAW_STORE				
+Pduprecord		fallback -> Pduparray				
+Pint_as_pointer		fallback -> Popaque				
+Ppoll		fallback -> Pccall				
+Psetfloatfield		fallback -> Psetfield				
+Psetglobal		impossible				
+Pstring_load_16		merged into P_RAW_LOAD				
+Pstring_load_32		merged into P_RAW_LOAD				
+Pstring_load_64		merged into P_RAW_LOAD				

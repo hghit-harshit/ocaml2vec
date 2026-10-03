@@ -1,0 +1,6 @@
+(executable
+ (name ir2vec_extract)
+ (public_name ir2vec-extract)
+ (package ir2vec)
+ (libraries ir2vec compiler-libs.optcomp)
+ (flags (:standard -w +8 -warn-error +8)))

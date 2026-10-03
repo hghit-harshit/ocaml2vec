@@ -1,0 +1,226 @@
+level	entity	triples	vector	vector_triples	status
+lambda	Lapply_a1	128950	Lapply_a1	128950	trained
+lambda	Lapply_a2	167982	Lapply_a2	167982	trained
+lambda	Lapply_a3	70092	Lapply_a3	70092	trained
+lambda	Lapply_a4p	77591	Lapply_a4p	77591	trained
+lambda	Lfunction_a1	92499	Lfunction_a1	92499	trained
+lambda	Lfunction_a2	55731	Lfunction_a2	55731	trained
+lambda	Lfunction_a3	21684	Lfunction_a3	21684	trained
+lambda	Lfunction_a4p	14602	Lfunction_a4p	14602	trained
+lambda	Llet	459877	Llet	459877	trained
+lambda	Lmutlet	3156	Lmutlet	3156	trained
+lambda	Lletrec	16085	Lletrec	16085	trained
+lambda	Lswitch	44638	Lswitch	44638	trained
+lambda	Lstringswitch	3305	Lstringswitch	3305	trained
+lambda	Lstaticraise	22428	Lstaticraise	22428	trained
+lambda	Lstaticcatch	18438	Lstaticcatch	18438	trained
+lambda	Ltrywith	6981	Ltrywith	6981	trained
+lambda	Lifthenelse	158315	Lifthenelse	158315	trained
+lambda	Lsequence	252268	Lsequence	252268	trained
+lambda	Lwhile	1287	Lwhile	1287	trained
+lambda	Lfor	4424	Lfor	4424	trained
+lambda	Lassign	2540	Lassign	2540	trained
+lambda	Lsend	24003	Lsend	24003	trained
+lambda	Pbytes_to_string	99	Pbytes_to_string	99	low-confidence
+lambda	Pbytes_of_string	6	Pbytes_of_string	6	low-confidence
+lambda	Pignore	994	Pignore	994	low-confidence
+lambda	Pgetglobal_self	277104	Pgetglobal_self	277104	trained
+lambda	Pgetglobal_stdlib	53308	Pgetglobal_stdlib	53308	trained
+lambda	Pgetglobal_other	119040	Pgetglobal_other	119040	trained
+lambda	Psetglobal	0		0	impossible
+lambda	Pmakeblock	286458	Pmakeblock	286458	trained
+lambda	Pmakelazyblock	750	Pmakelazyblock	750	low-confidence
+lambda	Pfield	928944	Pfield	928944	trained
+lambda	Pfield_computed	1952	Pfield_computed	1952	trained
+lambda	Psetfield	198759	Psetfield	198759	trained
+lambda	Psetfield_computed	1576	Psetfield_computed	1576	trained
+lambda	Pfloatfield	9204	Pfloatfield	9204	trained
+lambda	Psetfloatfield	0		0	fallback->Psetfield
+lambda	Pduprecord	0		0	fallback->Pduparray
+lambda	Prunstack	12	Prunstack	12	low-confidence
+lambda	Pperform	16	Pperform	16	low-confidence
+lambda	Presume	20	Presume	20	low-confidence
+lambda	Preperform	12	Preperform	12	low-confidence
+lambda	Pccall	13680	Pccall	13680	trained
+lambda	Praise	10678	Praise	10678	trained
+lambda	Psequand	9604	Psequand	9604	trained
+lambda	Psequor	5876	Psequor	5876	trained
+lambda	Pnot	4884	Pnot	4884	trained
+lambda	Pnegint	339	Pnegint	339	low-confidence
+lambda	Paddint	23896	Paddint	23896	trained
+lambda	Psubint	19920	Psubint	19920	trained
+lambda	Pmulint	2620	Pmulint	2620	trained
+lambda	Pdivint	1216	Pdivint	1216	trained
+lambda	Pmodint	676	Pmodint	676	low-confidence
+lambda	Pandint	2888	Pandint	2888	trained
+lambda	Porint	1512	Porint	1512	trained
+lambda	Pxorint	128	Pxorint	128	low-confidence
+lambda	Plslint	1984	Plslint	1984	trained
+lambda	Plsrint	1524	Plsrint	1524	trained
+lambda	Pasrint	332	Pasrint	332	low-confidence
+lambda	Pintcomp	78532	Pintcomp	78532	trained
+lambda	Pcompare_ints	432	Pcompare_ints	432	low-confidence
+lambda	Pcompare_floats	64	Pcompare_floats	64	low-confidence
+lambda	Pcompare_bints	76	Pcompare_bints	76	low-confidence
+lambda	Poffsetint	3456	Poffsetint	3456	trained
+lambda	Poffsetref	490	Poffsetref	490	low-confidence
+lambda	Pintoffloat	258	Pintoffloat	258	low-confidence
+lambda	Pfloatofint	564	Pfloatofint	564	low-confidence
+lambda	Pnegfloat	432	Pnegfloat	432	low-confidence
+lambda	Pabsfloat	234	Pabsfloat	234	low-confidence
+lambda	Paddfloat	3156	Paddfloat	3156	trained
+lambda	Psubfloat	2196	Psubfloat	2196	trained
+lambda	Pmulfloat	4856	Pmulfloat	4856	trained
+lambda	Pdivfloat	1620	Pdivfloat	1620	trained
+lambda	Pfloatcomp	2832	Pfloatcomp	2832	trained
+lambda	Pstringlength	4089	Pstringlength	4089	trained
+lambda	Pstringrefu	804	Pstringrefu	804	low-confidence
+lambda	Pstringrefs	3868	Pstringrefs	3868	trained
+lambda	Pbyteslength	660	Pbyteslength	660	low-confidence
+lambda	Pbytesrefu	308	Pbytesrefu	308	low-confidence
+lambda	Pbytessetu	488	Pbytessetu	488	low-confidence
+lambda	Pbytesrefs	240	Pbytesrefs	240	low-confidence
+lambda	Pbytessets	540	Pbytessets	540	low-confidence
+lambda	Pmakearray	54694	Pmakearray	54694	trained
+lambda	Pduparray	600	Pduparray	600	low-confidence
+lambda	Parraylength	4020	Parraylength	4020	trained
+lambda	Parrayrefu	2048	Parrayrefu	2048	trained
+lambda	Parraysetu	556	Parraysetu	556	low-confidence
+lambda	Parrayrefs	15339	Parrayrefs	15339	trained
+lambda	Parraysets	3208	Parraysets	3208	trained
+lambda	Pisint	39105	Pisint	39105	trained
+lambda	Pisout	3216	Pisout	3216	trained
+lambda	Pbintofint	417	Pbintofint	417	low-confidence
+lambda	Pintofbint	399	Pintofbint	399	low-confidence
+lambda	Pcvtbint	150	Pcvtbint	150	low-confidence
+lambda	Pnegbint	111	Pnegbint	111	low-confidence
+lambda	Paddbint	424	Paddbint	424	low-confidence
+lambda	Psubbint	468	Psubbint	468	low-confidence
+lambda	Pmulbint	372	Pmulbint	372	low-confidence
+lambda	Pdivbint	272	Pdivbint	272	low-confidence
+lambda	Pmodbint	132	Pmodbint	132	low-confidence
+lambda	Pandbint	344	Pandbint	344	low-confidence
+lambda	Porbint	224	Porbint	224	low-confidence
+lambda	Pxorbint	176	Pxorbint	176	low-confidence
+lambda	Plslbint	244	Plslbint	244	low-confidence
+lambda	Plsrbint	436	Plsrbint	436	low-confidence
+lambda	Pasrbint	108	Pasrbint	108	low-confidence
+lambda	Pbintcomp	1188	Pbintcomp	1188	trained
+lambda	Pbigarrayref	406	P_BIGARRAY	950	low-confidence (merged into P_BIGARRAY)
+lambda	Pbigarrayset	421	P_BIGARRAY	950	low-confidence (merged into P_BIGARRAY)
+lambda	Pbigarraydim	123	P_BIGARRAY	950	low-confidence (merged into P_BIGARRAY)
+lambda	Pstring_load_16	52	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pstring_load_32	68	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pstring_load_64	44	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbytes_load_16	76	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbytes_load_32	68	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbytes_load_64	52	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbytes_set_16	132	P_RAW_STORE	604	low-confidence (merged into P_RAW_STORE)
+lambda	Pbytes_set_32	124	P_RAW_STORE	604	low-confidence (merged into P_RAW_STORE)
+lambda	Pbytes_set_64	100	P_RAW_STORE	604	low-confidence (merged into P_RAW_STORE)
+lambda	Pbigstring_load_16	108	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbigstring_load_32	120	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbigstring_load_64	36	P_RAW_LOAD	624	low-confidence (merged into P_RAW_LOAD)
+lambda	Pbigstring_set_16	76	P_RAW_STORE	604	low-confidence (merged into P_RAW_STORE)
+lambda	Pbigstring_set_32	140	P_RAW_STORE	604	low-confidence (merged into P_RAW_STORE)
+lambda	Pbigstring_set_64	32	P_RAW_STORE	604	low-confidence (merged into P_RAW_STORE)
+lambda	Pctconst	27	Pctconst	27	low-confidence
+lambda	Pbswap16	150	P_BSWAP	375	low-confidence (merged into P_BSWAP)
+lambda	Pbbswap	225	P_BSWAP	375	low-confidence (merged into P_BSWAP)
+lambda	Pint_as_pointer	0		0	fallback->Popaque
+lambda	Patomic_load	8	Patomic_load	8	low-confidence
+lambda	Popaque	1608	Popaque	1608	trained
+lambda	Pdls_get	4	Pdls_get	4	low-confidence
+lambda	Ppoll	0		0	fallback->Pccall
+lambda	INT	100258	INT	100258	trained
+lambda	FLOAT	8708	FLOAT	8708	trained
+lambda	BINT	2148	BINT	2148	trained
+lambda	ADDR	1048	ADDR	1048	trained
+lambda	GEN	775252	GEN	775252	trained
+lambda	VAR_INT	51217	VAR_INT	51217	trained
+lambda	VAR_FLOAT	4498	VAR_FLOAT	4498	trained
+lambda	VAR_BINT	2556	VAR_BINT	2556	trained
+lambda	VAR_GEN	425741	VAR_GEN	425741	trained
+lambda	MUTVAR	2939	MUTVAR	2939	trained
+lambda	CONST_INT	103629	CONST_INT	103629	trained
+lambda	CONST_FLOAT	2160	CONST_FLOAT	2160	trained
+lambda	CONST_BINT	504	CONST_BINT	504	low-confidence
+lambda	CONST_STRING	17254	CONST_STRING	17254	trained
+lambda	CONST_BLOCK	12743	CONST_BLOCK	12743	trained
+cmm	Capply	947724	Capply	947724	trained
+cmm	Cextcall	359617	Cextcall	359617	trained
+cmm	Cload_byte_u	53625	Cload_byte_u	53625	trained
+cmm	Cload_byte_s	0		0	fallback->Cload_byte_u
+cmm	Cload_16u	564	Cload_16u	564	low-confidence
+cmm	Cload_16s	0		0	fallback->Cload_16u
+cmm	Cload_32u	420	Cload_32u	420	low-confidence
+cmm	Cload_32s	2396	Cload_32s	2396	trained
+cmm	Cload_64	352	Cload_64	352	low-confidence
+cmm	Cload_word_int	209554	Cload_word_int	209554	trained
+cmm	Cload_word_val	1317073	Cload_word_val	1317073	trained
+cmm	Cload_single	0		0	fallback->Cload_double
+cmm	Cload_double	31425	Cload_double	31425	trained
+cmm	Calloc	753707	Calloc	753707	trained
+cmm	Cstore_byte_u	1976	Cstore_byte_u	1976	trained
+cmm	Cstore_byte_s	4	Cstore_byte_s	4	low-confidence
+cmm	Cstore_16u	380	Cstore_narrow	1184	trained (merged into Cstore_narrow)
+cmm	Cstore_16s	0	Cstore_narrow	1184	trained (merged into Cstore_narrow)
+cmm	Cstore_32u	444	Cstore_narrow	1184	trained (merged into Cstore_narrow)
+cmm	Cstore_32s	0	Cstore_narrow	1184	trained (merged into Cstore_narrow)
+cmm	Cstore_64	360	Cstore_narrow	1184	trained (merged into Cstore_narrow)
+cmm	Cstore_word_int	3752	Cstore_word_int	3752	trained
+cmm	Cstore_word_val	16360	Cstore_word_val	16360	trained
+cmm	Cstore_single	0		0	fallback->Cstore_double
+cmm	Cstore_double	1824	Cstore_double	1824	trained
+cmm	Caddi	146622	Caddi	146622	trained
+cmm	Csubi	63728	Csubi	63728	trained
+cmm	Cmuli	4011	Cmuli	4011	trained
+cmm	Cmulhi	835	Cmulhi	835	low-confidence
+cmm	Cdivi	735	Cdivi	735	low-confidence
+cmm	Cmodi	505	Cmodi	505	low-confidence
+cmm	Cand	116902	Cand	116902	trained
+cmm	Cor	22968	Cor	22968	trained
+cmm	Cxor	3796	Cxor	3796	trained
+cmm	Clsl	124835	Clsl	124835	trained
+cmm	Clsr	57399	Clsr	57399	trained
+cmm	Casr	40928	Casr	40928	trained
+cmm	Ccmpi	226321	Ccmpi	226321	trained
+cmm	Caddv	94109	Caddv	94109	trained
+cmm	Cadda	1968535	Cadda	1968535	trained
+cmm	Ccmpa	4660	Ccmpa	4660	trained
+cmm	Cnegf	576	Cnegf	576	low-confidence
+cmm	Cabsf	366	Cabsf	366	low-confidence
+cmm	Caddf	4454	Caddf	4454	trained
+cmm	Csubf	2958	Csubf	2958	trained
+cmm	Cmulf	6797	Cmulf	6797	trained
+cmm	Cdivf	2016	Cdivf	2016	trained
+cmm	Cfloatofint	808	Cfloatofint	808	low-confidence
+cmm	Cintoffloat	569	Cintoffloat	569	low-confidence
+cmm	Ccmpf	4639	Ccmpf	4639	trained
+cmm	Craise	14552	Craise	14552	trained
+cmm	Ccheckbound	29116	Ccheckbound	29116	trained
+cmm	Copaque	3655	Copaque	3655	trained
+cmm	Cdls_get	7	C_RUNTIME	7	low-confidence (merged into C_RUNTIME)
+cmm	Cpoll	0	C_RUNTIME	7	low-confidence (merged into C_RUNTIME)
+cmm	COPY	37954	COPY	37954	trained
+cmm	ASSIGN	11766	ASSIGN	11766	trained
+cmm	BR	275688	BR	275688	trained
+cmm	SWITCH	21483	SWITCH	21483	trained
+cmm	JUMP	177426	JUMP	177426	trained
+cmm	RET	223170	RET	223170	trained
+cmm	TUPLE	0		0	fallback->COPY
+cmm	RETURN_ADDR	0		0	impossible
+cmm	INT	240298	INT	240298	trained
+cmm	VAL	597454	VAL	597454	trained
+cmm	ADDR	399566	ADDR	399566	trained
+cmm	FLOAT	12785	FLOAT	12785	trained
+cmm	VAR_INT	306615	VAR_INT	306615	trained
+cmm	VAR_VAL	1077304	VAR_VAL	1077304	trained
+cmm	VAR_ADDR	399566	VAR_ADDR	399566	trained
+cmm	VAR_FLOAT	14140	VAR_FLOAT	14140	trained
+cmm	CONST_INT	622217	CONST_INT	622217	trained
+cmm	CONST_NATINT	134926	CONST_NATINT	134926	trained
+cmm	CONST_FLOAT	1483	CONST_FLOAT	1483	trained
+cmm	SYM_FUNC	81938	SYM_FUNC	81938	trained
+cmm	SYM_DATA	178802	SYM_DATA	178802	trained
+cmm	SYM_EXTERN	136090	SYM_EXTERN	136090	trained

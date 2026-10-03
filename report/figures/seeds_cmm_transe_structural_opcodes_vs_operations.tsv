@@ -1,0 +1,70 @@
+# cmm · transe · α = 0.75 · vocabulary sha256 ec830229ca12 · not plotted: 5 fallback-mapped, 1 impossible (no own vector; listed in the .tsv)
+# categories: Craise is runtime here, Lambda's Praise is a control form; Cload_narrow is unused (the family did not merge)
+# PCA explained variance: PC1 0.086227, PC2 0.072749
+entity	category	group	pc1	pc2	low_confidence	triples
+ASSIGN	structural	structural	-0.071192	-0.176853	False	11766
+BR	structural	structural	-0.122600	0.308214	False	275688
+COPY	structural	structural	-0.086065	-0.300511	False	37954
+JUMP	structural	structural	-0.031017	-0.252305	False	177426
+RET	structural	structural	-0.224515	-0.147041	False	223170
+SWITCH	structural	structural	-0.125093	0.246909	False	21483
+C_RUNTIME	runtime	operations	0.133512	0.219439	True	7
+Cabsf	float arithmetic	operations	0.492476	0.013010	True	366
+Cadda	pointer arithmetic	operations	-0.014423	-0.348187	False	1968535
+Caddf	float arithmetic	operations	0.564837	-0.234798	False	4454
+Caddi	int arithmetic	operations	-0.499615	-0.106528	False	146622
+Caddv	pointer arithmetic	operations	-0.139548	-0.338206	False	94109
+Calloc	calls and allocation	operations	-0.031742	-0.536918	False	753707
+Cand	int arithmetic	operations	-0.491106	-0.068786	False	116902
+Capply	calls and allocation	operations	-0.245612	-0.522595	False	947724
+Casr	int arithmetic	operations	-0.287067	-0.119376	False	40928
+Ccheckbound	runtime	operations	-0.284878	0.210775	False	29116
+Ccmpa	comparisons and tests	operations	-0.053606	0.242028	False	4660
+Ccmpf	comparisons and tests	operations	0.361674	0.156526	False	4639
+Ccmpi	comparisons and tests	operations	-0.283991	0.033092	False	226321
+Cdivf	float arithmetic	operations	0.456507	-0.219096	False	2016
+Cdivi	int arithmetic	operations	0.007866	0.379538	True	735
+Cextcall	calls and allocation	operations	0.148916	-0.430837	False	359617
+Cfloatofint	conversions	operations	0.174535	0.109736	True	808
+Cintoffloat	conversions	operations	0.312434	0.354627	True	569
+Cload_16u	loads	operations	0.195224	0.277706	True	564
+Cload_32s	loads	operations	0.064065	0.175778	False	2396
+Cload_32u	loads	operations	0.118973	0.288525	True	420
+Cload_64	loads	operations	0.190021	0.217755	True	352
+Cload_byte_u	loads	operations	-0.099232	0.384756	False	53625
+Cload_double	loads	operations	0.423040	-0.362551	False	31425
+Cload_word_int	loads	operations	-0.301391	-0.304148	False	209554
+Cload_word_val	loads	operations	-0.184111	-0.424145	False	1317073
+Clsl	int arithmetic	operations	-0.330889	0.066166	False	124835
+Clsr	int arithmetic	operations	-0.373717	0.215216	False	57399
+Cmodi	int arithmetic	operations	0.086492	0.434317	True	505
+Cmulf	float arithmetic	operations	0.627667	-0.245591	False	6797
+Cmulhi	int arithmetic	operations	-0.070083	0.414051	True	835
+Cmuli	int arithmetic	operations	-0.267176	0.017496	False	4011
+Cnegf	float arithmetic	operations	0.445314	-0.115102	True	576
+Copaque	runtime	operations	-0.073306	-0.067972	False	3655
+Cor	int arithmetic	operations	-0.368216	0.087818	False	22968
+Craise	runtime	operations	0.120289	-0.063692	False	14552
+Cstore_byte_s	stores	operations	0.143316	0.331999	True	4
+Cstore_byte_u	stores	operations	-0.064158	0.020514	False	1976
+Cstore_double	stores	operations	0.291811	0.155526	False	1824
+Cstore_narrow	stores	operations	0.099985	0.308941	False	1184
+Cstore_word_int	stores	operations	-0.174896	-0.021326	False	3752
+Cstore_word_val	stores	operations	-0.183769	-0.216079	False	16360
+Csubf	float arithmetic	operations	0.601380	-0.155290	False	2958
+Csubi	int arithmetic	operations	-0.362542	0.037624	False	63728
+Cxor	int arithmetic	operations	-0.214777	0.069853	False	3796
+Cdls_get		merged into C_RUNTIME				
+Cload_16s		fallback -> Cload_16u				
+Cload_byte_s		fallback -> Cload_byte_u				
+Cload_narrow		unused: the Cload_narrow family did not merge (Cload_32s has >= 1000 triples), so no vector exists				
+Cload_single		fallback -> Cload_double				
+Cpoll		merged into C_RUNTIME				
+Cstore_16s		merged into Cstore_narrow				
+Cstore_16u		merged into Cstore_narrow				
+Cstore_32s		merged into Cstore_narrow				
+Cstore_32u		merged into Cstore_narrow				
+Cstore_64		merged into Cstore_narrow				
+Cstore_single		fallback -> Cstore_double				
+RETURN_ADDR		impossible				
+TUPLE		fallback -> COPY				

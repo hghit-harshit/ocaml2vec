@@ -1,0 +1,97 @@
+# Training corpus: pure-OCaml opam packages that install on OCaml 5.5.1.
+# One per line, in dependency order: a package is (re)installed with dumps
+# only after its dependencies, so `opam reinstall` never rebuilds a corpus
+# package's dependents into its dump directory (DECISIONS.md D3.4).
+# The plateau plot (ir2vec check plateau) follows this order.
+# ocaml-stdlib is the pinned compiler's own stdlib (build_stdlib.sh, D3.12).
+ocaml-stdlib
+dune
+ocamlfind
+ocamlbuild
+csexp
+cppo
+cmdliner
+re
+sexplib0
+parsexp
+base
+fix
+pprint
+menhirLib
+menhirSdk
+menhir
+yojson
+ocamlgraph
+iter
+gen
+containers
+uutf
+uunf
+astring
+fmt
+fpath
+jsonm
+ptime
+qcheck-core
+alcotest
+# OCaml 5 concurrency (effects, atomics, domain-local state): added after the
+# first stats run found these entities absent (DECISIONS.md D3.10).
+backoff
+multicore-magic
+saturn
+domainslib
+picos
+kcas
+moonpool
+# Diluting dune's share (D4.4): pure-OCaml packages across domains (text,
+# formats, numerics incl. Bigarray float32, binary parsing, ppx, concurrency).
+camlp-streams
+stringext
+hex
+base64
+optint
+csv
+psq
+lru
+ptmap
+oseq
+trie
+mtime
+hmap
+easy-format
+biniou
+atdgen-runtime
+xmlm
+react
+fileutils
+ocaml-version
+opam-file-format
+ocp-indent
+cmarkit
+containers-data
+sexplib
+stdio
+ocplib-endian
+logs
+bos
+ounit2
+crowbar
+ezjsonm
+domain-name
+ipaddr
+angstrom
+uri
+tyxml
+decompress
+uuseg
+zed
+notty
+printbox
+gg
+owl-base
+odoc-parser
+ppxlib
+ppx_deriving
+sedlex
+lwt
+otoml

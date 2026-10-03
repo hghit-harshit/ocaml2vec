@@ -1,0 +1,28 @@
+{
+ "units": 1829,
+ "lambda_functions": 63363,
+ "matched": 63265,
+ "cmm_functions": 70843,
+ "by": {
+  "entry": 1829,
+  "stamp": 43794,
+  "location": 15455,
+  "params": 2187
+ },
+ "unmatched": {
+  "named": 9,
+  "anonymous": 89,
+  "module_init": 0
+ },
+ "cmm_only": {
+  "synthesised_closure": 6219,
+  "optional_arg_inner": 1359,
+  "other": 0
+ },
+ "cmm_only_parent": {
+  "lambda_fid": 6576,
+  "cmm_only_parent": 279,
+  "none": 723
+ },
+ "match_rate": 0.99845335605953
+}
