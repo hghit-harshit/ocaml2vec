@@ -1,0 +1,56 @@
+; unit Factorial  source examples/factorial.ml  ocaml 5.5.1
+
+camlFactorial.fact_rec_274 (n/275:Int)
+  B0:
+    t1 = Ccmpi(Cle) n/275, 3                                 : Int
+    BR t1 -> B1, B2
+  B1:
+    RET 3
+  B2:
+    t2 = Caddi n/275, -2                                     : Int
+    t3 = Capply &camlFactorial.fact_rec_274, t2              : Val
+    t4 = Casr t3, 1                                          : Int
+    t5 = Caddi n/275, -1                                     : Int
+    t6 = Cmuli t5, t4                                        : Int
+    t7 = Caddi t6, 1                                         : Int
+    RET t7
+
+camlFactorial.fact_loop_276 (n/278:Int)
+  ; mutable: acc/279, i/280
+  B0:
+    acc/279 = COPY 3                                         : Int
+    i/280 = COPY 5                                           : Int
+    t1 = Ccmpi(Cgt) i/280, n/278                             : Int
+    BR t1 -> B2, B3
+  B1:
+    JUMP -> B8                                               ; synthetic
+  B2:
+    JUMP -> B1
+  B3:
+    JUMP -> B4
+  B4:
+    t2 = Casr i/280, 1                                       : Int
+    t3 = Caddi acc/279, -1                                   : Int
+    t4 = Cmuli t3, t2                                        : Int
+    t5 = Caddi t4, 1                                         : Int
+    acc/279 = ASSIGN t5                                      : Int
+    *id_prev*/286 = COPY i/280                               : Int
+    t6 = Caddi i/280, 2                                      : Int
+    i/280 = ASSIGN t6                                        : Int
+    t7 = Ccmpi(Ceq) *id_prev*/286, n/278                     : Int
+    BR t7 -> B5, B6
+  B5:
+    JUMP -> B1
+  B6:
+    JUMP -> B7                                               ; synthetic
+  B7:
+    JUMP -> B4
+  B8:
+    RET acc/279
+
+camlFactorial.entry ()
+  B0:
+    Cextcall(caml_initialize,noalloc) &camlFactorial, &camlFactorial.2
+    t1 = Cadda &camlFactorial, 8                             : Addr
+    Cextcall(caml_initialize,noalloc) t1, &camlFactorial.1
+    RET 1

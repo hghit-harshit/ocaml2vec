@@ -40,6 +40,44 @@ let opcode : operation -> string = function
   | Ccheckbound -> "Ccheckbound" | Copaque -> "Copaque" | Cdls_get -> "Cdls_get"
   | Cpoll -> "Cpoll"
 
+(* Display only (cmm-tree / cmm-tac text): [opcode] plus the payload it drops.
+   Never an entity name. *)
+let int_cmp_name : integer_comparison -> string = function
+  | Ceq -> "Ceq" | Cne -> "Cne" | Clt -> "Clt" | Cgt -> "Cgt" | Cle -> "Cle"
+  | Cge -> "Cge"
+
+let float_cmp_name : float_comparison -> string = function
+  | CFeq -> "CFeq" | CFneq -> "CFneq" | CFlt -> "CFlt" | CFnlt -> "CFnlt"
+  | CFgt -> "CFgt" | CFngt -> "CFngt" | CFle -> "CFle" | CFnle -> "CFnle"
+  | CFge -> "CFge" | CFnge -> "CFnge"
+
+let mut_name : Asttypes.mutable_flag -> string = function
+  | Mutable -> "Mutable" | Immutable -> "Immutable"
+
+let init_name : Lambda.initialization_or_assignment -> string = function
+  | Assignment -> "Assignment" | Heap_initialization -> "Heap_initialization"
+  | Root_initialization -> "Root_initialization"
+
+let raise_name : Lambda.raise_kind -> string = function
+  | Raise_regular -> "Raise_regular" | Raise_reraise -> "Raise_reraise"
+  | Raise_notrace -> "Raise_notrace"
+
+let opcode_full : operation -> string = function
+  | Ccmpi c -> Printf.sprintf "Ccmpi(%s)" (int_cmp_name c)
+  | Ccmpa c -> Printf.sprintf "Ccmpa(%s)" (int_cmp_name c)
+  | Ccmpf c -> Printf.sprintf "Ccmpf(%s)" (float_cmp_name c)
+  | Cextcall (name, _, _, alloc) ->
+      Printf.sprintf "Cextcall(%s,%s)" name (if alloc then "alloc" else "noalloc")
+  | Cload { memory_chunk; mutability; is_atomic } ->
+      Printf.sprintf "Cload(%s,%s%s)" (chunk_ctor memory_chunk) (mut_name mutability)
+        (if is_atomic then ",atomic" else "")
+  | Cstore (c, init) -> Printf.sprintf "Cstore(%s,%s)" (chunk_ctor c) (init_name init)
+  | Craise k -> Printf.sprintf "Craise(%s)" (raise_name k)
+  | ( Capply _ | Calloc | Caddi | Csubi | Cmuli | Cmulhi | Cdivi | Cmodi | Cand
+    | Cor | Cxor | Clsl | Clsr | Casr | Caddv | Cadda | Cnegf | Cabsf | Caddf
+    | Csubf | Cmulf | Cdivf | Cfloatofint | Cintoffloat | Ccheckbound | Copaque
+    | Cdls_get | Cpoll ) as op -> opcode op
+
 (* Type emission, schema §2.4. *)
 type type_emission =
   | Fixed of machtype_component

@@ -2,6 +2,8 @@
 
    ir2vec-extract lambda <Unit.<md5>.lambda.bin> [-o out.json]
    ir2vec-extract cmm <Unit.<md5>.cmm.bin> [-o out.json]
+   ir2vec-extract cmm-tree <Unit.<md5>.cmm.bin> [-o out.txt]  (Cmm as dumped, text)
+   ir2vec-extract cmm-tac <Unit.<md5>.cmm.bin> [-o out.txt]   (lowered TAC, text)
    ir2vec-extract entities [-o out.json]   (inventory from the installed .mli)
    --legacy-format-1 admits dumps written before the build field (D5.13). *)
 
@@ -9,6 +11,8 @@ let usage () =
   prerr_endline
     "usage: ir2vec-extract lambda <dump.lambda.bin> [-o out.json]\n\
     \       ir2vec-extract cmm <dump.cmm.bin> [-o out.json]\n\
+    \       ir2vec-extract cmm-tree <dump.cmm.bin> [-o out.txt]\n\
+    \       ir2vec-extract cmm-tac <dump.cmm.bin> [-o out.txt]\n\
     \       ir2vec-extract entities [-o out.json]";
   exit 2
 
@@ -16,6 +20,11 @@ let output out json =
   match out with
   | None -> print_string (Ir2vec.Json_out.to_string json)
   | Some path -> Ir2vec.Json_out.to_file path json
+
+let output_text out s =
+  match out with
+  | None -> print_string s
+  | Some path -> Out_channel.with_open_bin path (fun oc -> output_string oc s)
 
 let () =
   let args = List.tl (Array.to_list Sys.argv) in
@@ -35,6 +44,12 @@ let () =
     | [ "cmm"; dump ] ->
         let h, p = Ir2vec.Dump.read_cmm ~legacy_format_1 dump in
         output out (Ir2vec.Cmm_abs.extract h p)
+    | [ "cmm-tree"; dump ] ->
+        let h, p = Ir2vec.Dump.read_cmm ~legacy_format_1 dump in
+        output_text out (Ir2vec.Cmm_text.tree h p)
+    | [ "cmm-tac"; dump ] ->
+        let h, p = Ir2vec.Dump.read_cmm ~legacy_format_1 dump in
+        output_text out (Ir2vec.Cmm_text.tac h p)
     | [ "entities" ] ->
         output out (Ir2vec.Inventory.to_json (Ir2vec.Inventory.read_ctors ()))
     | _ -> usage ()

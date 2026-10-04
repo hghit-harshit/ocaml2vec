@@ -26,12 +26,13 @@ module E = Entities
 
 type operand =
   | Var of string
-  | Const of string            (* CONST_INT | CONST_NATINT | CONST_FLOAT *)
+  | Const of string * string   (* CONST_INT | CONST_NATINT | CONST_FLOAT, literal *)
   | Sym of string
 
 type instr = {
   iid : int;
   op : string;
+  display : string;   (* op with its Cmm payload, e.g. Ccmpi(Cle); text output only *)
   ty : machtype_component option;
   dst : string option;
   args : operand list;
@@ -90,6 +91,9 @@ let new_block st =
   st.blocks <- b :: st.blocks;
   b
 
+(* Display form of a float constant (round-trips). *)
+let float_lit f = Printf.sprintf "%.17g" f
+
 let tmp st = st.n_tmps <- st.n_tmps + 1; "t" ^ string_of_int st.n_tmps
 
 let set_type st x t = if not (Hashtbl.mem st.types x) then Hashtbl.replace st.types x t
@@ -98,7 +102,7 @@ let type_of_var st x = Option.value ~default:Val (Hashtbl.find_opt st.types x)
 
 let operand_type st = function
   | Var x -> type_of_var st x
-  | Const k when k = E.c_const_float -> Float
+  | Const (k, _) when k = E.c_const_float -> Float
   | Const _ | Sym _ -> Int
 
 let mark_mutable st x =
@@ -133,7 +137,7 @@ let rec count_cops e =
 let dead st e = st.dead_cops <- st.dead_cops + count_cops e
 
 let emit st ?dst ?(succ = []) ?(side_effect = false) ?(terminator = false)
-    ?(synthetic = false) ?(counts = []) ~op ~ty args =
+    ?(synthetic = false) ?(counts = []) ?display ~op ~ty args =
   let b =
     match st.cur with
     | Some b -> b
@@ -142,7 +146,8 @@ let emit st ?dst ?(succ = []) ?(side_effect = false) ?(terminator = false)
   (match st.traps with
    | h :: _ when not (List.mem h b.exn_succ) -> b.exn_succ <- b.exn_succ @ [h]
    | _ -> ());
-  let i = { iid = st.n_instrs; op; ty; dst; args; side_effect; terminator;
+  let display = Option.value ~default:op display in
+  let i = { iid = st.n_instrs; op; display; ty; dst; args; side_effect; terminator;
             synthetic; counts } in
   st.n_instrs <- st.n_instrs + 1;
   b.instrs <- i :: b.instrs;
@@ -171,9 +176,9 @@ let rec lower st ctx ?dst e : res =
     match ctx with Value -> Val op | Effect -> Done | Tail -> ret st op
   in
   match e with
-  | Cconst_int _ -> atom (Const E.c_const_int)
-  | Cconst_natint _ -> atom (Const E.c_const_natint)
-  | Cconst_float _ -> atom (Const E.c_const_float)
+  | Cconst_int (n, _) -> atom (Const (E.c_const_int, string_of_int n))
+  | Cconst_natint (n, _) -> atom (Const (E.c_const_natint, Nativeint.to_string n ^ "n"))
+  | Cconst_float (f, _) -> atom (Const (E.c_const_float, float_lit f))
   | Cconst_symbol (s, _) -> atom (Sym s)
   | Cvar v | Cvar_mut v -> atom (resolve st v)
   | Clet (vp, def, body) ->
@@ -206,7 +211,7 @@ let rec lower st ctx ?dst e : res =
        | Val op ->
            emit st ~dst:x ~op:E.assign ~ty:(Some (type_of_var st x)) [op];
            (* the value of an assignment is unit, i.e. the constant 1 *)
-           atom (Const E.c_const_int)
+           atom (Const (E.c_const_int, "1"))
        | Diverged -> Diverged
        | Done -> assert false)
   | Ctuple [] when ctx = Effect -> Done
@@ -236,12 +241,13 @@ let rec lower st ctx ?dst e : res =
            let name = Cmm_ent.opcode op in
            let side_effect = Cmm_ent.side_effect op in
            let counts = Cmm_ent.op_counts op in
+           let display = Cmm_ent.opcode_full op in
            if Cmm_ent.is_terminator op then begin
-             emit st ~side_effect ~terminator:true ~counts ~op:name ~ty ops;
+             emit st ~side_effect ~terminator:true ~counts ~display ~op:name ~ty ops;
              Diverged
            end else begin
              let d = match ctx with Effect -> None | Value | Tail -> Some (dest st dst) in
-             emit st ?dst:d ~side_effect ~counts ~op:name ~ty ops;
+             emit st ?dst:d ~side_effect ~counts ~display ~op:name ~ty ops;
              result st ctx d
            end)
   | Csequence (a, b) ->

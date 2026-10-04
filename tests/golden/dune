@@ -160,3 +160,25 @@
 (rule
  (alias runtest)
  (action (diff pq.cmm.json pq.cmm.json.gen)))
+
+; Text views of the Cmm dump (cmm-tree / cmm-tac), fact.ml only.
+
+(rule
+ (action
+  (with-stdout-to fact.cmm-tree.txt.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm-tree
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/fact.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff fact.cmm-tree.txt fact.cmm-tree.txt.gen)))
+
+(rule
+ (action
+  (with-stdout-to fact.cmm-tac.txt.gen
+   (run bash %{dep:../../extractor/test/extract_fixture.sh} cmm-tac
+    %{exe:../../extractor/bin/ir2vec_extract.exe} %{dep:../fixtures/fact.ml}))))
+
+(rule
+ (alias runtest)
+ (action (diff fact.cmm-tac.txt fact.cmm-tac.txt.gen)))

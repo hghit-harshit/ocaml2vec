@@ -1,0 +1,87 @@
+; unit Factorial  source examples/factorial.ml  ocaml 5.5.1
+
+(Cdata)
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlFactorial.2)
+  (Csymbol_address camlFactorial.fact_rec_274)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlFactorial.1)
+  (Csymbol_address camlFactorial.fact_loop_276)
+  (Cint 72057594037927941))
+
+(Cdata (Cint 2816) (Cglobal_symbol camlFactorial) (Cdefine_symbol camlFactorial) (Cint 1) (Cint 1))
+
+(Cdata
+  (Cglobal_symbol camlFactorial.gc_roots)
+  (Cdefine_symbol camlFactorial.gc_roots)
+  (Csymbol_address camlFactorial)
+  (Cint 0))
+
+(Cfunction camlFactorial.fact_rec_274
+  ((n/275 Int))
+  (Cifthenelse
+    (Cop Ccmpi(Cle) (Cvar n/275) (Cconst_int 3))
+    (Cconst_int 3)
+    (Cop Caddi
+      (Cop Cmuli
+        (Cop Caddi (Cvar n/275) (Cconst_int -1))
+        (Cop Casr
+          (Cop Capply
+            (Cconst_symbol camlFactorial.fact_rec_274)
+            (Cop Caddi (Cvar n/275) (Cconst_int -2)))
+          (Cconst_int 1)))
+      (Cconst_int 1))))
+
+(Cfunction camlFactorial.fact_loop_276
+  ((n/278 Int))
+  (Clet_mut acc/279 Int
+    (Cconst_int 3)
+    (Csequence
+      (Clet_mut i/280 Int
+        (Cconst_int 5)
+        (Ccatch Nonrecursive
+          (Cifthenelse
+            (Cop Ccmpi(Cgt) (Cvar_mut i/280) (Cvar n/278))
+            (Cexit 3)
+            (Ccatch Recursive
+              (Cexit 4)
+              (handler 4
+                ()
+                (Csequence
+                  (Csequence
+                    (Cassign acc/279
+                      (Cop Caddi
+                        (Cop Cmuli
+                          (Cop Caddi (Cvar_mut acc/279) (Cconst_int -1))
+                          (Cop Casr (Cvar_mut i/280) (Cconst_int 1)))
+                        (Cconst_int 1)))
+                    (Clet *id_prev*/286
+                      (Cvar_mut i/280)
+                      (Csequence
+                        (Cassign i/280 (Cop Caddi (Cvar_mut i/280) (Cconst_int 2)))
+                        (Cifthenelse
+                          (Cop Ccmpi(Ceq) (Cvar *id_prev*/286) (Cvar n/278))
+                          (Cexit 3)
+                          (Ctuple)))))
+                  (Cexit 4)))))
+          (handler 3 () (Ctuple))))
+      (Cvar_mut acc/279))))
+
+(Cfunction camlFactorial.entry
+  ()
+  (Csequence
+    (Clet clos/284
+      (Cconst_symbol camlFactorial.2)
+      (Cop Cextcall(caml_initialize,noalloc) (Cconst_symbol camlFactorial) (Cvar clos/284)))
+    (Csequence
+      (Clet fact_loop/276
+        (Cconst_symbol camlFactorial.1)
+        (Cop Cextcall(caml_initialize,noalloc)
+          (Cop Cadda (Cconst_symbol camlFactorial) (Cconst_int 8))
+          (Cvar fact_loop/276)))
+      (Cconst_int 1))))

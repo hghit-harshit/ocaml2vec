@@ -34,7 +34,7 @@ let json_operand syms (f : L.func) = function
   | L.Var x ->
       let t = Option.value ~default:Val (Hashtbl.find_opt f.var_types x) in
       J.Obj [ "kind", J.String (Cmm_ent.var_kind t); "var", J.String x ]
-  | L.Const k -> J.Obj [ "kind", J.String k ]
+  | L.Const (k, _) -> J.Obj [ "kind", J.String k ]
   | L.Sym s -> J.Obj [ "kind", J.String (sym_kind syms s); "sym", J.String s ]
 
 let json_instr syms f (i : L.instr) =

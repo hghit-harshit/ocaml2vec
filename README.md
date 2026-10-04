@@ -36,6 +36,12 @@ ir2vec-extract lambda /tmp/d/Foo.<md5>.lambda.bin -o foo.lambda.json
 ir2vec-extract cmm /tmp/d/Foo.<md5>.cmm.bin -o foo.cmm.json
 ir2vec-extract entities -o docs/entities.5.5.1.json   # also produced by `dune test`
 
+# readable Cmm with constructor names (Ccmpi(Cle), not <=), for inspection only
+ir2vec-extract cmm-tree /tmp/d/Foo.<md5>.cmm.bin      # Cmm tree as dumped
+ir2vec-extract cmm-tac /tmp/d/Foo.<md5>.cmm.bin       # lowered TAC + CFG, as embedded
+bash extractor/show_cmm.sh foo.ml [bar.ml ...]        # compile + both views -> foo.cmm-{tree,tac}.txt
+bash extractor/show_cmm.sh --print tac foo.ml -- -package str   # to stdout; flags after -- go to ocamlfind
+
 # manual stress test over the compiler testsuite (a few minutes)
 opam exec --switch=ir2vec -- bash extractor/test/stress_testsuite.sh
 ```

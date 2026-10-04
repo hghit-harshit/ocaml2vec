@@ -1,0 +1,38 @@
+; unit Fact  source fact.ml  ocaml 5.5.1
+
+(Cdata)
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlFact.1)
+  (Csymbol_address camlFact.fact_274)
+  (Cint 72057594037927941))
+
+(Cdata (Cint 1792) (Cglobal_symbol camlFact) (Cdefine_symbol camlFact) (Cint 1))
+
+(Cdata
+  (Cglobal_symbol camlFact.gc_roots)
+  (Cdefine_symbol camlFact.gc_roots)
+  (Csymbol_address camlFact)
+  (Cint 0))
+
+(Cfunction camlFact.fact_274
+  ((n/275 Int))
+  (Cifthenelse
+    (Cop Ccmpi(Cle) (Cvar n/275) (Cconst_int 3))
+    (Cconst_int 3)
+    (Cop Caddi
+      (Cop Cmuli
+        (Cop Caddi (Cvar n/275) (Cconst_int -1))
+        (Cop Casr
+          (Cop Capply (Cconst_symbol camlFact.fact_274) (Cop Caddi (Cvar n/275) (Cconst_int -2)))
+          (Cconst_int 1)))
+      (Cconst_int 1))))
+
+(Cfunction camlFact.entry
+  ()
+  (Csequence
+    (Clet clos/278
+      (Cconst_symbol camlFact.1)
+      (Cop Cextcall(caml_initialize,noalloc) (Cconst_symbol camlFact) (Cvar clos/278)))
+    (Cconst_int 1)))
