@@ -1,0 +1,465 @@
+; unit Shapes  source examples/shapes.ml  ocaml 5.5.1
+
+(Cdata)
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.9)
+  (Csymbol_address camlShapes.checked_sqrt_440)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.8)
+  (Csymbol_address camlShapes.safe_sqrt_443)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.7)
+  (Csymbol_address camlShapes.describe_446)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 4087)
+  (Cdefine_symbol camlShapes.16)
+  (Csymbol_address caml_curry2)
+  (Cint 144115188075855879)
+  (Csymbol_address camlShapes.fun_469))
+
+(Cdata
+  (Cint 4087)
+  (Cdefine_symbol camlShapes.15)
+  (Csymbol_address caml_curry2)
+  (Cint 144115188075855879)
+  (Csymbol_address camlShapes.go_366))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.14)
+  (Csymbol_address camlShapes.area_278)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.13)
+  (Csymbol_address camlShapes.total_area_285)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.12)
+  (Csymbol_address camlShapes.biggest_363)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.11)
+  (Csymbol_address camlShapes.bump_376)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlShapes.10)
+  (Csymbol_address camlShapes.bubble_sort_379)
+  (Cint 72057594037927941))
+
+(Cdata
+  (Cint 9984)
+  (Cglobal_symbol camlShapes)
+  (Cdefine_symbol camlShapes)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1)
+  (Cint 1))
+
+(Cdata
+  (Cglobal_symbol camlShapes.gc_roots)
+  (Cdefine_symbol camlShapes.gc_roots)
+  (Csymbol_address camlShapes)
+  (Cint 0))
+
+(Cfunction camlShapes.area_278
+  ((param/284 Val))
+  (Clet switcher/491
+    (Cop Cload(Byte_unsigned,Immutable) (Cop Cadda (Cvar param/284) (Cconst_int -8)))
+    (Cswitch
+      (Cvar switcher/491)
+      (index 0 1 2)
+      (case0
+        (Clet r/280
+          (Cop Cload(Word_val,Immutable) (Cvar param/284))
+          (Cop Calloc
+            (Cconst_natint 1277n)
+            (Cop Cmulf
+              (Cop Cmulf
+                (Cconst_float 3.1415899999999999)
+                (Cop Cload(Double,Immutable) (Cvar r/280)))
+              (Cop Cload(Double,Immutable) (Cvar r/280))))))
+      (case1
+        (Cop Calloc
+          (Cconst_natint 1277n)
+          (Cop Cmulf
+            (Cop Cload(Double,Immutable) (Cop Cload(Word_val,Immutable) (Cvar param/284)))
+            (Cop Cload(Double,Immutable)
+              (Cop Cload(Word_val,Immutable) (Cop Cadda (Cvar param/284) (Cconst_int 8)))))))
+      (case2
+        (Clet s/283
+          (Cop Cload(Word_val,Immutable) (Cvar param/284))
+          (Cop Calloc
+            (Cconst_natint 1277n)
+            (Cop Cmulf
+              (Cop Cload(Double,Immutable) (Cvar s/283))
+              (Cop Cload(Double,Immutable) (Cvar s/283)))))))))
+
+(Cfunction camlShapes.total_area_285
+  ((shapes/287 Val))
+  (Cop Capply
+    (Cconst_symbol camlStdlib__List.fold_left_387)
+    (Cconst_symbol camlShapes.16)
+    (Cconst_symbol camlShapes.2)
+    (Cvar shapes/287)))
+
+(Cfunction camlShapes.fun_469
+  ((acc/361 Val) (s/362 Val))
+  (Cop Calloc
+    (Cconst_natint 1277n)
+    (Cop Caddf
+      (Cop Cload(Double,Immutable) (Cvar acc/361))
+      (Cop Cload(Double,Immutable) (Cop Capply (Cconst_symbol camlShapes.area_278) (Cvar s/362))))))
+
+(Cfunction camlShapes.biggest_363
+  ((shapes/365 Val))
+  (Clet clos/473
+    (Cconst_symbol camlShapes.15)
+    (Cifthenelse
+      (Cop Cand (Cvar shapes/365) (Cconst_int 1))
+      (Cconst_int 1)
+      (Cop Calloc
+        (Cconst_natint 1024n)
+        (Cop Capply
+          (Cconst_symbol camlShapes.go_366)
+          (Cop Cload(Word_val,Immutable) (Cvar shapes/365))
+          (Cop Cload(Word_val,Immutable) (Cop Cadda (Cvar shapes/365) (Cconst_int 8))))))))
+
+(Cfunction camlShapes.go_366
+  ((best/367 Val) (param/370 Val))
+  (Cifthenelse
+    (Cop Cand (Cvar param/370) (Cconst_int 1))
+    (Cvar best/367)
+    (Clet rest/369
+      (Cop Cload(Word_val,Immutable) (Cop Cadda (Cvar param/370) (Cconst_int 8)))
+      (Clet s/368
+        (Cop Cload(Word_val,Immutable) (Cvar param/370))
+        (Cifthenelse
+          (Cop Ccmpf(CFgt)
+            (Cop Cload(Double,Immutable)
+              (Cop Capply (Cconst_symbol camlShapes.area_278) (Cvar s/368)))
+            (Cop Cload(Double,Immutable)
+              (Cop Capply (Cconst_symbol camlShapes.area_278) (Cvar best/367))))
+          (Cop Capply (Cconst_symbol camlShapes.go_366) (Cvar s/368) (Cvar rest/369))
+          (Cop Capply (Cconst_symbol camlShapes.go_366) (Cvar best/367) (Cvar rest/369)))))))
+
+(Cfunction camlShapes.bump_376
+  ((c/378 Val))
+  (Csequence
+    (Cop Cstore(Word_val,Assignment)
+      (Cop Cadda (Cvar c/378) (Cconst_int 8))
+      (Cop Caddi
+        (Cop Cload(Word_int,Mutable) (Cop Cadda (Cvar c/378) (Cconst_int 8)))
+        (Cconst_int 2)))
+    (Cconst_int 1)))
+
+(Cfunction camlShapes.bubble_sort_379
+  ((a/381 Val))
+  (Clet n/382
+    (Cop Cor
+      (Cop Clsr
+        (Cop Cload(Word_int,Immutable) (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+        (Cconst_int 9))
+      (Cconst_int 1))
+    (Csequence
+      (Clet_mut i/436 Int
+        (Cconst_int 1)
+        (Clet bound/481
+          (Cop Caddi (Cvar n/382) (Cconst_int -4))
+          (Ccatch Nonrecursive
+            (Cifthenelse
+              (Cop Ccmpi(Cgt) (Cvar_mut i/436) (Cvar bound/481))
+              (Cexit 16)
+              (Ccatch Recursive
+                (Cexit 19)
+                (handler 19
+                  ()
+                  (Csequence
+                    (Csequence
+                      (Clet_mut j/437 Int
+                        (Cconst_int 1)
+                        (Clet bound/483
+                          (Cop Caddi (Cop Csubi (Cvar n/382) (Cvar_mut i/436)) (Cconst_int -3))
+                          (Ccatch Nonrecursive
+                            (Cifthenelse
+                              (Cop Ccmpi(Cgt) (Cvar_mut j/437) (Cvar bound/483))
+                              (Cexit 17)
+                              (Ccatch Recursive
+                                (Cexit 18)
+                                (handler 18
+                                  ()
+                                  (Csequence
+                                    (Csequence
+                                      (Cifthenelse
+                                        (Cop Ccmpi(Cgt)
+                                          (Clet index/490
+                                            (Cvar_mut j/437)
+                                            (Csequence
+                                              (Cop Ccheckbound
+                                                (Cop Clsr
+                                                  (Cop Cload(Word_int,Immutable)
+                                                    (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+                                                  (Cconst_int 9))
+                                                (Cvar index/490))
+                                              (Cop Cload(Word_int,Mutable)
+                                                (Cop Cadda
+                                                  (Cop Cadda
+                                                    (Cvar a/381)
+                                                    (Cop Clsl (Cvar index/490) (Cconst_int 2)))
+                                                  (Cconst_int -4)))))
+                                          (Clet index/489
+                                            (Cop Caddi (Cvar_mut j/437) (Cconst_int 2))
+                                            (Csequence
+                                              (Cop Ccheckbound
+                                                (Cop Clsr
+                                                  (Cop Cload(Word_int,Immutable)
+                                                    (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+                                                  (Cconst_int 9))
+                                                (Cvar index/489))
+                                              (Cop Cload(Word_int,Mutable)
+                                                (Cop Cadda
+                                                  (Cop Cadda
+                                                    (Cvar a/381)
+                                                    (Cop Clsl (Cvar index/489) (Cconst_int 2)))
+                                                  (Cconst_int -4))))))
+                                        (Clet t/438
+                                          (Clet index/484
+                                            (Cvar_mut j/437)
+                                            (Csequence
+                                              (Cop Ccheckbound
+                                                (Cop Clsr
+                                                  (Cop Cload(Word_int,Immutable)
+                                                    (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+                                                  (Cconst_int 9))
+                                                (Cvar index/484))
+                                              (Cop Cload(Word_int,Mutable)
+                                                (Cop Cadda
+                                                  (Cop Cadda
+                                                    (Cvar a/381)
+                                                    (Cop Clsl (Cvar index/484) (Cconst_int 2)))
+                                                  (Cconst_int -4)))))
+                                          (Csequence
+                                            (Clet newval/487
+                                              (Clet index/486
+                                                (Cop Caddi (Cvar_mut j/437) (Cconst_int 2))
+                                                (Csequence
+                                                  (Cop Ccheckbound
+                                                    (Cop Clsr
+                                                      (Cop Cload(Word_int,Immutable)
+                                                        (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+                                                      (Cconst_int 9))
+                                                    (Cvar index/486))
+                                                  (Cop Cload(Word_int,Mutable)
+                                                    (Cop Cadda
+                                                      (Cop Cadda
+                                                        (Cvar a/381)
+                                                        (Cop Clsl (Cvar index/486) (Cconst_int 2)))
+                                                      (Cconst_int -4)))))
+                                              (Clet index/488
+                                                (Cvar_mut j/437)
+                                                (Csequence
+                                                  (Cop Ccheckbound
+                                                    (Cop Clsr
+                                                      (Cop Cload(Word_int,Immutable)
+                                                        (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+                                                      (Cconst_int 9))
+                                                    (Cvar index/488))
+                                                  (Cop Cstore(Word_int,Assignment)
+                                                    (Cop Cadda
+                                                      (Cop Cadda
+                                                        (Cvar a/381)
+                                                        (Cop Clsl (Cvar index/488) (Cconst_int 2)))
+                                                      (Cconst_int -4))
+                                                    (Cvar newval/487)))))
+                                            (Clet index/485
+                                              (Cop Caddi (Cvar_mut j/437) (Cconst_int 2))
+                                              (Csequence
+                                                (Cop Ccheckbound
+                                                  (Cop Clsr
+                                                    (Cop Cload(Word_int,Immutable)
+                                                      (Cop Cadda (Cvar a/381) (Cconst_int -8)))
+                                                    (Cconst_int 9))
+                                                  (Cvar index/485))
+                                                (Cop Cstore(Word_int,Assignment)
+                                                  (Cop Cadda
+                                                    (Cop Cadda
+                                                      (Cvar a/381)
+                                                      (Cop Clsl (Cvar index/485) (Cconst_int 2)))
+                                                    (Cconst_int -4))
+                                                  (Cvar t/438))))))
+                                        (Ctuple))
+                                      (Clet *id_prev*/482
+                                        (Cvar_mut j/437)
+                                        (Csequence
+                                          (Cassign j/437
+                                            (Cop Caddi (Cvar_mut j/437) (Cconst_int 2)))
+                                          (Cifthenelse
+                                            (Cop Ccmpi(Ceq) (Cvar *id_prev*/482) (Cvar bound/483))
+                                            (Cexit 17)
+                                            (Ctuple)))))
+                                    (Cexit 18)))))
+                            (handler 17 () (Ctuple)))))
+                      (Clet *id_prev*/480
+                        (Cvar_mut i/436)
+                        (Csequence
+                          (Cassign i/436 (Cop Caddi (Cvar_mut i/436) (Cconst_int 2)))
+                          (Cifthenelse
+                            (Cop Ccmpi(Ceq) (Cvar *id_prev*/480) (Cvar bound/481))
+                            (Cexit 16)
+                            (Ctuple)))))
+                    (Cexit 19)))))
+            (handler 16 () (Ctuple)))))
+      (Cconst_int 1))))
+
+(Cfunction camlShapes.checked_sqrt_440
+  ((x/442 Int))
+  (Cifthenelse
+    (Cop Ccmpi(Clt) (Cvar x/442) (Cconst_int 1))
+    (Cop Craise(Raise_notrace)
+      (Cop Calloc
+        (Cconst_natint 2048n)
+        (Cop Cload(Word_val,Immutable) (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 40)))
+        (Cvar x/442)))
+    (Cop Calloc
+      (Cconst_natint 1277n)
+      (Cop Cextcall(sqrt,noalloc) (Cop Cfloatofint (Cop Casr (Cvar x/442) (Cconst_int 1)))))))
+
+(Cfunction camlShapes.safe_sqrt_443
+  ((x/445 Int))
+  (Ctrywith
+    (Cop Capply (Cconst_symbol camlShapes.checked_sqrt_440) (Cvar x/445))
+    exn/460
+    (Cifthenelse
+      (Cop Ccmpi(Ceq)
+        (Cop Cload(Word_val,Immutable) (Cvar exn/460))
+        (Cop Cload(Word_val,Immutable) (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 40))))
+      (Cconst_symbol camlShapes.2)
+      (Cop Craise(Raise_notrace) (Cvar exn/460)))))
+
+(Cfunction camlShapes.describe_446
+  ((s/448 Val))
+  (Clet switcher/479
+    (Cop Cload(Byte_unsigned,Immutable) (Cop Cadda (Cvar s/448) (Cconst_int -8)))
+    (Cswitch
+      (Cvar switcher/479)
+      (index 0 1 2)
+      (case0
+        (Cop Capply
+          (Cconst_symbol camlStdlib.^_139)
+          (Cconst_symbol camlShapes.4)
+          (Cop Capply
+            (Cconst_symbol camlStdlib.string_of_float_189)
+            (Cop Capply (Cconst_symbol camlShapes.area_278) (Cvar s/448)))))
+      (case1
+        (Cop Capply
+          (Cconst_symbol camlStdlib.^_139)
+          (Cconst_symbol camlShapes.5)
+          (Cop Capply
+            (Cconst_symbol camlStdlib.string_of_float_189)
+            (Cop Capply (Cconst_symbol camlShapes.area_278) (Cvar s/448)))))
+      (case2
+        (Cop Capply
+          (Cconst_symbol camlStdlib.^_139)
+          (Cconst_symbol camlShapes.6)
+          (Cop Capply
+            (Cconst_symbol camlStdlib.string_of_float_189)
+            (Cop Capply (Cconst_symbol camlShapes.area_278) (Cvar s/448))))))))
+
+(Cdata (Cint 3068) (Cdefine_symbol camlShapes.6) (Cstring "square of area ") (Cskip 0) (Cint8 0))
+
+(Cdata (Cint 4092) (Cdefine_symbol camlShapes.5) (Cstring "rectangle of area ") (Cskip 5) (Cint8 5))
+
+(Cdata (Cint 3068) (Cdefine_symbol camlShapes.4) (Cstring "circle of area ") (Cskip 0) (Cint8 0))
+
+(Cdata
+  (Cint 4092)
+  (Cglobal_symbol camlShapes.3)
+  (Cdefine_symbol camlShapes.3)
+  (Cstring "Shapes.Not_positive")
+  (Cskip 4)
+  (Cint8 4))
+
+(Cdata (Cint 2045) (Cdefine_symbol camlShapes.2) (Cdouble 0))
+
+(Cdata (Cint 2045) (Cdefine_symbol camlShapes.1) (Cdouble 3.1415899999999999))
+
+(Cfunction camlShapes.entry
+  ()
+  (Csequence
+    (Clet area/278
+      (Cconst_symbol camlShapes.14)
+      (Cop Cextcall(caml_initialize,noalloc) (Cconst_symbol camlShapes) (Cvar area/278)))
+    (Csequence
+      (Clet total_area/285
+        (Cconst_symbol camlShapes.13)
+        (Cop Cextcall(caml_initialize,noalloc)
+          (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 8))
+          (Cvar total_area/285)))
+      (Csequence
+        (Clet biggest/363
+          (Cconst_symbol camlShapes.12)
+          (Cop Cextcall(caml_initialize,noalloc)
+            (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 16))
+            (Cvar biggest/363)))
+        (Csequence
+          (Clet bump/376
+            (Cconst_symbol camlShapes.11)
+            (Cop Cextcall(caml_initialize,noalloc)
+              (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 24))
+              (Cvar bump/376)))
+          (Csequence
+            (Clet bubble_sort/379
+              (Cconst_symbol camlShapes.10)
+              (Cop Cextcall(caml_initialize,noalloc)
+                (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 32))
+                (Cvar bubble_sort/379)))
+            (Csequence
+              (Clet Not_positive/439
+                (Cop Calloc
+                  (Cconst_natint 2296n)
+                  (Cconst_symbol camlShapes.3)
+                  (Cop Cextcall(caml_fresh_oo_id,noalloc) (Cconst_int 1)))
+                (Cop Cextcall(caml_initialize,noalloc)
+                  (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 40))
+                  (Cvar Not_positive/439)))
+              (Csequence
+                (Clet checked_sqrt/440
+                  (Cconst_symbol camlShapes.9)
+                  (Cop Cextcall(caml_initialize,noalloc)
+                    (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 48))
+                    (Cvar checked_sqrt/440)))
+                (Csequence
+                  (Clet safe_sqrt/443
+                    (Cconst_symbol camlShapes.8)
+                    (Cop Cextcall(caml_initialize,noalloc)
+                      (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 56))
+                      (Cvar safe_sqrt/443)))
+                  (Csequence
+                    (Clet describe/446
+                      (Cconst_symbol camlShapes.7)
+                      (Cop Cextcall(caml_initialize,noalloc)
+                        (Cop Cadda (Cconst_symbol camlShapes) (Cconst_int 64))
+                        (Cvar describe/446)))
+                    (Cconst_int 1)))))))))))

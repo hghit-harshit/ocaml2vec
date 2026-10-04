@@ -1,0 +1,284 @@
+; unit Shapes  source examples/shapes.ml  ocaml 5.5.1
+
+camlShapes.area_278 (param/284:Val)
+  B0:
+    t1 = Cadda param/284, -8                                 : Addr
+    switcher/491 = Cload(Byte_unsigned,Immutable) t1         : Int
+    SWITCH switcher/491 -> B1, B2, B3
+  B1:
+    r/280 = Cload(Word_val,Immutable) param/284              : Val
+    t2 = Cload(Double,Immutable) r/280                       : Float
+    t3 = Cload(Double,Immutable) r/280                       : Float
+    t4 = Cmulf 3.1415899999999999, t3                        : Float
+    t5 = Cmulf t4, t2                                        : Float
+    t6 = Calloc 1277n, t5                                    : Val
+    RET t6
+  B2:
+    t7 = Cadda param/284, 8                                  : Addr
+    t8 = Cload(Word_val,Immutable) t7                        : Val
+    t9 = Cload(Double,Immutable) t8                          : Float
+    t10 = Cload(Word_val,Immutable) param/284                : Val
+    t11 = Cload(Double,Immutable) t10                        : Float
+    t12 = Cmulf t11, t9                                      : Float
+    t13 = Calloc 1277n, t12                                  : Val
+    RET t13
+  B3:
+    s/283 = Cload(Word_val,Immutable) param/284              : Val
+    t14 = Cload(Double,Immutable) s/283                      : Float
+    t15 = Cload(Double,Immutable) s/283                      : Float
+    t16 = Cmulf t15, t14                                     : Float
+    t17 = Calloc 1277n, t16                                  : Val
+    RET t17
+
+camlShapes.total_area_285 (shapes/287:Val)
+  B0:
+    t1 = Capply &camlStdlib__List.fold_left_387, &camlShapes.16, &camlShapes.2, shapes/287 : Val
+    RET t1
+
+camlShapes.fun_469 (acc/361:Val, s/362:Val)
+  B0:
+    t1 = Capply &camlShapes.area_278, s/362                  : Val
+    t2 = Cload(Double,Immutable) t1                          : Float
+    t3 = Cload(Double,Immutable) acc/361                     : Float
+    t4 = Caddf t3, t2                                        : Float
+    t5 = Calloc 1277n, t4                                    : Val
+    RET t5
+
+camlShapes.biggest_363 (shapes/365:Val)
+  B0:
+    t1 = Cand shapes/365, 1                                  : Int
+    BR t1 -> B1, B2
+  B1:
+    RET 1
+  B2:
+    t2 = Cadda shapes/365, 8                                 : Addr
+    t3 = Cload(Word_val,Immutable) t2                        : Val
+    t4 = Cload(Word_val,Immutable) shapes/365                : Val
+    t5 = Capply &camlShapes.go_366, t4, t3                   : Val
+    t6 = Calloc 1024n, t5                                    : Val
+    RET t6
+
+camlShapes.go_366 (best/367:Val, param/370:Val)
+  B0:
+    t1 = Cand param/370, 1                                   : Int
+    BR t1 -> B1, B2
+  B1:
+    RET best/367
+  B2:
+    t2 = Cadda param/370, 8                                  : Addr
+    rest/369 = Cload(Word_val,Immutable) t2                  : Val
+    s/368 = Cload(Word_val,Immutable) param/370              : Val
+    t3 = Capply &camlShapes.area_278, best/367               : Val
+    t4 = Cload(Double,Immutable) t3                          : Float
+    t5 = Capply &camlShapes.area_278, s/368                  : Val
+    t6 = Cload(Double,Immutable) t5                          : Float
+    t7 = Ccmpf(CFgt) t6, t4                                  : Int
+    BR t7 -> B3, B4
+  B3:
+    t8 = Capply &camlShapes.go_366, s/368, rest/369          : Val
+    RET t8
+  B4:
+    t9 = Capply &camlShapes.go_366, best/367, rest/369       : Val
+    RET t9
+
+camlShapes.bump_376 (c/378:Val)
+  B0:
+    t1 = Cadda c/378, 8                                      : Addr
+    t2 = Cload(Word_int,Mutable) t1                          : Int
+    t3 = Caddi t2, 2                                         : Int
+    t4 = Cadda c/378, 8                                      : Addr
+    Cstore(Word_val,Assignment) t4, t3
+    RET 1
+
+camlShapes.bubble_sort_379 (a/381:Val)
+  ; mutable: i/436, j/437
+  B0:
+    t1 = Cadda a/381, -8                                     : Addr
+    t2 = Cload(Word_int,Immutable) t1                        : Int
+    t3 = Clsr t2, 9                                          : Int
+    n/382 = Cor t3, 1                                        : Int
+    i/436 = COPY 1                                           : Int
+    bound/481 = Caddi n/382, -4                              : Int
+    t4 = Ccmpi(Cgt) i/436, bound/481                         : Int
+    BR t4 -> B2, B3
+  B1:
+    JUMP -> B19                                              ; synthetic
+  B2:
+    JUMP -> B1
+  B3:
+    JUMP -> B4
+  B4:
+    j/437 = COPY 1                                           : Int
+    t5 = Csubi n/382, i/436                                  : Int
+    bound/483 = Caddi t5, -3                                 : Int
+    t6 = Ccmpi(Cgt) j/437, bound/483                         : Int
+    BR t6 -> B6, B7
+  B5:
+    JUMP -> B15                                              ; synthetic
+  B6:
+    JUMP -> B5
+  B7:
+    JUMP -> B8
+  B8:
+    index/489 = Caddi j/437, 2                               : Int
+    t7 = Cadda a/381, -8                                     : Addr
+    t8 = Cload(Word_int,Immutable) t7                        : Int
+    t9 = Clsr t8, 9                                          : Int
+    Ccheckbound t9, index/489
+    t10 = Clsl index/489, 2                                  : Int
+    t11 = Cadda a/381, t10                                   : Addr
+    t12 = Cadda t11, -4                                      : Addr
+    t13 = Cload(Word_int,Mutable) t12                        : Int
+    index/490 = COPY j/437                                   : Int
+    t14 = Cadda a/381, -8                                    : Addr
+    t15 = Cload(Word_int,Immutable) t14                      : Int
+    t16 = Clsr t15, 9                                        : Int
+    Ccheckbound t16, index/490
+    t17 = Clsl index/490, 2                                  : Int
+    t18 = Cadda a/381, t17                                   : Addr
+    t19 = Cadda t18, -4                                      : Addr
+    t20 = Cload(Word_int,Mutable) t19                        : Int
+    t21 = Ccmpi(Cgt) t20, t13                                : Int
+    BR t21 -> B9, B10
+  B9:
+    index/484 = COPY j/437                                   : Int
+    t22 = Cadda a/381, -8                                    : Addr
+    t23 = Cload(Word_int,Immutable) t22                      : Int
+    t24 = Clsr t23, 9                                        : Int
+    Ccheckbound t24, index/484
+    t25 = Clsl index/484, 2                                  : Int
+    t26 = Cadda a/381, t25                                   : Addr
+    t27 = Cadda t26, -4                                      : Addr
+    t/438 = Cload(Word_int,Mutable) t27                      : Int
+    index/486 = Caddi j/437, 2                               : Int
+    t28 = Cadda a/381, -8                                    : Addr
+    t29 = Cload(Word_int,Immutable) t28                      : Int
+    t30 = Clsr t29, 9                                        : Int
+    Ccheckbound t30, index/486
+    t31 = Clsl index/486, 2                                  : Int
+    t32 = Cadda a/381, t31                                   : Addr
+    t33 = Cadda t32, -4                                      : Addr
+    newval/487 = Cload(Word_int,Mutable) t33                 : Int
+    index/488 = COPY j/437                                   : Int
+    t34 = Cadda a/381, -8                                    : Addr
+    t35 = Cload(Word_int,Immutable) t34                      : Int
+    t36 = Clsr t35, 9                                        : Int
+    Ccheckbound t36, index/488
+    t37 = Clsl index/488, 2                                  : Int
+    t38 = Cadda a/381, t37                                   : Addr
+    t39 = Cadda t38, -4                                      : Addr
+    Cstore(Word_int,Assignment) t39, newval/487
+    index/485 = Caddi j/437, 2                               : Int
+    t40 = Cadda a/381, -8                                    : Addr
+    t41 = Cload(Word_int,Immutable) t40                      : Int
+    t42 = Clsr t41, 9                                        : Int
+    Ccheckbound t42, index/485
+    t43 = Clsl index/485, 2                                  : Int
+    t44 = Cadda a/381, t43                                   : Addr
+    t45 = Cadda t44, -4                                      : Addr
+    Cstore(Word_int,Assignment) t45, t/438
+    JUMP -> B11                                              ; synthetic
+  B10:
+    JUMP -> B11                                              ; synthetic
+  B11:
+    *id_prev*/482 = COPY j/437                               : Int
+    t46 = Caddi j/437, 2                                     : Int
+    j/437 = ASSIGN t46                                       : Int
+    t47 = Ccmpi(Ceq) *id_prev*/482, bound/483                : Int
+    BR t47 -> B12, B13
+  B12:
+    JUMP -> B5
+  B13:
+    JUMP -> B14                                              ; synthetic
+  B14:
+    JUMP -> B8
+  B15:
+    *id_prev*/480 = COPY i/436                               : Int
+    t48 = Caddi i/436, 2                                     : Int
+    i/436 = ASSIGN t48                                       : Int
+    t49 = Ccmpi(Ceq) *id_prev*/480, bound/481                : Int
+    BR t49 -> B16, B17
+  B16:
+    JUMP -> B1
+  B17:
+    JUMP -> B18                                              ; synthetic
+  B18:
+    JUMP -> B4
+  B19:
+    RET 1
+
+camlShapes.checked_sqrt_440 (x/442:Int)
+  B0:
+    t1 = Ccmpi(Clt) x/442, 1                                 : Int
+    BR t1 -> B1, B2
+  B1:
+    t2 = Cadda &camlShapes, 40                               : Addr
+    t3 = Cload(Word_val,Immutable) t2                        : Val
+    t4 = Calloc 2048n, t3, x/442                             : Val
+    Craise(Raise_notrace) t4
+  B2:
+    t5 = Casr x/442, 1                                       : Int
+    t6 = Cfloatofint t5                                      : Float
+    t7 = Cextcall(sqrt,noalloc) t6                           : Float
+    t8 = Calloc 1277n, t7                                    : Val
+    RET t8
+
+camlShapes.safe_sqrt_443 (x/445:Int)
+  ; handler params: exn/460
+  B0:    ; exn -> B1
+    t1 = Capply &camlShapes.checked_sqrt_440, x/445          : Val
+    RET t1
+  B1:
+    t2 = Cadda &camlShapes, 40                               : Addr
+    t3 = Cload(Word_val,Immutable) t2                        : Val
+    t4 = Cload(Word_val,Immutable) exn/460                   : Val
+    t5 = Ccmpi(Ceq) t4, t3                                   : Int
+    BR t5 -> B2, B3
+  B2:
+    RET &camlShapes.2
+  B3:
+    Craise(Raise_notrace) exn/460
+
+camlShapes.describe_446 (s/448:Val)
+  B0:
+    t1 = Cadda s/448, -8                                     : Addr
+    switcher/479 = Cload(Byte_unsigned,Immutable) t1         : Int
+    SWITCH switcher/479 -> B1, B2, B3
+  B1:
+    t2 = Capply &camlShapes.area_278, s/448                  : Val
+    t3 = Capply &camlStdlib.string_of_float_189, t2          : Val
+    t4 = Capply &camlStdlib.^_139, &camlShapes.4, t3         : Val
+    RET t4
+  B2:
+    t5 = Capply &camlShapes.area_278, s/448                  : Val
+    t6 = Capply &camlStdlib.string_of_float_189, t5          : Val
+    t7 = Capply &camlStdlib.^_139, &camlShapes.5, t6         : Val
+    RET t7
+  B3:
+    t8 = Capply &camlShapes.area_278, s/448                  : Val
+    t9 = Capply &camlStdlib.string_of_float_189, t8          : Val
+    t10 = Capply &camlStdlib.^_139, &camlShapes.6, t9        : Val
+    RET t10
+
+camlShapes.entry ()
+  B0:
+    Cextcall(caml_initialize,noalloc) &camlShapes, &camlShapes.14
+    t1 = Cadda &camlShapes, 8                                : Addr
+    Cextcall(caml_initialize,noalloc) t1, &camlShapes.13
+    t2 = Cadda &camlShapes, 16                               : Addr
+    Cextcall(caml_initialize,noalloc) t2, &camlShapes.12
+    t3 = Cadda &camlShapes, 24                               : Addr
+    Cextcall(caml_initialize,noalloc) t3, &camlShapes.11
+    t4 = Cadda &camlShapes, 32                               : Addr
+    Cextcall(caml_initialize,noalloc) t4, &camlShapes.10
+    t5 = Cextcall(caml_fresh_oo_id,noalloc) 1                : Val
+    Not_positive/439 = Calloc 2296n, &camlShapes.3, t5       : Val
+    t6 = Cadda &camlShapes, 40                               : Addr
+    Cextcall(caml_initialize,noalloc) t6, Not_positive/439
+    t7 = Cadda &camlShapes, 48                               : Addr
+    Cextcall(caml_initialize,noalloc) t7, &camlShapes.9
+    t8 = Cadda &camlShapes, 56                               : Addr
+    Cextcall(caml_initialize,noalloc) t8, &camlShapes.8
+    t9 = Cadda &camlShapes, 64                               : Addr
+    Cextcall(caml_initialize,noalloc) t9, &camlShapes.7
+    RET 1

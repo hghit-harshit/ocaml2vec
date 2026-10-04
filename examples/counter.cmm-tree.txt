@@ -1,0 +1,56 @@
+; unit Counter  source examples/counter.ml  ocaml 5.5.1
+
+(Cdata)
+
+(Cdata
+  (Cint 3063)
+  (Cdefine_symbol camlCounter.1)
+  (Csymbol_address camlCounter.counter_274)
+  (Cint 72057594037927941))
+
+(Cdata (Cint 1792) (Cglobal_symbol camlCounter) (Cdefine_symbol camlCounter) (Cint 1))
+
+(Cdata
+  (Cglobal_symbol camlCounter.gc_roots)
+  (Cdefine_symbol camlCounter.gc_roots)
+  (Csymbol_address camlCounter)
+  (Cint 0))
+
+(Cfunction camlCounter.counter_274
+  ((param/278 Int))
+  (Clet_mut r/276 Int
+    (Cconst_int 1)
+    (Csequence
+      (Clet_mut i/277 Int
+        (Cconst_int 1)
+        (Ccatch Nonrecursive
+          (Cifthenelse
+            (Cop Ccmpi(Cgt) (Cvar_mut i/277) (Cconst_int 19))
+            (Cexit 2)
+            (Ccatch Recursive
+              (Cexit 3)
+              (handler 3
+                ()
+                (Csequence
+                  (Csequence
+                    (Cassign r/276
+                      (Cop Caddi (Cop Caddi (Cvar_mut r/276) (Cvar_mut i/277)) (Cconst_int -1)))
+                    (Clet *id_prev*/281
+                      (Cvar_mut i/277)
+                      (Csequence
+                        (Cassign i/277 (Cop Caddi (Cvar_mut i/277) (Cconst_int 2)))
+                        (Cifthenelse
+                          (Cop Ccmpi(Ceq) (Cvar *id_prev*/281) (Cconst_int 19))
+                          (Cexit 2)
+                          (Ctuple)))))
+                  (Cexit 3)))))
+          (handler 2 () (Ctuple))))
+      (Cvar_mut r/276))))
+
+(Cfunction camlCounter.entry
+  ()
+  (Csequence
+    (Clet counter/274
+      (Cconst_symbol camlCounter.1)
+      (Cop Cextcall(caml_initialize,noalloc) (Cconst_symbol camlCounter) (Cvar counter/274)))
+    (Cconst_int 1)))

@@ -1,0 +1,37 @@
+; unit Counter  source examples/counter.ml  ocaml 5.5.1
+
+camlCounter.counter_274 (param/278:Int)
+  ; mutable: r/276, i/277
+  B0:
+    r/276 = COPY 1                                           : Int
+    i/277 = COPY 1                                           : Int
+    t1 = Ccmpi(Cgt) i/277, 19                                : Int
+    BR t1 -> B2, B3
+  B1:
+    JUMP -> B8                                               ; synthetic
+  B2:
+    JUMP -> B1
+  B3:
+    JUMP -> B4
+  B4:
+    t2 = Caddi r/276, i/277                                  : Int
+    t3 = Caddi t2, -1                                        : Int
+    r/276 = ASSIGN t3                                        : Int
+    *id_prev*/281 = COPY i/277                               : Int
+    t4 = Caddi i/277, 2                                      : Int
+    i/277 = ASSIGN t4                                        : Int
+    t5 = Ccmpi(Ceq) *id_prev*/281, 19                        : Int
+    BR t5 -> B5, B6
+  B5:
+    JUMP -> B1
+  B6:
+    JUMP -> B7                                               ; synthetic
+  B7:
+    JUMP -> B4
+  B8:
+    RET r/276
+
+camlCounter.entry ()
+  B0:
+    Cextcall(caml_initialize,noalloc) &camlCounter, &camlCounter.1
+    RET 1
